@@ -6,4 +6,15 @@
     <string name="ort">Austragungsort</string>
     <string name="zeit">Spielbeginn</string>
     <string name="weiter">Weiter</string>
+    <string name="hd1">1. Herrendoppel</string>
+    <string name="hd2">2. Herrendoppel</string>
+    <string name="dd">Damendoppel</string>
+    <string name="he1">1. Herreneinzel</string>
+    <string name="he2">2. Herreneinzel</string>
+    <string name="he3">3. Herreneinzel</string>
+    <string name="de">Dameneinzel</string>
+    <string name="mx">Mixed</string>
+    <string name="name">Spielername</string>
+    <string name="save">Speichern</string>
+    <string name="ergebnis">Ergebnisse eintragen</string>
 </resources>
