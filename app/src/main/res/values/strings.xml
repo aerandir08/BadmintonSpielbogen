@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Badminton Spielbogen</string>
+    <string name="heimverein">Heimverein</string>
+    <string name="gastverein">Gastverein</string>
+    <string name="staffel">Staffel</string>
+    <string name="ort">Austragungsort</string>
+    <string name="zeit">Spielbeginn</string>
+    <string name="weiter">Weiter</string>
+</resources>
