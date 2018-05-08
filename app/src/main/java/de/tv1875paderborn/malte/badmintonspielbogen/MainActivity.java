@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     public static String g_mx1;
     public static String g_mx2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
