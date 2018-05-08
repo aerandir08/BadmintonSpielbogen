@@ -217,7 +217,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edit_he3" />
 
         <EditText
-            android:id="@+id/edit_dd"
+            android:id="@+id/edit_de"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -238,7 +238,7 @@
             android:layout_marginTop="32dp"
             android:text="@string/mx"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_dd" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_de" />
 
         <EditText
             android:id="@+id/edit_mx1"
@@ -273,6 +273,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
+            android:onClick="button_save"
             android:text="Speichern"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edit_mx2" />
