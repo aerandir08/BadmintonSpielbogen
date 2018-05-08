@@ -10,11 +10,11 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
     // Allgemeine Daten speichern
-    public static String heimverein = "heimverein";
-    public static String gastverein = "gastverein";
-    public static String staffel = "staffel";
-    public static String ort = "ort";
-    public static String zeit = "zeit";
+    public static String heimverein;
+    public static String gastverein;
+    public static String staffel;
+    public static String ort;
+    public static String zeit;
 
     // Namen des Heimvereins speichern
     public static String h_hd11;
@@ -48,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        EditText editText = findViewById(R.id.editText_heimverein);
+        editText.setText(heimverein);
+        editText = findViewById(R.id.editText_gastverein);
+        editText.setText(gastverein);
+        editText = findViewById(R.id.editText_staffel);
+        editText.setText(staffel);
+        editText = findViewById(R.id.editText_ort);
+        editText.setText(ort);
+        editText = findViewById(R.id.editText_zeit);
+        editText.setText(zeit);
     }
 
     public void button_save(View view) {
