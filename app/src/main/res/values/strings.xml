@@ -17,4 +17,5 @@
     <string name="name">Spielername</string>
     <string name="save">Speichern</string>
     <string name="ergebnis">Ergebnisse eintragen</string>
+    <string name="default_erg">0-0</string>
 </resources>
