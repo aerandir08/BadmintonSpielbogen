@@ -8,7 +8,9 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true" >
 
         <!--1. Herrendoppel-->
         <TextView
@@ -82,13 +84,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_hd11"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_hd11" />
 
         <!--2. Herrendoppel-->
         <TextView
@@ -160,13 +162,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_hd21"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_hd21" />
 
         <!--Damendoppel-->
         <TextView
@@ -238,13 +240,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_dd1"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_dd1" />
 
         <!--1. Herreneinzel-->
         <TextView
@@ -316,13 +318,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_he11"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_he11" />
 
         <!--2. Herreneinzel-->
         <TextView
@@ -394,13 +396,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_he21"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_he21" />
 
         <!--3. Herreneinzel-->
         <TextView
@@ -472,13 +474,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_he31"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_he31" />
 
         <!--Dameneinzel-->
         <TextView
@@ -550,13 +552,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_de1"/>
+            app:layout_constraintTop_toBottomOf="@+id/er_de1" />
 
         <!--Mixed-->
         <TextView
@@ -636,7 +638,6 @@
             android:text="@string/save"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/er_h_mx" />
-
 
 
     </android.support.constraint.ConstraintLayout>

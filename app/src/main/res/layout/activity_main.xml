@@ -8,7 +8,9 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true" >
 
         <EditText
             android:id="@+id/editText_heimverein"
@@ -24,7 +26,8 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_heimverein"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_heimverein" />
+            app:layout_constraintStart_toEndOf="@+id/textView_heimverein"
+            android:nextFocusForward="@+id/editText_gastverein"/>
 
         <EditText
             android:id="@+id/editText_gastverein"
@@ -40,7 +43,8 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_gastverein"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_gastverein" />
+            app:layout_constraintStart_toEndOf="@+id/textView_gastverein"
+            android:nextFocusForward="@+id/editText_staffel"/>
 
         <EditText
             android:id="@+id/editText_staffel"
@@ -56,7 +60,8 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_staffel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_staffel" />
+            app:layout_constraintStart_toEndOf="@+id/textView_staffel"
+            android:nextFocusForward="@+id/editText_ort"/>
 
         <EditText
             android:id="@+id/editText_ort"
@@ -72,7 +77,8 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_ort"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_ort" />
+            app:layout_constraintStart_toEndOf="@+id/textView_ort"
+            android:nextFocusForward="@+id/editText_zeit"/>
 
         <EditText
             android:id="@+id/editText_zeit"
