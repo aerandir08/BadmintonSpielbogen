@@ -61,11 +61,19 @@ public class ergebnis extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ergebnis);
+        String h_hd1 = h_hd11 + "\n" + h_hd12;
+        String g_hd1 = g_hd11 + "\n" + g_hd12;
+        String h_hd2 = h_hd21 + "\n" + h_hd22;
+        String g_hd2 = g_hd21 + "\n" + g_hd22;
+        String h_dd = h_dd1 + "\n" + h_dd2;
+        String g_dd = g_dd1 + "\n" + g_dd1;
+        String h_mx = h_mx1 + "\n" + h_mx2;
+        String g_mx = g_mx1 + "\n" + g_mx2;
 
         TextView textView = findViewById(R.id.er_h_hd1);
-        textView.setText(h_hd11 + "\n" + h_hd12);
+        textView.setText(h_hd1);
         textView = findViewById(R.id.er_g_hd1);
-        textView.setText(g_hd11 + "\n" + g_hd12);
+        textView.setText(g_hd1);
         EditText editText = findViewById(R.id.er_hd11);
         editText.setText(er_hd11);
         editText = findViewById(R.id.er_hd12);
@@ -74,9 +82,9 @@ public class ergebnis extends AppCompatActivity {
         editText.setText(er_hd13);
 
         textView = findViewById(R.id.er_h_hd2);
-        textView.setText(h_hd21 + "\n" + h_hd22);
-        textView = findViewById(R.id.er_g_hd1);
-        textView.setText(g_hd21 + "\n" + g_hd22);
+        textView.setText(h_hd2);
+        textView = findViewById(R.id.er_g_hd2);
+        textView.setText(g_hd2);
         editText = findViewById(R.id.er_hd21);
         editText.setText(er_hd21);
         editText = findViewById(R.id.er_hd22);
@@ -85,9 +93,9 @@ public class ergebnis extends AppCompatActivity {
         editText.setText(er_hd23);
 
         textView = findViewById(R.id.er_h_dd);
-        textView.setText(h_dd1 + "\n" + h_dd2);
-        textView = findViewById(R.id.er_g_hd1);
-        textView.setText(g_dd1 + "\n" + g_dd1);
+        textView.setText(h_dd);
+        textView = findViewById(R.id.er_g_dd);
+        textView.setText(g_dd);
         editText = findViewById(R.id.er_dd1);
         editText.setText(er_dd1);
         editText = findViewById(R.id.er_dd2);
@@ -140,9 +148,9 @@ public class ergebnis extends AppCompatActivity {
         editText.setText(er_de3);
 
         textView = findViewById(R.id.er_h_mx);
-        textView.setText(h_mx1 + "\n" + h_mx2);
+        textView.setText(h_mx);
         textView = findViewById(R.id.er_g_mx);
-        textView.setText(g_mx1 + "\n" + g_mx2);
+        textView.setText(g_mx);
         editText = findViewById(R.id.er_mx1);
         editText.setText(er_mx1);
         editText = findViewById(R.id.er_mx2);
