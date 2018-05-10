@@ -1,11 +1,13 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gastverein;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_dd1;
@@ -84,5 +86,8 @@ public class menu_2 extends AppCompatActivity {
         h_mx1 = editText.getText().toString();
         editText = findViewById(R.id.edit_mx2);
         h_mx2 = editText.getText().toString();
+
+        Context context = getApplicationContext();
+        Toast.makeText(context, "Daten gespeichert", Toast.LENGTH_SHORT).show();
     }
 }

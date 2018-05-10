@@ -1,10 +1,12 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
         ort = editText.getText().toString();
         editText = findViewById(R.id.editText_zeit);
         zeit = editText.getText().toString();
+
+        Context context = getApplicationContext();
+        Toast.makeText(context, "Daten gespeichert", Toast.LENGTH_SHORT).show();
     }
 
     public void button_heimverein(View view) {
@@ -88,4 +93,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ergebnis.class);
         startActivity(intent);
     }
+
+    public void button_zeichnen(View view) {
+        Intent intent = new Intent(this, unterschrift.class);
+        startActivity(intent);
+    }
+
 }

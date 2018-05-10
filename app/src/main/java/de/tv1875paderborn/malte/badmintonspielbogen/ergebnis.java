@@ -1,10 +1,12 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_dd1;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_de;
@@ -231,5 +233,8 @@ public class ergebnis extends AppCompatActivity {
 
         editText = findViewById(R.id.er_mx3);
         er_mx3 = editText.getText().toString();
+
+        Context context = getApplicationContext();
+        Toast.makeText(context, "Daten gespeichert", Toast.LENGTH_SHORT).show();
     }
 }
