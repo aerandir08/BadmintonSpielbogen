@@ -18,4 +18,18 @@
     <string name="save">Speichern</string>
     <string name="ergebnis">Ergebnisse eintragen</string>
     <string name="default_erg">0-0</string>
+    <string name="title_activity_unterschrift">Unterschrift</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="sign">Unterschrift</string>
+    <string name="delete">Löschen</string>
+    <string name="aufstellungen">Mannschaftsaufstellungen</string>
+    <string name="pdf">pdf erstellen und verschicken</string>
+    <string name="end_spieltag">Spieltag abschließen</string>
+    <string name="sign_heim">Unterschrift Heim</string>
+    <string name="sign_gast">Unterschrift Gast</string>
 </resources>

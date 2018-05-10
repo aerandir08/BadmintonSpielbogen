@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
 public class MainActivity extends AppCompatActivity {
     // Allgemeine Daten speichern
     public static String heimverein;
@@ -93,10 +91,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ergebnis.class);
         startActivity(intent);
     }
-
-    public void button_zeichnen(View view) {
-        Intent intent = new Intent(this, unterschrift.class);
-        startActivity(intent);
-    }
-
 }
