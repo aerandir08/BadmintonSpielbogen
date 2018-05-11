@@ -79,11 +79,11 @@ public class ergebnis extends AppCompatActivity {
         textView.setText(h_hd1);
         textView = findViewById(R.id.er_g_hd1);
         textView.setText(g_hd1);
-        EditText editText = findViewById(R.id.er_hd11);
+        EditText editText = findViewById(R.id.er_hd1_g1);
         editText.setText(er_hd11);
-        editText = findViewById(R.id.er_hd12);
+        editText = findViewById(R.id.er_hd1_g2);
         editText.setText(er_hd12);
-        editText = findViewById(R.id.er_hd13);
+        editText = findViewById(R.id.er_hd1_g3);
         editText.setText(er_hd13);
 
         textView = findViewById(R.id.er_h_hd2);
@@ -165,13 +165,13 @@ public class ergebnis extends AppCompatActivity {
     }
 
     public void button_save(View view) {
-        EditText editText = findViewById(R.id.er_hd11);
+        EditText editText = findViewById(R.id.er_hd1_g1);
         er_hd11 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_hd12);
+        editText = findViewById(R.id.er_hd1_g2);
         er_hd12 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_hd13);
+        editText = findViewById(R.id.er_hd1_g3);
         er_hd13 = editText.getText().toString();
 
         editText = findViewById(R.id.er_hd21);
