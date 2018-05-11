@@ -17,7 +17,7 @@
     <string name="name">Spielername</string>
     <string name="save">Speichern</string>
     <string name="ergebnis">Ergebnisse eintragen</string>
-    <string name="default_erg">0-0</string>
+    <string name="default_erg">0</string>
     <string name="title_activity_unterschrift">Unterschrift</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
