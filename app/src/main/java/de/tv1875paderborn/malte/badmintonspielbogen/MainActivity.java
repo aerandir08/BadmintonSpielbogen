@@ -91,4 +91,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ergebnis.class);
         startActivity(intent);
     }
+
+    public void button_pdf(View view){
+        create_pdf.main();
+    }
 }
