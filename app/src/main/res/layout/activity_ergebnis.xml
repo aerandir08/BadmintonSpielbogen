@@ -10,9 +10,551 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true" >
+        android:focusableInTouchMode="true">
 
         <!--1. Herrendoppel-->
+        <EditText
+            android:id="@+id/er_de_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintEnd_toStartOf="@+id/er_de_g1"
+            tools:layout_editor_absoluteY="542dp" />
+
+        <EditText
+            android:id="@+id/er_de_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintEnd_toStartOf="@+id/er_de_h2"
+            tools:layout_editor_absoluteY="542dp" />
+
+        <EditText
+            android:id="@+id/er_de_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintEnd_toStartOf="@+id/er_de_g2"
+            tools:layout_editor_absoluteY="542dp" />
+
+        <EditText
+            android:id="@+id/er_mx_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            app:layout_constraintEnd_toStartOf="@+id/er_mx_g1" />
+
+        <EditText
+            android:id="@+id/er_mx_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/er_mx_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <EditText
+            android:id="@+id/er_mx_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/er_mx_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <EditText
+            android:id="@+id/er_mx_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/er_mx_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <EditText
+            android:id="@+id/er_mx_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/er_mx_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <EditText
+            android:id="@+id/er_mx_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <EditText
+            android:id="@+id/er_de_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintEnd_toStartOf="@+id/er_de_h3"
+            tools:layout_editor_absoluteY="542dp" />
+
+        <EditText
+            android:id="@+id/er_de_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintEnd_toStartOf="@+id/er_de_g3"
+            tools:layout_editor_absoluteY="542dp" />
+
+        <EditText
+            android:id="@+id/er_de_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="542dp" />
+
+        <EditText
+            android:id="@+id/er_he3_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintEnd_toStartOf="@+id/er_he3_h2"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <EditText
+            android:id="@+id/er_he3_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintEnd_toStartOf="@+id/er_he3_g1"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <EditText
+            android:id="@+id/er_he3_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintEnd_toStartOf="@+id/er_he3_g2"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <EditText
+            android:id="@+id/er_he3_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintEnd_toStartOf="@+id/er_he3_h3"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <EditText
+            android:id="@+id/er_he3_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintEnd_toStartOf="@+id/er_he3_g3"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <EditText
+            android:id="@+id/er_he3_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <EditText
+            android:id="@+id/er_he2_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintEnd_toStartOf="@+id/er_he2_h2"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <EditText
+            android:id="@+id/er_he2_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintEnd_toStartOf="@+id/er_he2_g1"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <EditText
+            android:id="@+id/er_he2_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintEnd_toStartOf="@+id/er_he2_g2"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <EditText
+            android:id="@+id/er_he2_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintEnd_toStartOf="@+id/er_he2_h3"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <EditText
+            android:id="@+id/er_he2_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintEnd_toStartOf="@+id/er_he2_g3"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <EditText
+            android:id="@+id/er_he2_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <EditText
+            android:id="@+id/er_he1_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintEnd_toStartOf="@+id/er_he1_h2"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <EditText
+            android:id="@+id/er_he1_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintEnd_toStartOf="@+id/er_he1_g1" />
+
+        <EditText
+            android:id="@+id/er_he1_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintEnd_toStartOf="@+id/er_he1_g2"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <EditText
+            android:id="@+id/er_he1_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintEnd_toStartOf="@+id/er_he1_h3"
+            tools:layout_editor_absoluteY="290dp" />
+
+        <EditText
+            android:id="@+id/er_he1_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintEnd_toStartOf="@+id/er_he1_g3"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <EditText
+            android:id="@+id/er_he1_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <EditText
+            android:id="@+id/er_dd_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintEnd_toStartOf="@+id/er_dd_h2"
+            tools:layout_editor_absoluteY="206dp" />
+
+        <EditText
+            android:id="@+id/er_dd_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintEnd_toStartOf="@+id/er_dd_g2"
+            tools:layout_editor_absoluteY="206dp" />
+
+        <EditText
+            android:id="@+id/er_dd_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintEnd_toStartOf="@+id/er_dd_h3"
+            tools:layout_editor_absoluteY="206dp" />
+
+        <EditText
+            android:id="@+id/er_dd_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="206dp" />
+
+        <EditText
+            android:id="@+id/er_dd_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintEnd_toStartOf="@+id/er_dd_g3"
+            tools:layout_editor_absoluteY="206dp" />
+
+        <EditText
+            android:id="@+id/er_dd_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintEnd_toStartOf="@+id/er_dd_g1" />
+
+        <EditText
+            android:id="@+id/er_hd2_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd2_g1" />
+
+        <EditText
+            android:id="@+id/er_hd2_g1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd2_h2"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <EditText
+            android:id="@+id/er_hd2_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd2_g2"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <EditText
+            android:id="@+id/er_hd2_g2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd2_h3"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <EditText
+            android:id="@+id/er_hd2_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd2_g3"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <EditText
+            android:id="@+id/er_hd2_g3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="120dp" />
+
         <TextView
             android:id="@+id/text_hd1"
             android:layout_width="wrap_content"
@@ -46,40 +588,77 @@
             app:layout_constraintStart_toEndOf="@+id/er_h_hd1" />
 
         <EditText
-            android:id="@+id/er_hd11"
-            android:layout_width="70dp"
+            android:id="@+id/er_hd1_g1"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_h1"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd1_h2"
+            tools:layout_editor_absoluteY="35dp" />
+
+        <EditText
+            android:id="@+id/er_hd1_h1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="textPersonName"
             app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd1"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd12" />
+            app:layout_constraintEnd_toStartOf="@+id/er_hd1_g1" />
 
         <EditText
-            android:id="@+id/er_hd12"
-            android:layout_width="70dp"
+            android:id="@+id/er_hd1_g2"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd11"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd13" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_h2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd1_h3" />
 
         <EditText
-            android:id="@+id/er_hd13"
-            android:layout_width="70dp"
+            android:id="@+id/er_hd1_h2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_g1"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd1_g2" />
+
+        <EditText
+            android:id="@+id/er_hd1_g3"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_h3"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/er_hd1_h3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:hint="@string/default_erg"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_g2"
+            app:layout_constraintEnd_toStartOf="@+id/er_hd1_g3" />
 
         <View
             android:layout_width="match_parent"
@@ -90,7 +669,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_hd11" />
+            app:layout_constraintTop_toBottomOf="@+id/er_hd1_g1" />
 
         <!--2. Herrendoppel-->
         <TextView
@@ -123,42 +702,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_hd2"
             app:layout_constraintStart_toEndOf="@+id/er_h_hd2" />
 
-        <EditText
-            android:id="@+id/er_hd21"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd22" />
-
-        <EditText
-            android:id="@+id/er_hd22"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd21"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd23" />
-
-        <EditText
-            android:id="@+id/er_hd23"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd22"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -168,7 +711,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_hd21" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_hd2_h1" />
 
         <!--Damendoppel-->
         <TextView
@@ -201,42 +746,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_dd"
             app:layout_constraintStart_toEndOf="@+id/er_h_dd" />
 
-        <EditText
-            android:id="@+id/er_dd1"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd2" />
-
-        <EditText
-            android:id="@+id/er_dd2"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_dd1"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd3" />
-
-        <EditText
-            android:id="@+id/er_dd3"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_dd2"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -246,7 +755,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_dd1" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_dd_h1" />
 
         <!--1. Herreneinzel-->
         <TextView
@@ -279,42 +790,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_he1"
             app:layout_constraintStart_toEndOf="@+id/er_h_he1" />
 
-        <EditText
-            android:id="@+id/er_he11"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
-            app:layout_constraintEnd_toStartOf="@+id/er_he12" />
-
-        <EditText
-            android:id="@+id/er_he12"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_he11"
-            app:layout_constraintEnd_toStartOf="@+id/er_he13" />
-
-        <EditText
-            android:id="@+id/er_he13"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_he12"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -324,7 +799,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_he11" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_he1_h1" />
 
         <!--2. Herreneinzel-->
         <TextView
@@ -357,42 +834,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_he2"
             app:layout_constraintStart_toEndOf="@+id/er_h_he2" />
 
-        <EditText
-            android:id="@+id/er_he21"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
-            app:layout_constraintEnd_toStartOf="@+id/er_he22" />
-
-        <EditText
-            android:id="@+id/er_he22"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_he21"
-            app:layout_constraintEnd_toStartOf="@+id/er_he23" />
-
-        <EditText
-            android:id="@+id/er_he23"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_he22"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -402,7 +843,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_he21" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_he2_h1" />
 
         <!--3. Herreneinzel-->
         <TextView
@@ -435,42 +878,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_he3"
             app:layout_constraintStart_toEndOf="@+id/er_h_he3" />
 
-        <EditText
-            android:id="@+id/er_he31"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
-            app:layout_constraintEnd_toStartOf="@+id/er_he32" />
-
-        <EditText
-            android:id="@+id/er_he32"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_he31"
-            app:layout_constraintEnd_toStartOf="@+id/er_he33" />
-
-        <EditText
-            android:id="@+id/er_he33"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_he32"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -480,7 +887,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_he31" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_he3_h1" />
 
         <!--Dameneinzel-->
         <TextView
@@ -513,42 +922,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_de"
             app:layout_constraintStart_toEndOf="@+id/er_h_de" />
 
-        <EditText
-            android:id="@+id/er_de1"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
-            app:layout_constraintEnd_toStartOf="@+id/er_de2" />
-
-        <EditText
-            android:id="@+id/er_de2"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_de1"
-            app:layout_constraintEnd_toStartOf="@+id/er_de3" />
-
-        <EditText
-            android:id="@+id/er_de3"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_de2"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -558,7 +931,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_de1" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_de_h1" />
 
         <!--Mixed-->
         <TextView
@@ -591,42 +966,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/er_h_mx"
             app:layout_constraintStart_toEndOf="@+id/er_h_mx" />
 
-        <EditText
-            android:id="@+id/er_mx1"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx2" />
-
-        <EditText
-            android:id="@+id/er_mx2"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_mx1"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx3" />
-
-        <EditText
-            android:id="@+id/er_mx3"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ems="10"
-            android:hint="@string/default_erg"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_mx2"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"
@@ -656,12 +995,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
             android:onClick="button_sign_gast"
             android:text="@string/sign_gast"
             app:layout_constraintBaseline_toBaselineOf="@+id/save"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_mx3" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>
