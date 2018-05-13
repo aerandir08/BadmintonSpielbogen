@@ -35,30 +35,56 @@ import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_mx2;
 
 public class ergebnis extends AppCompatActivity {
     // Alle Ergebnisse als String
-    public  static String er_hd11;
-    public  static String er_hd12;
-    public  static String er_hd13;
-    public  static String er_hd21;
-    public  static String er_hd22;
-    public  static String er_hd23;
-    public  static String er_dd1;
-    public  static String er_dd2;
-    public  static String er_dd3;
-    public  static String er_he11;
-    public  static String er_he12;
-    public  static String er_he13;
-    public  static String er_he21;
-    public  static String er_he22;
-    public  static String er_he23;
-    public  static String er_he31;
-    public  static String er_he32;
-    public  static String er_he33;
-    public  static String er_de1;
-    public  static String er_de2;
-    public  static String er_de3;
-    public  static String er_mx1;
-    public  static String er_mx2;
-    public  static String er_mx3;
+    public  static String er_hd1_h1;
+    public  static String er_hd1_h2;
+    public  static String er_hd1_h3;
+    public  static String er_hd1_g1;
+    public  static String er_hd1_g2;
+    public  static String er_hd1_g3;
+    public  static String er_hd2_h1;
+    public  static String er_hd2_h2;
+    public  static String er_hd2_h3;
+    public  static String er_hd2_g1;
+    public  static String er_hd2_g2;
+    public  static String er_hd2_g3;
+    public  static String er_dd_h1;
+    public  static String er_dd_h2;
+    public  static String er_dd_h3;
+    public  static String er_dd_g1;
+    public  static String er_dd_g2;
+    public  static String er_dd_g3;
+    public  static String er_he1_h1;
+    public  static String er_he1_h2;
+    public  static String er_he1_h3;
+    public  static String er_he1_g1;
+    public  static String er_he1_g2;
+    public  static String er_he1_g3;
+    public  static String er_he2_h1;
+    public  static String er_he2_h2;
+    public  static String er_he2_h3;
+    public  static String er_he2_g1;
+    public  static String er_he2_g2;
+    public  static String er_he2_g3;
+    public  static String er_he3_h1;
+    public  static String er_he3_h2;
+    public  static String er_he3_h3;
+    public  static String er_he3_g1;
+    public  static String er_he3_g2;
+    public  static String er_he3_g3;
+    public  static String er_de_h1;
+    public  static String er_de_h2;
+    public  static String er_de_h3;
+    public  static String er_de_g1;
+    public  static String er_de_g2;
+    public  static String er_de_g3;
+    public  static String er_mx_h1;
+    public  static String er_mx_h2;
+    public  static String er_mx_h3;
+    public  static String er_mx_g1;
+    public  static String er_mx_g2;
+    public  static String er_mx_g3;
+    
+
 
     public static boolean sign;
 
@@ -79,166 +105,246 @@ public class ergebnis extends AppCompatActivity {
         textView.setText(h_hd1);
         textView = findViewById(R.id.er_g_hd1);
         textView.setText(g_hd1);
-        EditText editText = findViewById(R.id.er_hd1_g1);
-        editText.setText(er_hd11);
+        EditText editText = findViewById(R.id.er_hd1_h1);
+        editText.setText(er_hd1_h1);
+        editText = findViewById(R.id.er_hd1_h2);
+        editText.setText(er_hd1_h2);
+        editText = findViewById(R.id.er_hd1_h3);
+        editText.setText(er_hd1_h3);
+        editText = findViewById(R.id.er_hd1_g1);
+        editText.setText(er_hd1_g1);
         editText = findViewById(R.id.er_hd1_g2);
-        editText.setText(er_hd12);
+        editText.setText(er_hd1_g2);
         editText = findViewById(R.id.er_hd1_g3);
-        editText.setText(er_hd13);
+        editText.setText(er_hd1_g3);
 
         textView = findViewById(R.id.er_h_hd2);
         textView.setText(h_hd2);
         textView = findViewById(R.id.er_g_hd2);
         textView.setText(g_hd2);
-        editText = findViewById(R.id.er_hd21);
-        editText.setText(er_hd21);
-        editText = findViewById(R.id.er_hd22);
-        editText.setText(er_hd22);
-        editText = findViewById(R.id.er_hd23);
-        editText.setText(er_hd23);
+        editText = findViewById(R.id.er_hd2_h1);
+        editText.setText(er_hd2_h1);
+        editText = findViewById(R.id.er_hd2_h2);
+        editText.setText(er_hd2_h2);
+        editText = findViewById(R.id.er_hd2_h3);
+        editText.setText(er_hd2_h3);
+        editText = findViewById(R.id.er_hd2_g1);
+        editText.setText(er_hd2_g1);
+        editText = findViewById(R.id.er_hd2_g2);
+        editText.setText(er_hd2_g2);
+        editText = findViewById(R.id.er_hd2_g3);
+        editText.setText(er_hd2_g3);
 
         textView = findViewById(R.id.er_h_dd);
         textView.setText(h_dd);
         textView = findViewById(R.id.er_g_dd);
         textView.setText(g_dd);
-        editText = findViewById(R.id.er_dd1);
-        editText.setText(er_dd1);
-        editText = findViewById(R.id.er_dd2);
-        editText.setText(er_dd2);
-        editText = findViewById(R.id.er_dd3);
-        editText.setText(er_dd3);
+        editText = findViewById(R.id.er_dd_h1);
+        editText.setText(er_dd_h1);
+        editText = findViewById(R.id.er_dd_h2);
+        editText.setText(er_dd_h2);
+        editText = findViewById(R.id.er_dd_h3);
+        editText.setText(er_dd_h3);
+        editText = findViewById(R.id.er_dd_g1);
+        editText.setText(er_dd_g1);
+        editText = findViewById(R.id.er_dd_g2);
+        editText.setText(er_dd_g2);
+        editText = findViewById(R.id.er_dd_g3);
+        editText.setText(er_dd_g3);
 
         textView = findViewById(R.id.er_h_he1);
         textView.setText(h_he1);
         textView = findViewById(R.id.er_g_he1);
         textView.setText(g_he1);
-        editText = findViewById(R.id.er_he11);
-        editText.setText(er_he11);
-        editText = findViewById(R.id.er_he12);
-        editText.setText(er_he12);
-        editText = findViewById(R.id.er_he13);
-        editText.setText(er_he13);
+        editText = findViewById(R.id.er_he1_h1);
+        editText.setText(er_he1_h1);
+        editText = findViewById(R.id.er_he1_h2);
+        editText.setText(er_he1_h2);
+        editText = findViewById(R.id.er_he1_h3);
+        editText.setText(er_he1_h3);
+        editText = findViewById(R.id.er_he1_g1);
+        editText.setText(er_he1_g1);
+        editText = findViewById(R.id.er_he1_g2);
+        editText.setText(er_he1_g2);
+        editText = findViewById(R.id.er_he1_g3);
+        editText.setText(er_he1_g3);
 
         textView = findViewById(R.id.er_h_he2);
         textView.setText(h_he2);
         textView = findViewById(R.id.er_g_he2);
         textView.setText(g_he2);
-        editText = findViewById(R.id.er_he21);
-        editText.setText(er_he21);
-        editText = findViewById(R.id.er_he22);
-        editText.setText(er_he22);
-        editText = findViewById(R.id.er_he23);
-        editText.setText(er_he23);
+        editText = findViewById(R.id.er_he2_h1);
+        editText.setText(er_he2_h1);
+        editText = findViewById(R.id.er_he2_h2);
+        editText.setText(er_he2_h2);
+        editText = findViewById(R.id.er_he2_h3);
+        editText.setText(er_he2_h3);
+        editText = findViewById(R.id.er_he2_g1);
+        editText.setText(er_he2_g1);
+        editText = findViewById(R.id.er_he2_g2);
+        editText.setText(er_he2_g2);
+        editText = findViewById(R.id.er_he2_g3);
+        editText.setText(er_he2_g3);
 
         textView = findViewById(R.id.er_h_he3);
         textView.setText(h_he3);
         textView = findViewById(R.id.er_g_he3);
         textView.setText(g_he3);
-        editText = findViewById(R.id.er_he31);
-        editText.setText(er_he31);
-        editText = findViewById(R.id.er_he32);
-        editText.setText(er_he32);
-        editText = findViewById(R.id.er_he33);
-        editText.setText(er_he33);
+        editText = findViewById(R.id.er_he3_h1);
+        editText.setText(er_he3_h1);
+        editText = findViewById(R.id.er_he3_h2);
+        editText.setText(er_he3_h2);
+        editText = findViewById(R.id.er_he3_h3);
+        editText.setText(er_he3_h3);
+        editText = findViewById(R.id.er_he3_g1);
+        editText.setText(er_he3_g1);
+        editText = findViewById(R.id.er_he3_g2);
+        editText.setText(er_he3_g2);
+        editText = findViewById(R.id.er_he3_g3);
+        editText.setText(er_he3_g3);
 
         textView = findViewById(R.id.er_h_de);
         textView.setText(h_de);
         textView = findViewById(R.id.er_g_de);
         textView.setText(g_de);
-        editText = findViewById(R.id.er_de1);
-        editText.setText(er_de1);
-        editText = findViewById(R.id.er_de2);
-        editText.setText(er_de2);
-        editText = findViewById(R.id.er_de3);
-        editText.setText(er_de3);
+        editText = findViewById(R.id.er_de_h1);
+        editText.setText(er_de_h1);
+        editText = findViewById(R.id.er_de_h2);
+        editText.setText(er_de_h2);
+        editText = findViewById(R.id.er_de_h3);
+        editText.setText(er_de_h3);
+        editText = findViewById(R.id.er_de_g1);
+        editText.setText(er_de_g1);
+        editText = findViewById(R.id.er_de_g2);
+        editText.setText(er_de_g2);
+        editText = findViewById(R.id.er_de_g3);
+        editText.setText(er_de_g3);
 
         textView = findViewById(R.id.er_h_mx);
         textView.setText(h_mx);
         textView = findViewById(R.id.er_g_mx);
         textView.setText(g_mx);
-        editText = findViewById(R.id.er_mx1);
-        editText.setText(er_mx1);
-        editText = findViewById(R.id.er_mx2);
-        editText.setText(er_mx2);
-        editText = findViewById(R.id.er_mx3);
-        editText.setText(er_mx3);
+        editText = findViewById(R.id.er_mx_h1);
+        editText.setText(er_mx_h1);
+        editText = findViewById(R.id.er_mx_h2);
+        editText.setText(er_mx_h2);
+        editText = findViewById(R.id.er_mx_h3);
+        editText.setText(er_mx_h3);
+        editText = findViewById(R.id.er_mx_g1);
+        editText.setText(er_mx_g1);
+        editText = findViewById(R.id.er_mx_g2);
+        editText.setText(er_mx_g2);
+        editText = findViewById(R.id.er_mx_g3);
+        editText.setText(er_mx_g3);
     }
 
-    public void button_save(View view) {
-        EditText editText = findViewById(R.id.er_hd1_g1);
-        er_hd11 = editText.getText().toString();
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EditText editText = findViewById(R.id.er_hd1_h1);
+        er_hd1_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd1_h2);
+        er_hd1_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd1_h3);
+        er_hd1_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd1_g1);
+        er_hd1_g1 = editText.getText().toString();
         editText = findViewById(R.id.er_hd1_g2);
-        er_hd12 = editText.getText().toString();
-
+        er_hd1_g2 = editText.getText().toString();
         editText = findViewById(R.id.er_hd1_g3);
-        er_hd13 = editText.getText().toString();
+        er_hd1_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_hd21);
-        er_hd21 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd2_h1);
+        er_hd2_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd2_h2);
+        er_hd2_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd2_h3);
+        er_hd2_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd2_g1);
+        er_hd2_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd2_g2);
+        er_hd2_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_hd2_g3);
+        er_hd2_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_hd22);
-        er_hd22 = editText.getText().toString();
+        editText = findViewById(R.id.er_dd_h1);
+        er_dd_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_dd_h2);
+        er_dd_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_dd_h3);
+        er_dd_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_dd_g1);
+        er_dd_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_dd_g2);
+        er_dd_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_dd_g3);
+        er_dd_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_hd23);
-        er_hd23 = editText.getText().toString();
+        editText = findViewById(R.id.er_he1_h1);
+        er_he1_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he1_h2);
+        er_he1_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he1_h3);
+        er_he1_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_he1_g1);
+        er_he1_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he1_g2);
+        er_he1_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he1_g3);
+        er_he1_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_dd1);
-        er_dd1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he2_h1);
+        er_he2_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he2_h2);
+        er_he2_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he2_h3);
+        er_he2_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_he2_g1);
+        er_he2_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he2_g2);
+        er_he2_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he2_g3);
+        er_he2_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_dd2);
-        er_dd2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he3_h1);
+        er_he3_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he3_h2);
+        er_he3_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he3_h3);
+        er_he3_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_he3_g1);
+        er_he3_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_he3_g2);
+        er_he3_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_he3_g3);
+        er_he3_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_dd3);
-        er_dd3 = editText.getText().toString();
+        editText = findViewById(R.id.er_de_h1);
+        er_de_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_de_h2);
+        er_de_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_de_h3);
+        er_de_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_de_g1);
+        er_de_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_de_g2);
+        er_de_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_de_g3);
+        er_de_g3 = editText.getText().toString();
 
-        editText = findViewById(R.id.er_he11);
-        er_he11 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he12);
-        er_he12 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he13);
-        er_he13 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he21);
-        er_he21 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he22);
-        er_he22 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he23);
-        er_he23 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he31);
-        er_he31 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he32);
-        er_he32 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_he33);
-        er_he33 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_de1);
-        er_de1 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_de2);
-        er_de2 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_de3);
-        er_de3 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_mx1);
-        er_mx1 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_mx2);
-        er_mx2 = editText.getText().toString();
-
-        editText = findViewById(R.id.er_mx3);
-        er_mx3 = editText.getText().toString();
-
-        Context context = getApplicationContext();
-        Toast.makeText(context, "Daten gespeichert", Toast.LENGTH_SHORT).show();
+        editText = findViewById(R.id.er_mx_h1);
+        er_mx_h1 = editText.getText().toString();
+        editText = findViewById(R.id.er_mx_h2);
+        er_mx_h2 = editText.getText().toString();
+        editText = findViewById(R.id.er_mx_h3);
+        er_mx_h3 = editText.getText().toString();
+        editText = findViewById(R.id.er_mx_g1);
+        er_mx_g1 = editText.getText().toString();
+        editText = findViewById(R.id.er_mx_g2);
+        er_mx_g2 = editText.getText().toString();
+        editText = findViewById(R.id.er_mx_g3);
+        er_mx_g3 = editText.getText().toString();
     }
 
     public void button_sign_heim(View view) {

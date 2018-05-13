@@ -929,9 +929,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/er_de_h1" />
 
@@ -967,38 +967,27 @@
             app:layout_constraintStart_toEndOf="@+id/er_h_mx" />
 
         <Button
-            android:id="@+id/save"
+            android:id="@+id/button_sign_heim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:onClick="button_save"
-            android:text="@string/save"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_mx" />
-
-        <Button
-            android:id="@+id/button_sign_heim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
             android:onClick="button_sign_heim"
             android:text="@string/sign_heim"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button_sign_gast"
-            app:layout_constraintEnd_toStartOf="@+id/button_sign_gast" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/er_h_mx" />
 
         <Button
             android:id="@+id/button_sign_gast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:onClick="button_sign_gast"
             android:text="@string/sign_gast"
-            app:layout_constraintBaseline_toBaselineOf="@+id/save"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/button_sign_heim"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_sign_heim"/>
 
 
     </android.support.constraint.ConstraintLayout>

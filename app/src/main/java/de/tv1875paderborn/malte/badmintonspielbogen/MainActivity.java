@@ -61,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
         editText.setText(zeit);
     }
 
-    public void button_save(View view) {
+    @Override
+    protected void onStop() {
+        super.onStop();
         EditText editText = findViewById(R.id.editText_heimverein);
         heimverein = editText.getText().toString();
         editText = findViewById(R.id.editText_gastverein);
@@ -72,9 +74,6 @@ public class MainActivity extends AppCompatActivity {
         ort = editText.getText().toString();
         editText = findViewById(R.id.editText_zeit);
         zeit = editText.getText().toString();
-
-        Context context = getApplicationContext();
-        Toast.makeText(context, "Daten gespeichert", Toast.LENGTH_SHORT).show();
     }
 
     public void button_heimverein(View view) {

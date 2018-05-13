@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true" >
+        android:focusableInTouchMode="true">
 
         <EditText
             android:id="@+id/editText_heimverein"
@@ -23,11 +23,11 @@
             android:ems="10"
             android:hint="@string/heimverein"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/editText_gastverein"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_heimverein"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_heimverein"
-            android:nextFocusForward="@+id/editText_gastverein"/>
+            app:layout_constraintStart_toEndOf="@+id/textView_heimverein" />
 
         <EditText
             android:id="@+id/editText_gastverein"
@@ -40,11 +40,11 @@
             android:ems="10"
             android:hint="@string/gastverein"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/editText_staffel"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_gastverein"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_gastverein"
-            android:nextFocusForward="@+id/editText_staffel"/>
+            app:layout_constraintStart_toEndOf="@+id/textView_gastverein" />
 
         <EditText
             android:id="@+id/editText_staffel"
@@ -57,11 +57,11 @@
             android:ems="10"
             android:hint="@string/staffel"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/editText_ort"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_staffel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_staffel"
-            android:nextFocusForward="@+id/editText_ort"/>
+            app:layout_constraintStart_toEndOf="@+id/textView_staffel" />
 
         <EditText
             android:id="@+id/editText_ort"
@@ -74,11 +74,11 @@
             android:ems="10"
             android:hint="@string/ort"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/editText_zeit"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView_ort"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView_ort"
-            android:nextFocusForward="@+id/editText_zeit"/>
+            app:layout_constraintStart_toEndOf="@+id/textView_ort" />
 
         <EditText
             android:id="@+id/editText_zeit"
@@ -162,18 +162,6 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_ort" />
 
         <Button
-            android:id="@+id/button_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="32dp"
-            android:onClick="button_save"
-            android:text="@string/save"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_zeit" />
-
-        <Button
             android:id="@+id/button_heimverein2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -215,10 +203,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:text="@string/aufstellungen"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_save" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_zeit" />
 
         <TextView
             android:id="@+id/textView_pdf"

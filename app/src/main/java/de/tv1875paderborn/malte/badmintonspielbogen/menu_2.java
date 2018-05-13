@@ -61,7 +61,10 @@ public class menu_2 extends AppCompatActivity {
         editText.setText(h_mx2);
     }
 
-    public void button_save(View view) {
+    @Override
+    protected void onStop() {
+        super.onStop();
+
         EditText editText = findViewById(R.id.edit_hd11);
         h_hd11 = editText.getText().toString();
         editText = findViewById(R.id.edit_hd12);
@@ -86,8 +89,5 @@ public class menu_2 extends AppCompatActivity {
         h_mx1 = editText.getText().toString();
         editText = findViewById(R.id.edit_mx2);
         h_mx2 = editText.getText().toString();
-
-        Context context = getApplicationContext();
-        Toast.makeText(context, "Daten gespeichert", Toast.LENGTH_SHORT).show();
     }
 }
