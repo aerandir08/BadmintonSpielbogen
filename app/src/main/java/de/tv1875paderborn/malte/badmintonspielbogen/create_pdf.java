@@ -4,6 +4,7 @@ import android.os.Environment;
 
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Element;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfName;
@@ -17,6 +18,12 @@ import com.itextpdf.text.DocumentException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 // Alle Variablen importieren
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heimverein;
@@ -162,16 +169,20 @@ public class create_pdf {
 
         try {
             PdfWriter.getInstance(document, new FileOutputStream(file));
+            Date datum = Calendar.getInstance().getTime();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.GERMANY);
+            String date = simpleDateFormat.format(datum);
 
             document.open();
 
             // überschrift und zentrales
-            document.add(new Paragraph("Spielberichtsbogen: " + heimverein + " : " + gastverein));
-            document.add(new Paragraph("Staffel: " + staffel + "     Austragungsort: " + ort + "     Spielbeginn:" + zeit));
+            document.add(new Paragraph(heimverein + " : " + gastverein));
+            document.add(new Paragraph("Staffel: " + staffel + "     Austragungsort: " + ort + "     Spielbeginn:" + zeit + "     Datum: " + date));
 
             // Tabelle
             // 1. Zeile
             PdfPTable table = new PdfPTable(12);
+
             PdfPCell cell1 = new PdfPCell(new Paragraph(""));
             PdfPCell cell2 = new PdfPCell(new Paragraph(heimverein));
             PdfPCell cell3 = new PdfPCell(new Paragraph(gastverein));
@@ -185,6 +196,7 @@ public class create_pdf {
             PdfPCell cell11 = new PdfPCell(new Paragraph("Spiele\nHeim"));
             PdfPCell cell12 = new PdfPCell(new Paragraph("Spiele\nGast"));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -237,6 +249,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_hd1_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_hd1_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -289,6 +302,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_hd2_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_hd2_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -341,6 +355,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_dd_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_dd_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -393,6 +408,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_he1_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_he1_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -445,6 +461,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_he2_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_he2_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -497,6 +514,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_he3_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_he3_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -549,6 +567,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_de_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_de_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -601,6 +620,7 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_mx_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_mx_g)));
 
+            cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -653,14 +673,29 @@ public class create_pdf {
             cell11 = new PdfPCell(new Paragraph(Integer.toString(game_sum_h)));
             cell12 = new PdfPCell(new Paragraph(Integer.toString(game_sum_g)));
 
+            cell1.setFixedHeight(30);
+            cell1.setBorderWidthLeft(0);
+            cell1.setBorderWidthBottom(0);
+            cell1.setBorderWidthRight(0);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell1.setVerticalAlignment(Element.ALIGN_MIDDLE);
+            cell2.setBorderWidthLeft(0);
+            cell2.setBorderWidthBottom(0);
+            cell2.setBorderWidthRight(0);
             cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell2.setVerticalAlignment(Element.ALIGN_MIDDLE);
+            cell3.setBorderWidthLeft(0);
+            cell3.setBorderWidthBottom(0);
+            cell3.setBorderWidthRight(0);
             cell3.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell3.setVerticalAlignment(Element.ALIGN_MIDDLE);
+            cell4.setBorderWidthLeft(0);
+            cell4.setBorderWidthBottom(0);
+            cell4.setBorderWidthRight(0);
             cell4.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell4.setVerticalAlignment(Element.ALIGN_MIDDLE);
+            cell5.setBorderWidthLeft(0);
+            cell5.setBorderWidthBottom(0);
             cell5.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell5.setVerticalAlignment(Element.ALIGN_MIDDLE);
             cell6.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -692,17 +727,47 @@ public class create_pdf {
             table.addCell(cell12);
 
             table.setWidthPercentage(100);
-            table.setSpacingBefore(10f);
-            table.setSpacingAfter(10f);
+            table.setSpacingBefore(20f);
             float[] columnWidths = {1f, 5f, 5f, 3f, 3f, 3f, 2f, 2f, 2f, 2f, 2f, 2f};
             table.setWidths(columnWidths);
 
             document.add(table);
 
             document.add(new Paragraph("Gewinner: " + winner));
-            
-            document.close(); // no need to close PDFwriter?
+            document.add( Chunk.NEWLINE );
 
+            try {
+                Image sign_heim = Image.getInstance(root + "/badmintonspielbogen/unterschriften/sign_heim.png");
+                Image sign_gast = Image.getInstance(root + "/badmintonspielbogen/unterschriften/sign_gast.png");
+
+                sign_heim.scaleToFit(180f, 360f);
+                sign_gast.scaleToFit(180f, 360f);
+
+                table = new PdfPTable(2);
+                cell1 = new PdfPCell(new Paragraph("Mannschaftsführer Heimverein:"));
+                cell1.setBorderWidth(0);
+                cell2 = new PdfPCell(new Paragraph("Mannschaftsführer Gastverein:"));
+                cell2.setBorderWidth(0);
+
+                table.addCell(cell1);
+                table.addCell(cell2);
+
+                cell1 = new PdfPCell(sign_heim, false);
+                cell1.setBorderWidth(0);
+                cell2 = new PdfPCell(sign_gast, false);
+                cell2.setBorderWidth(0);
+
+                table.addCell(cell1);
+                table.addCell(cell2);
+
+                document.add(table);
+
+                document.close(); // no need to close PDFwriter?
+            }catch (MalformedURLException e){
+                e.printStackTrace();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
@@ -722,8 +787,12 @@ public class create_pdf {
 
         hd1_1 = er_hd1_h1 + " - " + er_hd1_g1;
         hd1_2 = er_hd1_h2 + " - " + er_hd1_g2;
-        hd1_3 = er_hd1_h3 + " - " + er_hd1_g3;
-        
+
+        if (hd1_h3 == hd1_g3){
+            hd1_3 = "-";
+        }else {
+            hd1_3 = er_hd1_h3 + " - " + er_hd1_g3;
+        }
         pkt_hd1_h = hd1_h1 + hd1_h2 + hd1_h3;
         pkt_hd1_g = hd1_g1 + hd1_g2 + hd1_g3;
 
@@ -766,7 +835,11 @@ public class create_pdf {
 
         hd2_1 = er_hd2_h1 + " - " + er_hd2_g1;
         hd2_2 = er_hd2_h2 + " - " + er_hd2_g2;
-        hd2_3 = er_hd2_h3 + " - " + er_hd2_g3;
+        if (hd2_h3 == hd2_g3){
+            hd2_3 = "-";
+        }else {
+            hd2_3 = er_hd2_h3 + " - " + er_hd2_g3;
+        }
 
         pkt_hd2_h = hd2_h1 + hd2_h2 + hd2_h3;
         pkt_hd2_g = hd2_g1 + hd2_g2 + hd2_g3;
@@ -810,7 +883,11 @@ public class create_pdf {
 
         dd_1 = er_dd_h1 + " - " + er_dd_g1;
         dd_2 = er_dd_h2 + " - " + er_dd_g2;
-        dd_3 = er_dd_h3 + " - " + er_dd_g3;
+        if (dd_h3 == dd_g3){
+            dd_3 = "-";
+        }else {
+            dd_3 = er_dd_h3 + " - " + er_dd_g3;
+        }
 
         pkt_dd_h = dd_h1 + dd_h2 + dd_h3;
         pkt_dd_g = dd_g1 + dd_g2 + dd_g3;
@@ -854,7 +931,11 @@ public class create_pdf {
 
         he1_1 = er_he1_h1 + " - " + er_he1_g1;
         he1_2 = er_he1_h2 + " - " + er_he1_g2;
-        he1_3 = er_he1_h3 + " - " + er_he1_g3;
+        if (he1_h3 == he1_g3){
+            he1_3 = "-";
+        }else {
+            he1_3 = er_he1_h3 + " - " + er_he1_g3;
+        }
 
         pkt_he1_h = he1_h1 + he1_h2 + he1_h3;
         pkt_he1_g = he1_g1 + he1_g2 + he1_g3;
@@ -898,7 +979,11 @@ public class create_pdf {
 
         he2_1 = er_he2_h1 + " - " + er_he2_g1;
         he2_2 = er_he2_h2 + " - " + er_he2_g2;
-        he2_3 = er_he2_h3 + " - " + er_he2_g3;
+        if (he2_h3 == he2_g3){
+            he2_3 = "-";
+        }else {
+            he2_3 = er_he2_h3 + " - " + er_he2_g3;
+        }
 
         pkt_he2_h = he2_h1 + he2_h2 + he2_h3;
         pkt_he2_g = he2_g1 + he2_g2 + he2_g3;
@@ -942,7 +1027,11 @@ public class create_pdf {
 
         he3_1 = er_he3_h1 + " - " + er_he3_g1;
         he3_2 = er_he3_h2 + " - " + er_he3_g2;
-        he3_3 = er_he3_h3 + " - " + er_he3_g3;
+        if (he3_h3 == he3_g3){
+            he3_3 = "-";
+        }else {
+            he3_3 = er_he3_h3 + " - " + er_he3_g3;
+        }
 
         pkt_he3_h = he3_h1 + he3_h2 + he3_h3;
         pkt_he3_g = he3_g1 + he3_g2 + he3_g3;
@@ -986,7 +1075,11 @@ public class create_pdf {
 
         de_1 = er_de_h1 + " - " + er_de_g1;
         de_2 = er_de_h2 + " - " + er_de_g2;
-        de_3 = er_de_h3 + " - " + er_de_g3;
+        if (de_h3 == de_g3){
+            de_3 = "-";
+        }else {
+            de_3 = er_de_h3 + " - " + er_de_g3;
+        }
 
         pkt_de_h = de_h1 + de_h2 + de_h3;
         pkt_de_g = de_g1 + de_g2 + de_g3;
@@ -1030,7 +1123,11 @@ public class create_pdf {
 
         mx_1 = er_mx_h1 + " - " + er_mx_g1;
         mx_2 = er_mx_h2 + " - " + er_mx_g2;
-        mx_3 = er_mx_h3 + " - " + er_mx_g3;
+        if (mx_h3 == mx_g3){
+            mx_3 = "-";
+        }else {
+            mx_3 = er_mx_h3 + " - " + er_mx_g3;
+        }
 
         pkt_mx_h = mx_h1 + mx_h2 + mx_h3;
         pkt_mx_g = mx_g1 + mx_g2 + mx_g3;
