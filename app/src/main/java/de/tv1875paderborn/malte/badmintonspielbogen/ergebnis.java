@@ -244,107 +244,203 @@ public class ergebnis extends AppCompatActivity {
         super.onStop();
         EditText editText = findViewById(R.id.er_hd1_h1);
         er_hd1_h1 = editText.getText().toString();
+        if (er_hd1_h1.isEmpty())
+            er_hd1_h1 = "0";
         editText = findViewById(R.id.er_hd1_h2);
         er_hd1_h2 = editText.getText().toString();
+        if (er_hd1_h2.isEmpty())
+            er_hd1_h2 = "0";
         editText = findViewById(R.id.er_hd1_h3);
         er_hd1_h3 = editText.getText().toString();
+        if (er_hd1_h3.isEmpty())
+            er_hd1_h3 = "0";
         editText = findViewById(R.id.er_hd1_g1);
         er_hd1_g1 = editText.getText().toString();
+        if (er_hd1_g1.isEmpty())
+            er_hd1_g1 = "0";
         editText = findViewById(R.id.er_hd1_g2);
         er_hd1_g2 = editText.getText().toString();
+        if (er_hd1_g2.isEmpty())
+            er_hd1_g2 = "0";
         editText = findViewById(R.id.er_hd1_g3);
         er_hd1_g3 = editText.getText().toString();
+        if (er_hd1_g3.isEmpty())
+            er_hd1_g3 = "0";
 
         editText = findViewById(R.id.er_hd2_h1);
         er_hd2_h1 = editText.getText().toString();
+        if (er_hd2_h1.isEmpty())
+            er_hd2_h1 = "0";
         editText = findViewById(R.id.er_hd2_h2);
         er_hd2_h2 = editText.getText().toString();
+        if (er_hd2_h2.isEmpty())
+            er_hd2_h2 = "0";
         editText = findViewById(R.id.er_hd2_h3);
         er_hd2_h3 = editText.getText().toString();
+        if (er_hd2_h3.isEmpty())
+            er_hd2_h3 = "0";
         editText = findViewById(R.id.er_hd2_g1);
         er_hd2_g1 = editText.getText().toString();
+        if (er_hd2_g1.isEmpty())
+            er_hd2_g1 = "0";
         editText = findViewById(R.id.er_hd2_g2);
         er_hd2_g2 = editText.getText().toString();
+        if (er_hd2_g2.isEmpty())
+            er_hd2_g2 = "0";
         editText = findViewById(R.id.er_hd2_g3);
         er_hd2_g3 = editText.getText().toString();
+        if (er_hd2_g3.isEmpty())
+            er_hd2_g3 = "0";
 
         editText = findViewById(R.id.er_dd_h1);
         er_dd_h1 = editText.getText().toString();
+        if (er_dd_h1.isEmpty())
+            er_dd_h1 = "0";
         editText = findViewById(R.id.er_dd_h2);
         er_dd_h2 = editText.getText().toString();
+        if (er_dd_h2.isEmpty())
+            er_dd_h2 = "0";
         editText = findViewById(R.id.er_dd_h3);
         er_dd_h3 = editText.getText().toString();
+        if (er_dd_h3.isEmpty())
+            er_dd_h3 = "0";
         editText = findViewById(R.id.er_dd_g1);
         er_dd_g1 = editText.getText().toString();
+        if (er_dd_g1.isEmpty())
+            er_dd_g1 = "0";
         editText = findViewById(R.id.er_dd_g2);
         er_dd_g2 = editText.getText().toString();
+        if (er_dd_g2.isEmpty())
+            er_dd_g2 = "0";
         editText = findViewById(R.id.er_dd_g3);
         er_dd_g3 = editText.getText().toString();
+        if (er_dd_g3.isEmpty())
+            er_dd_g3 = "0";
 
         editText = findViewById(R.id.er_he1_h1);
         er_he1_h1 = editText.getText().toString();
+        if (er_he1_h1.isEmpty())
+            er_he1_h1 = "0";
         editText = findViewById(R.id.er_he1_h2);
         er_he1_h2 = editText.getText().toString();
+        if (er_he1_h2.isEmpty())
+            er_he1_h2 = "0";
         editText = findViewById(R.id.er_he1_h3);
         er_he1_h3 = editText.getText().toString();
+        if (er_he1_h3.isEmpty())
+            er_he1_h3 = "0";
         editText = findViewById(R.id.er_he1_g1);
         er_he1_g1 = editText.getText().toString();
+        if (er_he1_g1.isEmpty())
+            er_he1_g1 = "0";
         editText = findViewById(R.id.er_he1_g2);
         er_he1_g2 = editText.getText().toString();
+        if (er_he1_g2.isEmpty())
+            er_he1_g2 = "0";
         editText = findViewById(R.id.er_he1_g3);
         er_he1_g3 = editText.getText().toString();
+        if (er_he1_g3.isEmpty())
+            er_he1_g3 = "0";
 
         editText = findViewById(R.id.er_he2_h1);
         er_he2_h1 = editText.getText().toString();
+        if (er_he2_h1.isEmpty())
+            er_he2_h1 = "0";
         editText = findViewById(R.id.er_he2_h2);
         er_he2_h2 = editText.getText().toString();
+        if (er_he2_h2.isEmpty())
+            er_he2_h2 = "0";
         editText = findViewById(R.id.er_he2_h3);
         er_he2_h3 = editText.getText().toString();
+        if (er_he2_h3.isEmpty())
+            er_he2_h3 = "0";
         editText = findViewById(R.id.er_he2_g1);
         er_he2_g1 = editText.getText().toString();
+        if (er_he2_g1.isEmpty())
+            er_he2_g1 = "0";
         editText = findViewById(R.id.er_he2_g2);
         er_he2_g2 = editText.getText().toString();
+        if (er_he2_g2.isEmpty())
+            er_he2_g2 = "0";
         editText = findViewById(R.id.er_he2_g3);
         er_he2_g3 = editText.getText().toString();
+        if (er_he2_g3.isEmpty())
+            er_he2_g3 = "0";
 
         editText = findViewById(R.id.er_he3_h1);
         er_he3_h1 = editText.getText().toString();
+        if (er_he3_h1.isEmpty())
+            er_he3_h1 = "0";
         editText = findViewById(R.id.er_he3_h2);
         er_he3_h2 = editText.getText().toString();
+        if (er_he3_h2.isEmpty())
+            er_he3_h2 = "0";
         editText = findViewById(R.id.er_he3_h3);
         er_he3_h3 = editText.getText().toString();
+        if (er_he3_h3.isEmpty())
+            er_he3_h3 = "0";
         editText = findViewById(R.id.er_he3_g1);
         er_he3_g1 = editText.getText().toString();
+        if (er_he3_g1.isEmpty())
+            er_he3_g1 = "0";
         editText = findViewById(R.id.er_he3_g2);
         er_he3_g2 = editText.getText().toString();
+        if (er_he3_g2.isEmpty())
+            er_he3_g2 = "0";
         editText = findViewById(R.id.er_he3_g3);
         er_he3_g3 = editText.getText().toString();
+        if (er_he3_g3.isEmpty())
+            er_he3_g3 = "0";
 
         editText = findViewById(R.id.er_de_h1);
         er_de_h1 = editText.getText().toString();
+        if (er_de_h1.isEmpty())
+            er_de_h1 = "0";
         editText = findViewById(R.id.er_de_h2);
         er_de_h2 = editText.getText().toString();
+        if (er_de_h2.isEmpty())
+            er_de_h2 = "0";
         editText = findViewById(R.id.er_de_h3);
         er_de_h3 = editText.getText().toString();
+        if (er_de_h3.isEmpty())
+            er_de_h3 = "0";
         editText = findViewById(R.id.er_de_g1);
         er_de_g1 = editText.getText().toString();
+        if (er_de_g1.isEmpty())
+            er_de_g1 = "0";
         editText = findViewById(R.id.er_de_g2);
         er_de_g2 = editText.getText().toString();
+        if (er_de_g2.isEmpty())
+            er_de_g2 = "0";
         editText = findViewById(R.id.er_de_g3);
         er_de_g3 = editText.getText().toString();
+        if (er_de_g3.isEmpty())
+            er_de_g3 = "0";
 
         editText = findViewById(R.id.er_mx_h1);
         er_mx_h1 = editText.getText().toString();
+        if (er_mx_h1.isEmpty())
+            er_mx_h1 = "0";
         editText = findViewById(R.id.er_mx_h2);
         er_mx_h2 = editText.getText().toString();
+        if (er_mx_h2.isEmpty())
+            er_mx_h2 = "0";
         editText = findViewById(R.id.er_mx_h3);
         er_mx_h3 = editText.getText().toString();
+        if (er_mx_h3.isEmpty())
+            er_mx_h3 = "0";
         editText = findViewById(R.id.er_mx_g1);
         er_mx_g1 = editText.getText().toString();
+        if (er_mx_g1.isEmpty())
+            er_mx_g1 = "0";
         editText = findViewById(R.id.er_mx_g2);
         er_mx_g2 = editText.getText().toString();
+        if (er_mx_g2.isEmpty())
+            er_mx_g2 = "0";
         editText = findViewById(R.id.er_mx_g3);
         er_mx_g3 = editText.getText().toString();
+        if (er_mx_g3.isEmpty())
+            er_mx_g3 = "0";
     }
 
     public void button_sign_heim(View view) {
