@@ -6,6 +6,7 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -45,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     public static String g_mx1;
     public static String g_mx2;
 
+    public static boolean erg_opend = false;
+    public static boolean pdf_created = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
         editText.setText(ort);
         editText = findViewById(R.id.editText_zeit);
         editText.setText(zeit);
+
+        Button button = findViewById(R.id.button_create_pdf);
+        if (erg_opend){
+            button.setEnabled(true);
+        }else{
+            button.setEnabled(false);
+        }
+        button = findViewById(R.id.button_share_pdf);
+        if (pdf_created) {
+            button.setEnabled(true);
+        }else{
+            button.setEnabled(false);
+        }
     }
 
     @Override
@@ -90,10 +107,17 @@ public class MainActivity extends AppCompatActivity {
     public void button_ergebnis(View view) {
         Intent intent = new Intent(this, ergebnis.class);
         startActivity(intent);
+        erg_opend = true;
     }
 
     public void button_pdf(View view){
         create_pdf.main();
+        Button button = findViewById(R.id.button_share_pdf);
+        if (pdf_created) {
+            button.setEnabled(true);
+        }else{
+            button.setEnabled(false);
+        }
     }
 
     public void button_share_pdf(View view){
@@ -101,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         String root = Environment.getExternalStorageDirectory().toString();
 
         intent.setAction(Intent.ACTION_SEND);
-        intent.setType("document/pdf");
+        intent.setType("application/pdf");
         intent.putExtra(Intent.EXTRA_STREAM, root + "/badmintonspielbogen/Spielberichtsbogen.pdf");
         startActivity(Intent.createChooser(intent, "PDF senden..."));
     }
