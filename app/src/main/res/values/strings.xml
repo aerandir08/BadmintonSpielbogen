@@ -28,8 +28,9 @@
     <string name="sign">Unterschrift</string>
     <string name="delete">Löschen</string>
     <string name="aufstellungen">Mannschaftsaufstellungen</string>
-    <string name="pdf">pdf erstellen und verschicken</string>
+    <string name="pdf">pdf erstellen</string>
     <string name="end_spieltag">Spieltag abschließen</string>
     <string name="sign_heim">Unterschrift Heim</string>
     <string name="sign_gast">Unterschrift Gast</string>
+    <string name="share">pdf verschicken</string>
 </resources>

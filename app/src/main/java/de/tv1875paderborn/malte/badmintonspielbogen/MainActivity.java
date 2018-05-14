@@ -2,6 +2,7 @@ package de.tv1875paderborn.malte.badmintonspielbogen;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -93,5 +94,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void button_pdf(View view){
         create_pdf.main();
+    }
+
+    public void button_share_pdf(View view){
+        Intent intent = new Intent();
+        String root = Environment.getExternalStorageDirectory().toString();
+
+        intent.setAction(Intent.ACTION_SEND);
+        intent.setType("document/pdf");
+        intent.putExtra(Intent.EXTRA_STREAM, root + "/badmintonspielbogen/Spielberichtsbogen.pdf");
+        startActivity(Intent.createChooser(intent, "PDF senden..."));
     }
 }

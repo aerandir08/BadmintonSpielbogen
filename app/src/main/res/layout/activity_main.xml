@@ -220,7 +220,7 @@
             app:layout_constraintTop_toBottomOf="@+id/button_ergebnis" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_create_pdf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -230,5 +230,16 @@
             android:text="@string/pdf"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_pdf" />
+
+        <Button
+            android:id="@+id/button_share_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:onClick="button_share_pdf"
+            android:text="@string/share"
+            app:layout_constraintStart_toEndOf="@+id/button_create_pdf"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_create_pdf"/>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
