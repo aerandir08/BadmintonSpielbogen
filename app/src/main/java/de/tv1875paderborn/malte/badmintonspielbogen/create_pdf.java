@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.os.Environment;
+import android.widget.Toast;
 
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Element;
@@ -771,6 +772,7 @@ public class create_pdf {
             }catch (MalformedURLException e){
                 e.printStackTrace();
             }catch (IOException e){
+                Toast.makeText(context, "Unterschriften fehlen", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         } catch (DocumentException e) {
