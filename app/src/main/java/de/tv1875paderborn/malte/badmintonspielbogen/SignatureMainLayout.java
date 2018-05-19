@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.os.Build;
 import android.os.Environment;
 import android.view.MotionEvent;
 import android.view.View;
@@ -88,15 +89,17 @@ public class SignatureMainLayout extends LinearLayout implements OnClickListener
      * @param signature bitmap
      */
     final void saveImage(Bitmap signature) {
-
-        String root = Environment.getExternalStorageDirectory().toString();
+        File myDir;
 
         // the directory where the signature will be saved
-        File myDir = new File(root + "/badmintonspielbogen/unterschriften");
+        myDir = new File(getContext().getExternalFilesDir(null), "/unterschriften");
 
         // make the directory if it does not exist yet
         if (!myDir.exists()) {
-            myDir.mkdirs();
+            Boolean iscreated = myDir.mkdirs();
+            if (!iscreated){
+                Toast.makeText(this.getContext(), "Keine Schreibrechte", Toast.LENGTH_LONG).show();
+            }
         }
 
         // set the file name of your choice
@@ -115,7 +118,6 @@ public class SignatureMainLayout extends LinearLayout implements OnClickListener
         }
 
         try {
-
             // save the signature
             FileOutputStream out = new FileOutputStream(file);
             signature.compress(Bitmap.CompressFormat.PNG, 90, out);

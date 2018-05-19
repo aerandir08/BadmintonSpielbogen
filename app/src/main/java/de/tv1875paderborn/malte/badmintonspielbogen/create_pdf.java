@@ -1,5 +1,8 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.os.Environment;
 
 import com.itextpdf.text.Chunk;
@@ -158,13 +161,11 @@ public class create_pdf {
 
     private static String winner;
 
-    public static void main() {
-        String root = Environment.getExternalStorageDirectory().toString();
-
+    public static void main(Context context) {
         get_scores();
 
         // the directory where the signature will be saved
-        File file = new File(root + "/badmintonspielbogen/Spielberichtsbogen.pdf");
+        File file = new File(context.getExternalFilesDir(null), heimverein + "-" + gastverein + ".pdf");
 
         Document document = new Document(PageSize.A4.rotate());
 
@@ -738,8 +739,9 @@ public class create_pdf {
             document.add( Chunk.NEWLINE );
 
             try {
-                Image sign_heim = Image.getInstance(root + "/badmintonspielbogen/unterschriften/sign_heim.png");
-                Image sign_gast = Image.getInstance(root + "/badmintonspielbogen/unterschriften/sign_gast.png");
+                String root = context.getExternalFilesDir(null).toString();
+                Image sign_heim = Image.getInstance(root + "/unterschriften/sign_heim.png");
+                Image sign_gast = Image.getInstance(root + "/unterschriften/sign_gast.png");
 
                 sign_heim.scaleToFit(180f, 360f);
                 sign_gast.scaleToFit(180f, 360f);

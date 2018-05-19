@@ -2,13 +2,17 @@ package de.tv1875paderborn.malte.badmintonspielbogen;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Environment;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     // Allgemeine Daten speichern
@@ -111,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button_pdf(View view){
-        create_pdf.main();
+        Context context = getBaseContext();
+        create_pdf.main(context);
         Button button = findViewById(R.id.button_share_pdf);
         if (pdf_created) {
             button.setEnabled(true);
@@ -121,12 +126,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button_share_pdf(View view){
-        Intent intent = new Intent();
-        String root = Environment.getExternalStorageDirectory().toString();
+        String pdfname = heimverein + "-" + gastverein + ".pdf";
+        String mimeType = "application/pdf";
+        File file = new File(getBaseContext().getExternalFilesDir(null), pdfname);
 
-        intent.setAction(Intent.ACTION_SEND);
-        intent.setType("application/pdf");
-        intent.putExtra(Intent.EXTRA_STREAM, root + "/badmintonspielbogen/Spielberichtsbogen.pdf");
+        Uri uri = FileProvider.getUriForFile(this, "de.tv1875paderborn.malte.badmintonspielbogen.fileprovider", file);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType(mimeType);
+        intent.putExtra(Intent.EXTRA_STREAM, uri);
         startActivity(Intent.createChooser(intent, "PDF senden..."));
     }
 }
