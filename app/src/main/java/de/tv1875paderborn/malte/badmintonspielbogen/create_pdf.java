@@ -165,16 +165,19 @@ public class create_pdf {
     public static void main(Context context) {
         get_scores();
 
+        Date datum = Calendar.getInstance().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
+        String date = simpleDateFormat.format(datum);
+
         // the directory where the signature will be saved
-        File file = new File(context.getExternalFilesDir(null), heimverein + "-" + gastverein + ".pdf");
+        File file = new File(context.getExternalFilesDir(null), date + "_" + heimverein + "-" + gastverein + ".pdf");
 
         Document document = new Document(PageSize.A4.rotate());
 
         try {
             PdfWriter.getInstance(document, new FileOutputStream(file));
-            Date datum = Calendar.getInstance().getTime();
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.GERMANY);
-            String date = simpleDateFormat.format(datum);
+            simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.GERMANY);
+            date = simpleDateFormat.format(datum);
 
             document.open();
 
