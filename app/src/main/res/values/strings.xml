@@ -33,4 +33,5 @@
     <string name="sign_heim">Unterschrift Heim</string>
     <string name="sign_gast">Unterschrift Gast</string>
     <string name="share">pdf verschicken</string>
+    <string name="reset">Reset</string>
 </resources>
