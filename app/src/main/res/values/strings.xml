@@ -34,4 +34,5 @@
     <string name="sign_gast">Unterschrift Gast</string>
     <string name="share">pdf verschicken</string>
     <string name="reset">Reset</string>
+    <string name="load">Laden</string>
 </resources>
