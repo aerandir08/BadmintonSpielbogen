@@ -65,61 +65,61 @@ import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_mx1;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_mx2;
 
 // Ergebnisse
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_g3;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_g3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_h1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_h2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_h3;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_g1;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_g2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_g3;
 
 public class create_pdf {
 

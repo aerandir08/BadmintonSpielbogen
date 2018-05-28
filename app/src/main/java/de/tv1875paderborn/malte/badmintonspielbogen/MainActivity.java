@@ -1,11 +1,9 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.Environment;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,57 +15,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_h3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd1_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_hd2_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_dd_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he1_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he2_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_he3_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_de_g3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.er_mx_g3;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Writer;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     // Allgemeine Daten speichern
@@ -104,6 +66,56 @@ public class MainActivity extends AppCompatActivity {
     public static String g_de;
     public static String g_mx1;
     public static String g_mx2;
+
+    // Alle Ergebnisse als String
+    public  static String er_hd1_h1;
+    public  static String er_hd1_h2;
+    public  static String er_hd1_h3;
+    public  static String er_hd1_g1;
+    public  static String er_hd1_g2;
+    public  static String er_hd1_g3;
+    public  static String er_hd2_h1;
+    public  static String er_hd2_h2;
+    public  static String er_hd2_h3;
+    public  static String er_hd2_g1;
+    public  static String er_hd2_g2;
+    public  static String er_hd2_g3;
+    public  static String er_dd_h1;
+    public  static String er_dd_h2;
+    public  static String er_dd_h3;
+    public  static String er_dd_g1;
+    public  static String er_dd_g2;
+    public  static String er_dd_g3;
+    public  static String er_he1_h1;
+    public  static String er_he1_h2;
+    public  static String er_he1_h3;
+    public  static String er_he1_g1;
+    public  static String er_he1_g2;
+    public  static String er_he1_g3;
+    public  static String er_he2_h1;
+    public  static String er_he2_h2;
+    public  static String er_he2_h3;
+    public  static String er_he2_g1;
+    public  static String er_he2_g2;
+    public  static String er_he2_g3;
+    public  static String er_he3_h1;
+    public  static String er_he3_h2;
+    public  static String er_he3_h3;
+    public  static String er_he3_g1;
+    public  static String er_he3_g2;
+    public  static String er_he3_g3;
+    public  static String er_de_h1;
+    public  static String er_de_h2;
+    public  static String er_de_h3;
+    public  static String er_de_g1;
+    public  static String er_de_g2;
+    public  static String er_de_g3;
+    public  static String er_mx_h1;
+    public  static String er_mx_h2;
+    public  static String er_mx_h3;
+    public  static String er_mx_g1;
+    public  static String er_mx_g2;
+    public  static String er_mx_g3;
 
     public static boolean erg_opend = false;
     public static boolean pdf_created = false;
@@ -165,10 +177,10 @@ public class MainActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.menu_save:
-                save();
+                save_json();
                 return true;
             case R.id.menu_load:
-                load();
+                load_json();
                 return true;
             case R.id.menu_reset:
                 reset();
@@ -265,6 +277,113 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("er_mx_g2", er_mx_g2);
         editor.putString("er_mx_g3", er_mx_g3);
         editor.apply();
+    }
+
+    public void save_json(){
+        Date datum = Calendar.getInstance().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
+        String date = simpleDateFormat.format(datum);
+
+        try {
+            JSONObject jsonObj = new JSONObject();
+            jsonObj.put("heimverein", heimverein);
+            jsonObj.put("gastverein", gastverein);
+            jsonObj.put("staffel", staffel);
+            jsonObj.put("ort", ort);
+            jsonObj.put("zeit", zeit);
+
+            jsonObj.put("h_hd11", h_hd11);
+            jsonObj.put("h_hd12", h_hd12);
+            jsonObj.put("h_hd21", h_hd21);
+            jsonObj.put("h_hd22", h_hd22);
+            jsonObj.put("h_dd1", h_dd1);
+            jsonObj.put("h_dd2", h_dd2);
+            jsonObj.put("h_he1", h_he1);
+            jsonObj.put("h_he2", h_he2);
+            jsonObj.put("h_he3", h_he3);
+            jsonObj.put("h_de", h_de);
+            jsonObj.put("h_mx1", h_mx1);
+            jsonObj.put("h_mx2", h_mx2);
+
+            jsonObj.put("g_hd11", g_hd11);
+            jsonObj.put("g_hd12", g_hd12);
+            jsonObj.put("g_hd21", g_hd21);
+            jsonObj.put("g_hd22", g_hd22);
+            jsonObj.put("g_dd1", g_dd1);
+            jsonObj.put("g_dd2", g_dd2);
+            jsonObj.put("g_he1", g_he1);
+            jsonObj.put("g_he2", g_he2);
+            jsonObj.put("g_he3", g_he3);
+            jsonObj.put("g_de", g_de);
+            jsonObj.put("g_mx1", g_mx1);
+            jsonObj.put("g_mx2", g_mx2);
+
+            jsonObj.put("er_hd1_h1", er_hd1_h1);
+            jsonObj.put("er_hd1_h2", er_hd1_h2);
+            jsonObj.put("er_hd1_h3", er_hd1_h3);
+            jsonObj.put("er_hd2_h1", er_hd2_h1);
+            jsonObj.put("er_hd2_h2", er_hd2_h2);
+            jsonObj.put("er_hd2_h3", er_hd2_h3);
+            jsonObj.put("er_dd_h1", er_dd_h1);
+            jsonObj.put("er_dd_h2", er_dd_h2);
+            jsonObj.put("er_dd_h3", er_dd_h3);
+            jsonObj.put("er_he1_h1", er_he1_h1);
+            jsonObj.put("er_he1_h2", er_he1_h2);
+            jsonObj.put("er_he1_h3", er_he1_h3);
+            jsonObj.put("er_he2_h1", er_he2_h1);
+            jsonObj.put("er_he2_h2", er_he2_h2);
+            jsonObj.put("er_he2_h3", er_he2_h3);
+            jsonObj.put("er_he3_h1", er_he3_h1);
+            jsonObj.put("er_he3_h2", er_he3_h2);
+            jsonObj.put("er_he3_h3", er_he3_h3);
+            jsonObj.put("er_de_h1", er_de_h1);
+            jsonObj.put("er_de_h2", er_de_h2);
+            jsonObj.put("er_de_h3", er_de_h3);
+            jsonObj.put("er_mx_h1", er_mx_h1);
+            jsonObj.put("er_mx_h2", er_mx_h2);
+            jsonObj.put("er_mx_h3", er_mx_h3);
+
+            jsonObj.put("er_hd1_g1", er_hd1_g1);
+            jsonObj.put("er_hd1_g2", er_hd1_g2);
+            jsonObj.put("er_hd1_g3", er_hd1_g3);
+            jsonObj.put("er_hd2_g1", er_hd2_g1);
+            jsonObj.put("er_hd2_g2", er_hd2_g2);
+            jsonObj.put("er_hd2_g3", er_hd2_g3);
+            jsonObj.put("er_dd_g1", er_dd_g1);
+            jsonObj.put("er_dd_g2", er_dd_g2);
+            jsonObj.put("er_dd_g3", er_dd_g3);
+            jsonObj.put("er_he1_g1", er_he1_g1);
+            jsonObj.put("er_he1_g2", er_he1_g2);
+            jsonObj.put("er_he1_g3", er_he1_g3);
+            jsonObj.put("er_he2_g1", er_he2_g1);
+            jsonObj.put("er_he2_g2", er_he2_g2);
+            jsonObj.put("er_he2_g3", er_he2_g3);
+            jsonObj.put("er_he3_g1", er_he3_g1);
+            jsonObj.put("er_he3_g2", er_he3_g2);
+            jsonObj.put("er_he3_g3", er_he3_g3);
+            jsonObj.put("er_de_g1", er_de_g1);
+            jsonObj.put("er_de_g2", er_de_g2);
+            jsonObj.put("er_de_g3", er_de_g3);
+            jsonObj.put("er_mx_g1", er_mx_g1);
+            jsonObj.put("er_mx_g2", er_mx_g2);
+            jsonObj.put("er_mx_g3", er_mx_g3);
+
+            try {
+                File file = new File(this.getBaseContext().getExternalFilesDir(null), date + "_" + heimverein + "-" + gastverein + ".json");
+
+                Writer output = new BufferedWriter(new FileWriter(file));
+                output.write(jsonObj.toString());
+                output.close();
+
+                Toast.makeText(this.getBaseContext(), "gespeichert", Toast.LENGTH_LONG).show();
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
+        catch(JSONException ex) {
+            ex.printStackTrace();
+        }
     }
 
     public void load(){
@@ -365,7 +484,141 @@ public class MainActivity extends AppCompatActivity {
         er_mx_g3 = sharedPref.getString("er_mx_g3", null);
 
     }
-    
+
+    public void load_json(){
+        Date datum = Calendar.getInstance().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
+        String date = simpleDateFormat.format(datum);
+        File file = new File(this.getBaseContext().getExternalFilesDir(null), date + "_" + "ein" + "-" + "test" + ".json");
+
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
+            StringBuilder stringBuilder = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null){
+                stringBuilder.append(line).append("\n");
+            }
+            reader.close();
+            String json = stringBuilder.toString();
+            try {
+                JSONObject jsonObj = new JSONObject(json);
+                heimverein = get_string_from_json(jsonObj,"heimverein");
+                gastverein = get_string_from_json(jsonObj,"gastverein");
+                staffel = get_string_from_json(jsonObj,"staffel");
+                ort = get_string_from_json(jsonObj,"ort");
+                zeit = get_string_from_json(jsonObj,"zeit");
+
+                h_hd11 = get_string_from_json(jsonObj,"h_hd11");
+                h_hd12 = get_string_from_json(jsonObj,"h_hd12");
+                h_hd21 = get_string_from_json(jsonObj,"h_hd21");
+                h_hd22 = get_string_from_json(jsonObj,"h_hd22");
+                h_dd1 = get_string_from_json(jsonObj,"h_dd1");
+                h_dd2 = get_string_from_json(jsonObj,"h_dd2");
+                h_he1 = get_string_from_json(jsonObj,"h_he1");
+                h_he2 = get_string_from_json(jsonObj,"h_he2");
+                h_he3 = get_string_from_json(jsonObj,"h_he3");
+                h_de = get_string_from_json(jsonObj,"h_de");
+                h_mx1 = get_string_from_json(jsonObj,"h_mx1");
+                h_mx2 = get_string_from_json(jsonObj,"h_mx2");
+
+                g_hd11 = get_string_from_json(jsonObj,"g_hd11");
+                g_hd12 = get_string_from_json(jsonObj,"g_hd12");
+                g_hd21 = get_string_from_json(jsonObj,"g_hd21");
+                g_hd22 = get_string_from_json(jsonObj,"g_hd22");
+                g_dd1 = get_string_from_json(jsonObj,"g_dd1");
+                g_dd2 = get_string_from_json(jsonObj,"g_dd2");
+                g_he1 = get_string_from_json(jsonObj,"g_he1");
+                g_he2 = get_string_from_json(jsonObj,"g_he2");
+                g_he3 = get_string_from_json(jsonObj,"g_he3");
+                g_de = get_string_from_json(jsonObj,"g_de");
+                g_mx1 = get_string_from_json(jsonObj,"g_mx1");
+                g_mx2 = get_string_from_json(jsonObj,"g_mx2");
+
+                er_hd1_h1 = get_string_from_json(jsonObj,"er_hd1_h1");
+                er_hd1_h2 = get_string_from_json(jsonObj,"er_hd1_h2");
+                er_hd1_h3 = get_string_from_json(jsonObj,"er_hd1_h3");
+                er_hd2_h1 = get_string_from_json(jsonObj,"er_hd2_h1");
+                er_hd2_h2 = get_string_from_json(jsonObj,"er_hd2_h2");
+                er_hd2_h3 = get_string_from_json(jsonObj,"er_hd2_h3");
+                er_dd_h1 = get_string_from_json(jsonObj,"er_dd_h1");
+                er_dd_h2 = get_string_from_json(jsonObj,"er_dd_h2");
+                er_dd_h3 = get_string_from_json(jsonObj,"er_dd_h3");
+                er_he1_h1 = get_string_from_json(jsonObj,"er_he1_h1");
+                er_he1_h2 = get_string_from_json(jsonObj,"er_he1_h2");
+                er_he1_h3 = get_string_from_json(jsonObj,"er_he1_h3");
+                er_he2_h1 = get_string_from_json(jsonObj,"er_he2_h1");
+                er_he2_h2 = get_string_from_json(jsonObj,"er_he2_h2");
+                er_he2_h3 = get_string_from_json(jsonObj,"er_he2_h3");
+                er_he3_h1 = get_string_from_json(jsonObj,"er_he3_h1");
+                er_he3_h2 = get_string_from_json(jsonObj,"er_he3_h2");
+                er_he3_h3 = get_string_from_json(jsonObj,"er_he3_h3");
+                er_de_h1 = get_string_from_json(jsonObj,"er_de_h1");
+                er_de_h2 = get_string_from_json(jsonObj,"er_de_h2");
+                er_de_h3 = get_string_from_json(jsonObj,"er_de_h3");
+                er_mx_h1 = get_string_from_json(jsonObj,"er_mx_h1");
+                er_mx_h2 = get_string_from_json(jsonObj,"er_mx_h2");
+                er_mx_h3 = get_string_from_json(jsonObj,"er_mx_h3");
+
+                er_hd1_g1 = get_string_from_json(jsonObj,"er_hd1_g1");
+                er_hd1_g2 = get_string_from_json(jsonObj,"er_hd1_g2");
+                er_hd1_g3 = get_string_from_json(jsonObj,"er_hd1_g3");
+                er_hd2_g1 = get_string_from_json(jsonObj,"er_hd2_g1");
+                er_hd2_g2 = get_string_from_json(jsonObj,"er_hd2_g2");
+                er_hd2_g3 = get_string_from_json(jsonObj,"er_hd2_g3");
+                er_dd_g1 = get_string_from_json(jsonObj,"er_dd_g1");
+                er_dd_g2 = get_string_from_json(jsonObj,"er_dd_g2");
+                er_dd_g3 = get_string_from_json(jsonObj,"er_dd_g3");
+                er_he1_g1 = get_string_from_json(jsonObj,"er_he1_g1");
+                er_he1_g2 = get_string_from_json(jsonObj,"er_he1_g2");
+                er_he1_g3 = get_string_from_json(jsonObj,"er_he1_g3");
+                er_he2_g1 = get_string_from_json(jsonObj,"er_he2_g1");
+                er_he2_g2 = get_string_from_json(jsonObj,"er_he2_g2");
+                er_he2_g3 = get_string_from_json(jsonObj,"er_he2_g3");
+                er_he3_g1 = get_string_from_json(jsonObj,"er_he3_g1");
+                er_he3_g2 = get_string_from_json(jsonObj,"er_he3_g2");
+                er_he3_g3 = get_string_from_json(jsonObj,"er_he3_g3");
+                er_de_g1 = get_string_from_json(jsonObj,"er_de_g1");
+                er_de_g2 = get_string_from_json(jsonObj,"er_de_g2");
+                er_de_g3 = get_string_from_json(jsonObj,"er_de_g3");
+                er_mx_g1 = get_string_from_json(jsonObj,"er_mx_g1");
+                er_mx_g2 = get_string_from_json(jsonObj,"er_mx_g2");
+                er_mx_g3 = get_string_from_json(jsonObj,"er_mx_g3");
+
+                EditText editText = findViewById(R.id.editText_heimverein);
+                editText.setText(heimverein);
+                editText = findViewById(R.id.editText_gastverein);
+                editText.setText(gastverein);
+                editText = findViewById(R.id.editText_staffel);
+                editText.setText(staffel);
+                editText = findViewById(R.id.editText_ort);
+                editText.setText(ort);
+                editText = findViewById(R.id.editText_zeit);
+                editText.setText(zeit);
+
+            } catch (Exception ex){
+                ex.printStackTrace();
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+
+    }
+
+    public String get_string_from_json(JSONObject jsonObj, String value){
+        if (jsonObj.has(value)){
+            try {
+                return jsonObj.getString(value);
+            } catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }else {
+            return "";
+        }
+        return null;
+    }
+
     public void reset(){
         EditText editText = findViewById(R.id.editText_heimverein);
         editText.setText("");
