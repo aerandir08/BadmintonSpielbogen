@@ -35,4 +35,6 @@
     <string name="share">pdf verschicken</string>
     <string name="reset">Reset</string>
     <string name="load">Laden</string>
+    <string name="kommentar">Kommentar</string>
+    <string name="add_kommentar">Kommentar hinzufügen</string>
 </resources>

@@ -36,6 +36,7 @@ import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.pdf_crea
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.staffel;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.ort;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.zeit;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.kommentar;
 
 // Spielernamen
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_hd11;
@@ -741,6 +742,14 @@ public class create_pdf {
 
             document.add(new Paragraph("Gewinner: " + winner));
             document.add( Chunk.NEWLINE );
+
+            // Kommentare hinzufügen, falls vorhanden
+            if (kommentar.length() != 0) {
+                document.newPage();
+
+                document.add(new Paragraph("Kommentar"));
+                document.add(new Paragraph(kommentar));
+            }
 
             try {
                 String root = context.getExternalFilesDir(null).toString();

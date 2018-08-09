@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public static String staffel;
     public static String ort;
     public static String zeit;
+    public static String kommentar;
 
     // Namen des Heimvereins speichern
     public static String h_hd11;
@@ -135,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
         editText.setText(ort);
         editText = findViewById(R.id.editText_zeit);
         editText.setText(zeit);
+        editText = findViewById(R.id.editText_kommentar);
+        editText.setText(kommentar);
 
         Button button = findViewById(R.id.button_create_pdf);
         if (erg_opend){
@@ -163,6 +166,8 @@ public class MainActivity extends AppCompatActivity {
         ort = editText.getText().toString();
         editText = findViewById(R.id.editText_zeit);
         zeit = editText.getText().toString();
+        editText = findViewById(R.id.editText_kommentar);
+        kommentar = editText.getText().toString();
     }
 
     @Override
@@ -200,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(getString(R.string.staffel), staffel);
         editor.putString(getString(R.string.ort), ort);
         editor.putString(getString(R.string.zeit), zeit);
+        editor.putString(getString(R.string.kommentar), kommentar);
 
         editor.putString("h_hd11", h_hd11);
         editor.putString("h_hd12", h_hd12);
@@ -291,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
             jsonObj.put("staffel", staffel);
             jsonObj.put("ort", ort);
             jsonObj.put("zeit", zeit);
+            jsonObj.put("kommentar", kommentar);
 
             jsonObj.put("h_hd11", h_hd11);
             jsonObj.put("h_hd12", h_hd12);
@@ -395,6 +402,7 @@ public class MainActivity extends AppCompatActivity {
         staffel = sharedPref.getString(getString(R.string.staffel), null);;
         ort = sharedPref.getString(getString(R.string.ort), null);
         zeit = sharedPref.getString(getString(R.string.zeit), null);
+        kommentar = sharedPref.getString(getString(R.string.kommentar), null);
 
         EditText editText = findViewById(R.id.editText_heimverein);
         editText.setText(heimverein);
@@ -406,6 +414,8 @@ public class MainActivity extends AppCompatActivity {
         editText.setText(ort);
         editText = findViewById(R.id.editText_zeit);
         editText.setText(zeit);
+        editText = findViewById(R.id.editText_kommentar);
+        editText.setText(kommentar);
 
         h_hd11 = sharedPref.getString("h_hd11", null);
         h_hd12 = sharedPref.getString("h_hd12", null);
@@ -508,6 +518,7 @@ public class MainActivity extends AppCompatActivity {
                 staffel = get_string_from_json(jsonObj,"staffel");
                 ort = get_string_from_json(jsonObj,"ort");
                 zeit = get_string_from_json(jsonObj,"zeit");
+                kommentar = get_string_from_json(jsonObj, "kommentar");
 
                 h_hd11 = get_string_from_json(jsonObj,"h_hd11");
                 h_hd12 = get_string_from_json(jsonObj,"h_hd12");
@@ -595,6 +606,8 @@ public class MainActivity extends AppCompatActivity {
                 editText.setText(ort);
                 editText = findViewById(R.id.editText_zeit);
                 editText.setText(zeit);
+                editText = findViewById(R.id.editText_kommentar);
+                editText.setText(kommentar);
 
             } catch (Exception ex){
                 ex.printStackTrace();
@@ -629,6 +642,8 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText_ort);
         editText.setText("");
         editText = findViewById(R.id.editText_zeit);
+        editText.setText("");
+        editText = findViewById(R.id.editText_kommentar);
         editText.setText("");
 
         h_hd11 = "";
