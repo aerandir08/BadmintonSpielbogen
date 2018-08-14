@@ -31,8 +31,10 @@ import java.io.InputStreamReader;
 import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -189,7 +191,10 @@ public class MainActivity extends AppCompatActivity {
                 save_json();
                 return true;
             case R.id.menu_load:
-                choose_file();
+                choose_file_load();
+                return true;
+            case R.id.menu_delete:
+                choose_file_delete();
                 return true;
             case R.id.menu_reset:
                 reset();
@@ -315,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
         else return "";
     }
 
-    private void choose_file(){
+    private void choose_file_load(){
 
         final ArrayList<String> l_jason = new ArrayList<>();
         File file= new File(this.getBaseContext().getExternalFilesDir(null), "");
@@ -457,6 +462,65 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    public void choose_file_delete(){
+        final ArrayList<String> l_jason = new ArrayList<>();
+        File file= new File(this.getBaseContext().getExternalFilesDir(null), "");
+        for (File f : file.listFiles()) {
+            if (f.isFile())
+                if (getFileExtension(f).equals("json"))
+                    l_jason.add(f.getName());
+        }
+
+        final String[] cs = l_jason.toArray(new String[0]);
+        final boolean[] checked = new boolean[l_jason.size()];
+        final List<String> listitem = Arrays.asList(cs);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Wähle ein Spiel");
+        builder.setMultiChoiceItems(cs, checked, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                // Update the current focused item's checked status
+                checked[which] = isChecked;
+            }
+        });
+        // Specify the dialog is not cancelable
+        builder.setCancelable(false);
+
+        // Set a title for alert dialog
+        builder.setTitle("Welche Datein sollen gelöscht werden?");
+
+        // Set the positive/yes button click listener
+        builder.setPositiveButton("Löschen", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Do something when click positive button
+                for (int i = 0; i<checked.length; i++){
+                    if (checked[i]) {
+                        String filename = cs[i];
+                        delete_json(filename);
+                    }
+                }
+            }
+        });
+
+        // Set the neutral/cancel button click listener
+        builder.setNeutralButton("Abbrechen", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Do something when click the neutral button
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        // Display the alert dialog on interface
+        dialog.show();
+    }
+
+    public void delete_json(String filename){
+        File file = new File(this.getBaseContext().getExternalFilesDir(null), filename);
+        boolean bla = file.delete();
     }
 
     public String get_string_from_json(JSONObject jsonObj, String value){
