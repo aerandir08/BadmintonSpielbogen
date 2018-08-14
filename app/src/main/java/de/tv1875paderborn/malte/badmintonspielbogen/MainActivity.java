@@ -333,6 +333,9 @@ public class MainActivity extends AppCompatActivity {
         final CharSequence[] cs = l_jason.toArray(new CharSequence[l_jason.size()]);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Wähle ein Spiel");
+        if (l_jason.size() == 0) {
+            builder.setMessage("Keine Spiele vorhanden");
+        }
         builder.setItems(cs, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -478,41 +481,45 @@ public class MainActivity extends AppCompatActivity {
         final List<String> listitem = Arrays.asList(cs);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Wähle ein Spiel");
-        builder.setMultiChoiceItems(cs, checked, new DialogInterface.OnMultiChoiceClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                // Update the current focused item's checked status
-                checked[which] = isChecked;
-            }
-        });
-        // Specify the dialog is not cancelable
-        builder.setCancelable(false);
+        if (l_jason.size() == 0) {
+            builder.setMessage("Keine Spiele vorhanden");
+        }
+        else {
+            builder.setMultiChoiceItems(cs, checked, new DialogInterface.OnMultiChoiceClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                    // Update the current focused item's checked status
+                    checked[which] = isChecked;
+                }
+            });
+            // Specify the dialog is not cancelable
+            builder.setCancelable(false);
 
-        // Set a title for alert dialog
-        builder.setTitle("Welche Datein sollen gelöscht werden?");
+            // Set a title for alert dialog
+            builder.setTitle("Welche Datein sollen gelöscht werden?");
 
-        // Set the positive/yes button click listener
-        builder.setPositiveButton("Löschen", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Do something when click positive button
-                for (int i = 0; i<checked.length; i++){
-                    if (checked[i]) {
-                        String filename = cs[i];
-                        delete_json(filename);
+            // Set the positive/yes button click listener
+            builder.setPositiveButton("Löschen", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Do something when click positive button
+                    for (int i = 0; i < checked.length; i++) {
+                        if (checked[i]) {
+                            String filename = cs[i];
+                            delete_json(filename);
+                        }
                     }
                 }
-            }
-        });
+            });
 
-        // Set the neutral/cancel button click listener
-        builder.setNeutralButton("Abbrechen", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Do something when click the neutral button
-            }
-        });
-
+            // Set the neutral/cancel button click listener
+            builder.setNeutralButton("Abbrechen", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Do something when click the neutral button
+                }
+            });
+        }
         AlertDialog dialog = builder.create();
         // Display the alert dialog on interface
         dialog.show();

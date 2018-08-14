@@ -37,4 +37,5 @@
     <string name="load">Laden</string>
     <string name="kommentar">Kommentar</string>
     <string name="add_kommentar">Besondere Vorkommnisse</string>
+    <string name="delete_file">Gespeicherte Spiele löschen</string>
 </resources>
