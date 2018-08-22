@@ -25,28 +25,28 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/er_h_hd1"
+            android:id="@+id/erg_name_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/er_g_hd1"
+            app:layout_constraintEnd_toStartOf="@+id/erg_name_8"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_hd1" />
 
         <TextView
-            android:id="@+id/er_g_hd1"
+            android:id="@+id/erg_name_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_hd1"
-            app:layout_constraintStart_toEndOf="@+id/er_h_hd1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_0"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_0" />
 
         <EditText
-            android:id="@+id/er_hd1_h1"
+            android:id="@+id/heim_0_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -54,13 +54,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd1_g1"
+            android:nextFocusForward="@+id/gast_0_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd1"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd1_g1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_8"
+            app:layout_constraintEnd_toStartOf="@+id/gast_0_0" />
 
         <EditText
-            android:id="@+id/er_hd1_g1"
+            android:id="@+id/gast_0_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -68,14 +68,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd1_h2"
+            android:nextFocusForward="@+id/heim_0_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_h1"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd1_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/heim_0_0"
+            app:layout_constraintEnd_toStartOf="@+id/heim_0_1"
             tools:layout_editor_absoluteY="35dp" />
 
         <EditText
-            android:id="@+id/er_hd1_h2"
+            android:id="@+id/heim_0_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -83,13 +83,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd1_g2"
+            android:nextFocusForward="@+id/gast_0_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_g1"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd1_g2" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/gast_0_0"
+            app:layout_constraintEnd_toStartOf="@+id/gast_0_1" />
 
         <EditText
-            android:id="@+id/er_hd1_g2"
+            android:id="@+id/gast_0_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -97,13 +97,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd1_h3"
+            android:nextFocusForward="@+id/heim_0_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_h2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd1_h3" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/heim_0_1"
+            app:layout_constraintEnd_toStartOf="@+id/heim_0_2" />
 
         <EditText
-            android:id="@+id/er_hd1_h3"
+            android:id="@+id/heim_0_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -111,13 +111,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd1_g3"
+            android:nextFocusForward="@+id/gast_0_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_g2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd1_g3" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/gast_0_1"
+            app:layout_constraintEnd_toStartOf="@+id/gast_0_2" />
 
         <EditText
-            android:id="@+id/er_hd1_g3"
+            android:id="@+id/gast_0_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -125,9 +125,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd2_h1"
+            android:nextFocusForward="@+id/heim_1_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_hd1_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/heim_0_2"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <View
@@ -139,7 +139,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@+id/er_hd1_g1" />
+            app:layout_constraintTop_toBottomOf="@+id/gast_0_0" />
 
         <!--2. Herrendoppel-->
         <TextView
@@ -151,10 +151,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/hd2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_hd1" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_0" />
 
         <TextView
-            android:id="@+id/er_h_hd2"
+            android:id="@+id/erg_name_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -164,16 +164,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_hd2" />
 
         <TextView
-            android:id="@+id/er_g_hd2"
+            android:id="@+id/erg_name_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_hd2"
-            app:layout_constraintStart_toEndOf="@+id/er_h_hd2" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_1"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_1" />
 
         <EditText
-            android:id="@+id/er_hd2_h1"
+            android:id="@+id/heim_1_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -181,13 +181,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd2_g1"
+            android:nextFocusForward="@+id/gast_1_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd2_g1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_9"
+            app:layout_constraintEnd_toStartOf="@+id/gast_1_0" />
 
         <EditText
-            android:id="@+id/er_hd2_g1"
+            android:id="@+id/gast_1_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -195,14 +195,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd2_h2"
+            android:nextFocusForward="@+id/heim_1_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd2_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_9"
+            app:layout_constraintEnd_toStartOf="@+id/heim_1_1"
             tools:layout_editor_absoluteY="120dp" />
 
         <EditText
-            android:id="@+id/er_hd2_h2"
+            android:id="@+id/heim_1_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -210,14 +210,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd2_g2"
+            android:nextFocusForward="@+id/gast_1_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd2_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_9"
+            app:layout_constraintEnd_toStartOf="@+id/gast_1_1"
             tools:layout_editor_absoluteY="120dp" />
 
         <EditText
-            android:id="@+id/er_hd2_g2"
+            android:id="@+id/gast_1_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -225,14 +225,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd2_h3"
+            android:nextFocusForward="@+id/heim_1_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd2_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_9"
+            app:layout_constraintEnd_toStartOf="@+id/heim_1_2"
             tools:layout_editor_absoluteY="120dp" />
 
         <EditText
-            android:id="@+id/er_hd2_h3"
+            android:id="@+id/heim_1_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -240,14 +240,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_hd2_g3"
+            android:nextFocusForward="@+id/gast_1_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
-            app:layout_constraintEnd_toStartOf="@+id/er_hd2_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_9"
+            app:layout_constraintEnd_toStartOf="@+id/gast_1_2"
             tools:layout_editor_absoluteY="120dp" />
 
         <EditText
-            android:id="@+id/er_hd2_g3"
+            android:id="@+id/gast_1_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -255,9 +255,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_dd_h1"
+            android:nextFocusForward="@+id/heim_2_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_hd2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_9"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="120dp" />
 
@@ -272,7 +272,7 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_hd2_h1" />
+            app:layout_constraintTop_toBottomOf="@+id/heim_1_0" />
 
         <!--Damendoppel-->
         <TextView
@@ -284,10 +284,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/dd"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_hd2" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_1" />
 
         <TextView
-            android:id="@+id/er_h_dd"
+            android:id="@+id/erg_name_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -297,16 +297,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_dd" />
 
         <TextView
-            android:id="@+id/er_g_dd"
+            android:id="@+id/erg_name_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_dd"
-            app:layout_constraintStart_toEndOf="@+id/er_h_dd" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_2"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_2" />
 
         <EditText
-            android:id="@+id/er_dd_h1"
+            android:id="@+id/heim_2_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -314,13 +314,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_dd_g1"
+            android:nextFocusForward="@+id/gast_2_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd_g1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_10"
+            app:layout_constraintEnd_toStartOf="@+id/gast_2_0" />
 
         <EditText
-            android:id="@+id/er_dd_g1"
+            android:id="@+id/gast_2_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -328,14 +328,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_dd_h2"
+            android:nextFocusForward="@+id/heim_2_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_10"
+            app:layout_constraintEnd_toStartOf="@+id/heim_2_1"
             tools:layout_editor_absoluteY="206dp" />
 
         <EditText
-            android:id="@+id/er_dd_h2"
+            android:id="@+id/heim_2_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -343,14 +343,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_dd_g2"
+            android:nextFocusForward="@+id/gast_2_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_10"
+            app:layout_constraintEnd_toStartOf="@+id/gast_2_1"
             tools:layout_editor_absoluteY="206dp" />
 
         <EditText
-            android:id="@+id/er_dd_g2"
+            android:id="@+id/gast_2_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -358,14 +358,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_dd_h3"
+            android:nextFocusForward="@+id/heim_2_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_10"
+            app:layout_constraintEnd_toStartOf="@+id/heim_2_2"
             tools:layout_editor_absoluteY="206dp" />
 
         <EditText
-            android:id="@+id/er_dd_h3"
+            android:id="@+id/heim_2_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -373,14 +373,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_dd_g3"
+            android:nextFocusForward="@+id/gast_2_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
-            app:layout_constraintEnd_toStartOf="@+id/er_dd_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_10"
+            app:layout_constraintEnd_toStartOf="@+id/gast_2_2"
             tools:layout_editor_absoluteY="206dp" />
 
         <EditText
-            android:id="@+id/er_dd_g3"
+            android:id="@+id/gast_2_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -388,9 +388,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he1_h1"
+            android:nextFocusForward="@+id/heim_3_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_dd"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_10"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="206dp" />
 
@@ -405,7 +405,7 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_dd_h1" />
+            app:layout_constraintTop_toBottomOf="@+id/heim_2_0" />
 
         <!--1. Herreneinzel-->
         <TextView
@@ -417,10 +417,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/he1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_dd" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_2" />
 
         <TextView
-            android:id="@+id/er_h_he1"
+            android:id="@+id/erg_name_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -430,16 +430,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_he1" />
 
         <TextView
-            android:id="@+id/er_g_he1"
+            android:id="@+id/erg_name_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_he1"
-            app:layout_constraintStart_toEndOf="@+id/er_h_he1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_3"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_3" />
 
         <EditText
-            android:id="@+id/er_he1_h1"
+            android:id="@+id/heim_3_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -447,13 +447,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he1_g1"
+            android:nextFocusForward="@+id/gast_3_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
-            app:layout_constraintEnd_toStartOf="@+id/er_he1_g1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_11"
+            app:layout_constraintEnd_toStartOf="@+id/gast_3_0" />
 
         <EditText
-            android:id="@+id/er_he1_g1"
+            android:id="@+id/gast_3_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -461,14 +461,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he1_h2"
+            android:nextFocusForward="@+id/heim_3_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
-            app:layout_constraintEnd_toStartOf="@+id/er_he1_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_11"
+            app:layout_constraintEnd_toStartOf="@+id/heim_3_1"
             tools:layout_editor_absoluteY="291dp" />
 
         <EditText
-            android:id="@+id/er_he1_h2"
+            android:id="@+id/heim_3_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -476,14 +476,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he1_g2"
+            android:nextFocusForward="@+id/gast_3_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
-            app:layout_constraintEnd_toStartOf="@+id/er_he1_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_11"
+            app:layout_constraintEnd_toStartOf="@+id/gast_3_1"
             tools:layout_editor_absoluteY="291dp" />
 
         <EditText
-            android:id="@+id/er_he1_g2"
+            android:id="@+id/gast_3_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -491,14 +491,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he1_h3"
+            android:nextFocusForward="@+id/heim_3_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
-            app:layout_constraintEnd_toStartOf="@+id/er_he1_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_11"
+            app:layout_constraintEnd_toStartOf="@+id/heim_3_2"
             tools:layout_editor_absoluteY="290dp" />
 
         <EditText
-            android:id="@+id/er_he1_h3"
+            android:id="@+id/heim_3_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -506,14 +506,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he1_g3"
+            android:nextFocusForward="@+id/gast_3_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
-            app:layout_constraintEnd_toStartOf="@+id/er_he1_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_11"
+            app:layout_constraintEnd_toStartOf="@+id/gast_3_2"
             tools:layout_editor_absoluteY="291dp" />
 
         <EditText
-            android:id="@+id/er_he1_g3"
+            android:id="@+id/gast_3_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -521,9 +521,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he2_h1"
+            android:nextFocusForward="@+id/heim_4_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_11"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="291dp" />
 
@@ -538,7 +538,7 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_he1_h1" />
+            app:layout_constraintTop_toBottomOf="@+id/heim_3_0" />
 
         <!--2. Herreneinzel-->
         <TextView
@@ -550,10 +550,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/he2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_he1" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_3" />
 
         <TextView
-            android:id="@+id/er_h_he2"
+            android:id="@+id/erg_name_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -563,16 +563,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_he2" />
 
         <TextView
-            android:id="@+id/er_g_he2"
+            android:id="@+id/erg_name_12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_he2"
-            app:layout_constraintStart_toEndOf="@+id/er_h_he2" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_4"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_4" />
 
         <EditText
-            android:id="@+id/er_he2_h1"
+            android:id="@+id/heim_4_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -580,14 +580,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he2_g1"
+            android:nextFocusForward="@+id/gast_4_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
-            app:layout_constraintEnd_toStartOf="@+id/er_he2_g1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_12"
+            app:layout_constraintEnd_toStartOf="@+id/gast_4_0"
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/er_he2_g1"
+            android:id="@+id/gast_4_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -595,14 +595,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he2_h2"
+            android:nextFocusForward="@+id/heim_4_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
-            app:layout_constraintEnd_toStartOf="@+id/er_he2_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_12"
+            app:layout_constraintEnd_toStartOf="@+id/heim_4_1"
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/er_he2_h2"
+            android:id="@+id/heim_4_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -610,14 +610,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he2_g2"
+            android:nextFocusForward="@+id/gast_4_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
-            app:layout_constraintEnd_toStartOf="@+id/er_he2_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_12"
+            app:layout_constraintEnd_toStartOf="@+id/gast_4_1"
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/er_he2_g2"
+            android:id="@+id/gast_4_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -625,14 +625,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he2_h3"
+            android:nextFocusForward="@+id/heim_4_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
-            app:layout_constraintEnd_toStartOf="@+id/er_he2_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_12"
+            app:layout_constraintEnd_toStartOf="@+id/heim_4_2"
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/er_he2_h3"
+            android:id="@+id/heim_4_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -640,14 +640,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he2_g3"
+            android:nextFocusForward="@+id/gast_4_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
-            app:layout_constraintEnd_toStartOf="@+id/er_he2_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_12"
+            app:layout_constraintEnd_toStartOf="@+id/gast_4_2"
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/er_he2_g3"
+            android:id="@+id/gast_4_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -655,9 +655,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he3_h1"
+            android:nextFocusForward="@+id/heim_5_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_12"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="376dp" />
 
@@ -672,7 +672,7 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_he2_h1" />
+            app:layout_constraintTop_toBottomOf="@+id/heim_4_0" />
 
         <!--3. Herreneinzel-->
         <TextView
@@ -684,10 +684,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/he3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_he2" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_4" />
 
         <TextView
-            android:id="@+id/er_h_he3"
+            android:id="@+id/erg_name_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -697,16 +697,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_he3" />
 
         <TextView
-            android:id="@+id/er_g_he3"
+            android:id="@+id/erg_name_13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_he3"
-            app:layout_constraintStart_toEndOf="@+id/er_h_he3" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_5"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_5" />
 
         <EditText
-            android:id="@+id/er_he3_h1"
+            android:id="@+id/heim_5_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -714,14 +714,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he3_g1"
+            android:nextFocusForward="@+id/gast_5_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
-            app:layout_constraintEnd_toStartOf="@+id/er_he3_g1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_13"
+            app:layout_constraintEnd_toStartOf="@+id/gast_5_0"
             tools:layout_editor_absoluteY="462dp" />
 
         <EditText
-            android:id="@+id/er_he3_g1"
+            android:id="@+id/gast_5_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -729,14 +729,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he3_h2"
+            android:nextFocusForward="@+id/heim_5_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
-            app:layout_constraintEnd_toStartOf="@+id/er_he3_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_13"
+            app:layout_constraintEnd_toStartOf="@+id/heim_5_1"
             tools:layout_editor_absoluteY="462dp" />
 
         <EditText
-            android:id="@+id/er_he3_h2"
+            android:id="@+id/heim_5_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -744,14 +744,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he3_g2"
+            android:nextFocusForward="@+id/gast_5_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
-            app:layout_constraintEnd_toStartOf="@+id/er_he3_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_13"
+            app:layout_constraintEnd_toStartOf="@+id/gast_5_1"
             tools:layout_editor_absoluteY="462dp" />
 
         <EditText
-            android:id="@+id/er_he3_g2"
+            android:id="@+id/gast_5_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -759,14 +759,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he3_h3"
+            android:nextFocusForward="@+id/heim_5_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
-            app:layout_constraintEnd_toStartOf="@+id/er_he3_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_13"
+            app:layout_constraintEnd_toStartOf="@+id/heim_5_2"
             tools:layout_editor_absoluteY="447dp" />
 
         <EditText
-            android:id="@+id/er_he3_h3"
+            android:id="@+id/heim_5_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -774,14 +774,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_he3_g3"
+            android:nextFocusForward="@+id/gast_5_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
-            app:layout_constraintEnd_toStartOf="@+id/er_he3_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_13"
+            app:layout_constraintEnd_toStartOf="@+id/gast_5_2"
             tools:layout_editor_absoluteY="462dp" />
 
         <EditText
-            android:id="@+id/er_he3_g3"
+            android:id="@+id/gast_5_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -789,9 +789,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_de_h1"
+            android:nextFocusForward="@+id/heim_6_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_he3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_13"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="462dp" />
 
@@ -806,7 +806,7 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_he3_h1" />
+            app:layout_constraintTop_toBottomOf="@+id/heim_5_0" />
 
         <!--Dameneinzel-->
         <TextView
@@ -818,10 +818,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/de"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_he3" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_5" />
 
         <TextView
-            android:id="@+id/er_h_de"
+            android:id="@+id/erg_name_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -831,16 +831,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_de" />
 
         <TextView
-            android:id="@+id/er_g_de"
+            android:id="@+id/erg_name_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_de"
-            app:layout_constraintStart_toEndOf="@+id/er_h_de" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_6"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_6" />
 
         <EditText
-            android:id="@+id/er_de_h1"
+            android:id="@+id/heim_6_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -848,14 +848,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_de_g1"
+            android:nextFocusForward="@+id/gast_6_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
-            app:layout_constraintEnd_toStartOf="@+id/er_de_g1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_14"
+            app:layout_constraintEnd_toStartOf="@+id/gast_6_0"
             tools:layout_editor_absoluteY="542dp" />
 
         <EditText
-            android:id="@+id/er_de_g1"
+            android:id="@+id/gast_6_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -863,14 +863,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_de_h2"
+            android:nextFocusForward="@+id/heim_6_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
-            app:layout_constraintEnd_toStartOf="@+id/er_de_h2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_14"
+            app:layout_constraintEnd_toStartOf="@+id/heim_6_1"
             tools:layout_editor_absoluteY="542dp" />
 
         <EditText
-            android:id="@+id/er_de_h2"
+            android:id="@+id/heim_6_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -878,14 +878,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_de_g2"
+            android:nextFocusForward="@+id/gast_6_1"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
-            app:layout_constraintEnd_toStartOf="@+id/er_de_g2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_14"
+            app:layout_constraintEnd_toStartOf="@+id/gast_6_1"
             tools:layout_editor_absoluteY="542dp" />
 
         <EditText
-            android:id="@+id/er_de_g2"
+            android:id="@+id/gast_6_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -893,14 +893,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_de_h3"
+            android:nextFocusForward="@+id/heim_6_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
-            app:layout_constraintEnd_toStartOf="@+id/er_de_h3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_14"
+            app:layout_constraintEnd_toStartOf="@+id/heim_6_2"
             tools:layout_editor_absoluteY="542dp" />
 
         <EditText
-            android:id="@+id/er_de_h3"
+            android:id="@+id/heim_6_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -908,14 +908,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_de_g3"
+            android:nextFocusForward="@+id/gast_6_2"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
-            app:layout_constraintEnd_toStartOf="@+id/er_de_g3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_14"
+            app:layout_constraintEnd_toStartOf="@+id/gast_6_2"
             tools:layout_editor_absoluteY="542dp" />
 
         <EditText
-            android:id="@+id/er_de_g3"
+            android:id="@+id/gast_6_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -923,9 +923,9 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_mx_h1"
+            android:nextFocusForward="@+id/heim_7_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_de"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_14"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="542dp" />
 
@@ -941,7 +941,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_de_h1" />
+            app:layout_constraintTop_toBottomOf="@+id/heim_6_0" />
 
         <!--Mixed-->
         <TextView
@@ -953,10 +953,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/mx"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_de" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_6" />
 
         <TextView
-            android:id="@+id/er_h_mx"
+            android:id="@+id/erg_name_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -966,16 +966,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_mx" />
 
         <TextView
-            android:id="@+id/er_g_mx"
+            android:id="@+id/erg_name_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_h_mx"
-            app:layout_constraintStart_toEndOf="@+id/er_h_mx" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_7"
+            app:layout_constraintStart_toEndOf="@+id/erg_name_7" />
 
         <EditText
-            android:id="@+id/er_mx_h1"
+            android:id="@+id/heim_7_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -983,13 +983,13 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_mx_g1"
+            android:nextFocusForward="@+id/gast_7_0"
             android:imeOptions="actionNext"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx_g1" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
+            app:layout_constraintEnd_toStartOf="@+id/gast_7_0" />
 
         <EditText
-            android:id="@+id/er_mx_g1"
+            android:id="@+id/gast_7_0"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -997,14 +997,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_mx_h2"
+            android:nextFocusForward="@+id/heim_7_1"
             android:imeOptions="actionNext"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx_h2"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            app:layout_constraintEnd_toStartOf="@+id/heim_7_1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
             tools:layout_editor_absoluteY="631dp" />
 
         <EditText
-            android:id="@+id/er_mx_h2"
+            android:id="@+id/heim_7_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -1012,14 +1012,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_mx_g2"
+            android:nextFocusForward="@+id/gast_7_1"
             android:imeOptions="actionNext"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx_g2"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            app:layout_constraintEnd_toStartOf="@+id/gast_7_1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
             tools:layout_editor_absoluteY="631dp" />
 
         <EditText
-            android:id="@+id/er_mx_g2"
+            android:id="@+id/gast_7_1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -1027,14 +1027,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_mx_h3"
+            android:nextFocusForward="@+id/heim_7_2"
             android:imeOptions="actionNext"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx_h3"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            app:layout_constraintEnd_toStartOf="@+id/heim_7_2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
             tools:layout_editor_absoluteY="631dp" />
 
         <EditText
-            android:id="@+id/er_mx_h3"
+            android:id="@+id/heim_7_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -1042,14 +1042,14 @@
             android:ems="10"
             android:hint="@string/default_erg"
             android:inputType="number"
-            android:nextFocusForward="@+id/er_mx_g3"
+            android:nextFocusForward="@+id/gast_7_2"
             android:imeOptions="actionNext"
-            app:layout_constraintEnd_toStartOf="@+id/er_mx_g3"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            app:layout_constraintEnd_toStartOf="@+id/gast_7_2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
             tools:layout_editor_absoluteY="631dp" />
 
         <EditText
-            android:id="@+id/er_mx_g3"
+            android:id="@+id/gast_7_2"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -1058,7 +1058,7 @@
             android:hint="@string/default_erg"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBaseline_toBaselineOf="@+id/er_g_mx"
+            app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
             tools:layout_editor_absoluteY="631dp" />
 
         <Button
@@ -1071,7 +1071,7 @@
             android:onClick="button_sign_heim"
             android:text="@string/sign_heim"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/er_h_mx" />
+            app:layout_constraintTop_toBottomOf="@+id/erg_name_7" />
 
         <Button
             android:id="@+id/button_sign_gast"

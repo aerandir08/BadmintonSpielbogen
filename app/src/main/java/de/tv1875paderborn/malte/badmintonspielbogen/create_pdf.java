@@ -39,127 +39,23 @@ import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.zeit;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.kommentar;
 
 // Spielernamen
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_hd11;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_hd12;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_hd21;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_hd22;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_dd1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_dd2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_he1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_he2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_he3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_de;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_mx1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.h_mx2;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heim_team;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gast_team;
 
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_hd11;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_hd12;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_hd21;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_hd22;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_dd1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_dd2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_he1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_he2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_he3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_de;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_mx1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.g_mx2;
 
 // Ergebnisse
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd1_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_hd2_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_dd_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he1_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he2_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_he3_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_de_g3;
-
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_h1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_h2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_h3;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_g1;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_g2;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.er_mx_g3;
-
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heim_erg;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gast_erg;
 public class create_pdf {
 
-    private static String hd1_1, hd1_2, hd1_3;
-    private static int pkt_hd1_h, pkt_hd1_g;
-    private static int set_hd1_h, set_hd1_g;
-    private static int game_hd1_h, game_hd1_g;
-    private static String hd2_1, hd2_2, hd2_3;
-    private static int pkt_hd2_h, pkt_hd2_g;
-    private static int set_hd2_h, set_hd2_g;
-    private static int game_hd2_h, game_hd2_g;
-    private static String dd_1, dd_2, dd_3;
-    private static int pkt_dd_h, pkt_dd_g;
-    private static int set_dd_h, set_dd_g;
-    private static int game_dd_h, game_dd_g;
-    private static String he1_1, he1_2, he1_3;
-    private static int pkt_he1_h, pkt_he1_g;
-    private static int set_he1_h, set_he1_g;
-    private static int game_he1_h, game_he1_g;
-    private static String he2_1, he2_2, he2_3;
-    private static int pkt_he2_h, pkt_he2_g;
-    private static int set_he2_h, set_he2_g;
-    private static int game_he2_h, game_he2_g;
-    private static String he3_1, he3_2, he3_3;
-    private static int pkt_he3_h, pkt_he3_g;
-    private static int set_he3_h, set_he3_g;
-    private static int game_he3_h, game_he3_g;
-    private static String de_1, de_2, de_3;
-    private static int pkt_de_h, pkt_de_g;
-    private static int set_de_h, set_de_g;
-    private static int game_de_h, game_de_g;
-    private static String mx_1, mx_2, mx_3;
-    private static int pkt_mx_h, pkt_mx_g;
-    private static int set_mx_h, set_mx_g;
-    private static int game_mx_h, game_mx_g;
-
-    private static int pkt_sum_h, pkt_sum_g;
-    private static int set_sum_h, set_sum_g;
-    private static int game_sum_h, game_sum_g;
+    private static String sets[][] = new String[8][3];
+    private static Integer heim_points[] = new Integer[8];
+    private static Integer heim_sets[] = new Integer[8];
+    private static Integer heim_games[] = new Integer[8];
+    private static Integer gast_points[] = new Integer[8];
+    private static Integer gast_sets[] = new Integer[8];
+    private static Integer gast_games[] = new Integer[8];
+    private static Integer sums[] = new Integer[6];
 
     private static String winner;
 
@@ -244,17 +140,17 @@ public class create_pdf {
 
             // 2. Zeile
             cell1 = new PdfPCell(new Paragraph("1. HD"));
-            cell2 = new PdfPCell(new Paragraph(h_hd11 + "\n" + h_hd12));
-            cell3 = new PdfPCell(new Paragraph(g_hd11 + "\n" + g_hd12));
-            cell4 = new PdfPCell(new Paragraph(hd1_1));
-            cell5 = new PdfPCell(new Paragraph(hd1_2));
-            cell6 = new PdfPCell(new Paragraph(hd1_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_hd1_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_hd1_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_hd1_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_hd1_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_hd1_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_hd1_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[0] + "\n" + heim_team[1]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[0] + "\n" + gast_team[1]));
+            cell4 = new PdfPCell(new Paragraph(sets[0][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[0][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[0][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[0])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[0])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[0])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[0])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[0])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[0])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -297,17 +193,17 @@ public class create_pdf {
 
             // 3. Zeile
             cell1 = new PdfPCell(new Paragraph("2. HD"));
-            cell2 = new PdfPCell(new Paragraph(h_hd21 + "\n" + h_hd22));
-            cell3 = new PdfPCell(new Paragraph(g_hd21 + "\n" + g_hd22));
-            cell4 = new PdfPCell(new Paragraph(hd2_1));
-            cell5 = new PdfPCell(new Paragraph(hd2_2));
-            cell6 = new PdfPCell(new Paragraph(hd2_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_hd2_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_hd2_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_hd2_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_hd2_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_hd2_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_hd2_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[2] + "\n" + heim_team[3]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[2] + "\n" + gast_team[3]));
+            cell4 = new PdfPCell(new Paragraph(sets[1][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[1][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[1][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[1])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[1])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[1])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[1])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[1])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[1])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -350,17 +246,17 @@ public class create_pdf {
 
             // 4. Zeile
             cell1 = new PdfPCell(new Paragraph("DD"));
-            cell2 = new PdfPCell(new Paragraph(h_dd1 + "\n" + h_dd2));
-            cell3 = new PdfPCell(new Paragraph(g_dd1 + "\n" + g_dd2));
-            cell4 = new PdfPCell(new Paragraph(dd_1));
-            cell5 = new PdfPCell(new Paragraph(dd_2));
-            cell6 = new PdfPCell(new Paragraph(dd_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_dd_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_dd_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_dd_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_dd_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_dd_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_dd_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[4] + "\n" + heim_team[5]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[4] + "\n" + gast_team[5]));
+            cell4 = new PdfPCell(new Paragraph(sets[2][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[2][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[2][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[2])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[2])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[2])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[2])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[2])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[2])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -403,17 +299,17 @@ public class create_pdf {
 
             // 5. Zeile
             cell1 = new PdfPCell(new Paragraph("1. HE"));
-            cell2 = new PdfPCell(new Paragraph(h_he1));
-            cell3 = new PdfPCell(new Paragraph(g_he1));
-            cell4 = new PdfPCell(new Paragraph(he1_1));
-            cell5 = new PdfPCell(new Paragraph(he1_2));
-            cell6 = new PdfPCell(new Paragraph(he1_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_he1_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_he1_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_he1_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_he1_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_he1_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_he1_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[6]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[6]));
+            cell4 = new PdfPCell(new Paragraph(sets[3][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[3][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[3][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[3])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[3])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[3])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[3])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[3])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[3])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -456,17 +352,17 @@ public class create_pdf {
 
             // 6. Zeile
             cell1 = new PdfPCell(new Paragraph("2. HE"));
-            cell2 = new PdfPCell(new Paragraph(h_he2));
-            cell3 = new PdfPCell(new Paragraph(g_he2));
-            cell4 = new PdfPCell(new Paragraph(he2_1));
-            cell5 = new PdfPCell(new Paragraph(he2_2));
-            cell6 = new PdfPCell(new Paragraph(he2_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_he2_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_he2_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_he2_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_he2_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_he2_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_he2_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[7]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[7]));
+            cell4 = new PdfPCell(new Paragraph(sets[4][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[4][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[4][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[4])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[4])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[4])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[4])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[4])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[4])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -509,17 +405,17 @@ public class create_pdf {
 
             // 7. Zeile
             cell1 = new PdfPCell(new Paragraph("3. HE"));
-            cell2 = new PdfPCell(new Paragraph(h_he3));
-            cell3 = new PdfPCell(new Paragraph(g_he3));
-            cell4 = new PdfPCell(new Paragraph(he3_1));
-            cell5 = new PdfPCell(new Paragraph(he3_2));
-            cell6 = new PdfPCell(new Paragraph(he3_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_he3_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_he3_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_he3_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_he3_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_he3_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_he3_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[8]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[8]));
+            cell4 = new PdfPCell(new Paragraph(sets[5][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[5][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[5][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[5])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[5])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[5])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[5])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[5])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[5])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -562,17 +458,17 @@ public class create_pdf {
 
             // 8. Zeile
             cell1 = new PdfPCell(new Paragraph("DE"));
-            cell2 = new PdfPCell(new Paragraph(h_de));
-            cell3 = new PdfPCell(new Paragraph(g_de));
-            cell4 = new PdfPCell(new Paragraph(de_1));
-            cell5 = new PdfPCell(new Paragraph(de_2));
-            cell6 = new PdfPCell(new Paragraph(de_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_de_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_de_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_de_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_de_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_de_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_de_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[9]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[9]));
+            cell4 = new PdfPCell(new Paragraph(sets[6][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[6][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[6][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[6])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[6])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[6])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[6])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[6])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[6])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -615,17 +511,17 @@ public class create_pdf {
 
             // 9. Zeile
             cell1 = new PdfPCell(new Paragraph("MX"));
-            cell2 = new PdfPCell(new Paragraph(h_mx1 + "\n" + h_mx2));
-            cell3 = new PdfPCell(new Paragraph(g_mx1 + "\n" + g_mx2));
-            cell4 = new PdfPCell(new Paragraph(mx_1));
-            cell5 = new PdfPCell(new Paragraph(mx_2));
-            cell6 = new PdfPCell(new Paragraph(mx_3));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_mx_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_mx_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_mx_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_mx_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_mx_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_mx_g)));
+            cell2 = new PdfPCell(new Paragraph(heim_team[10] + "\n" + heim_team[11]));
+            cell3 = new PdfPCell(new Paragraph(gast_team[10] + "\n" + gast_team[11]));
+            cell4 = new PdfPCell(new Paragraph(sets[7][0]));
+            cell5 = new PdfPCell(new Paragraph(sets[7][1]));
+            cell6 = new PdfPCell(new Paragraph(sets[7][2]));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(heim_points[7])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(gast_points[7])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(heim_sets[7])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(gast_sets[7])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(heim_games[7])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(gast_games[7])));
 
             cell1.setFixedHeight(30);
             cell1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -673,12 +569,12 @@ public class create_pdf {
             cell4 = new PdfPCell(new Paragraph(""));
             cell5 = new PdfPCell(new Paragraph(""));
             cell6 = new PdfPCell(new Paragraph("Summe:"));
-            cell7 = new PdfPCell(new Paragraph(Integer.toString(pkt_sum_h)));
-            cell8 = new PdfPCell(new Paragraph(Integer.toString(pkt_sum_g)));
-            cell9 = new PdfPCell(new Paragraph(Integer.toString(set_sum_h)));
-            cell10 = new PdfPCell(new Paragraph(Integer.toString(set_sum_g)));
-            cell11 = new PdfPCell(new Paragraph(Integer.toString(game_sum_h)));
-            cell12 = new PdfPCell(new Paragraph(Integer.toString(game_sum_g)));
+            cell7 = new PdfPCell(new Paragraph(Integer.toString(sums[0])));
+            cell8 = new PdfPCell(new Paragraph(Integer.toString(sums[1])));
+            cell9 = new PdfPCell(new Paragraph(Integer.toString(sums[2])));
+            cell10 = new PdfPCell(new Paragraph(Integer.toString(sums[3])));
+            cell11 = new PdfPCell(new Paragraph(Integer.toString(sums[4])));
+            cell12 = new PdfPCell(new Paragraph(Integer.toString(sums[5])));
 
             cell1.setFixedHeight(30);
             cell1.setBorderWidthLeft(0);
@@ -794,410 +690,51 @@ public class create_pdf {
         }
 
     }
+
     private static void get_scores() {
-        boolean set1, set2, set3;
 
-        int hd1_h1 = Integer.parseInt(er_hd1_h1);
-        int hd1_h2 = Integer.parseInt(er_hd1_h2);
-        int hd1_h3 = Integer.parseInt(er_hd1_h3);
-        int hd1_g1 = Integer.parseInt(er_hd1_g1);
-        int hd1_g2 = Integer.parseInt(er_hd1_g2);
-        int hd1_g3 = Integer.parseInt(er_hd1_g3);
-
-        hd1_1 = er_hd1_h1 + " - " + er_hd1_g1;
-        hd1_2 = er_hd1_h2 + " - " + er_hd1_g2;
-
-        if (hd1_h3 == hd1_g3){
-            hd1_3 = "-";
-        }else {
-            hd1_3 = er_hd1_h3 + " - " + er_hd1_g3;
-        }
-        pkt_hd1_h = hd1_h1 + hd1_h2 + hd1_h3;
-        pkt_hd1_g = hd1_g1 + hd1_g2 + hd1_g3;
-
-        // true = Heim gewinnt
-        set1 = hd1_h1 > hd1_g1;
-        set2 = hd1_h2 > hd1_g2;
-        set3 = hd1_h3 > hd1_g3;
-        if (hd1_h3 == hd1_g3) {
-            if (set1) {
-                set_hd1_h = 2;
-                set_hd1_g = 0;
-                game_hd1_h = 1;
-                game_hd1_g = 0;
-            } else {
-                set_hd1_h = 0;
-                set_hd1_g = 2;
-                game_hd1_h = 0;
-                game_hd1_g = 1;
+        for (int game=0; game<8; game++){
+            for (int set=0; set<3; set++) {
+                // Darstellung Satzergebnis
+                if (heim_erg[game][set].equals(gast_erg[game][set])){
+                    sets[game][set] = "-";
+                }else {
+                    sets[game][set] = heim_erg[game][set] + "-" + gast_erg[game][set];
+                }
+                // Berechnung Punkte
+                if (heim_erg[game][set] > gast_erg[game][set]){
+                    heim_sets[game] += 1;
+                }else {
+                    gast_sets[game] += 1;
+                }
+                heim_points[game] += heim_erg[game][set];
+                gast_points[game] += gast_erg[game][set];
             }
-        } else {
-            if (set3) {
-                set_hd1_h = 2;
-                set_hd1_g = 1;
-                game_hd1_h = 1;
-                game_hd1_g = 0;
-            } else {
-                set_hd1_h = 1;
-                set_hd1_g = 2;
-                game_hd1_h = 0;
-                game_hd1_g = 1;
+            // Berechnung Sätze und Spiele
+            if (heim_sets[game] > gast_sets[game]){
+                heim_games[game] += 1;
+            }else{
+                gast_games[game] += 1;
             }
+
+            // Summen berechnen
+            sums[0] += heim_points[game];
+            sums[1] += gast_points[game];
+            sums[2] += heim_sets[game];
+            sums[3] += gast_sets[game];
+            sums[4] += heim_games[game];
+            sums[5] += gast_games[game];
         }
 
-        int hd2_h1 = Integer.parseInt(er_hd2_h1);
-        int hd2_h2 = Integer.parseInt(er_hd2_h2);
-        int hd2_h3 = Integer.parseInt(er_hd2_h3);
-        int hd2_g1 = Integer.parseInt(er_hd2_g1);
-        int hd2_g2 = Integer.parseInt(er_hd2_g2);
-        int hd2_g3 = Integer.parseInt(er_hd2_g3);
-
-        hd2_1 = er_hd2_h1 + " - " + er_hd2_g1;
-        hd2_2 = er_hd2_h2 + " - " + er_hd2_g2;
-        if (hd2_h3 == hd2_g3){
-            hd2_3 = "-";
-        }else {
-            hd2_3 = er_hd2_h3 + " - " + er_hd2_g3;
-        }
-
-        pkt_hd2_h = hd2_h1 + hd2_h2 + hd2_h3;
-        pkt_hd2_g = hd2_g1 + hd2_g2 + hd2_g3;
-
-        // true = Heim gewinnt
-        set1 = hd2_h1 > hd2_g1;
-        set2 = hd2_h2 > hd2_g2;
-        set3 = hd2_h3 > hd2_g3;
-        if (hd2_h3 == hd2_g3) {
-            if (set1) {
-                set_hd2_h = 2;
-                set_hd2_g = 0;
-                game_hd2_h = 1;
-                game_hd2_g = 0;
-            } else {
-                set_hd2_h = 0;
-                set_hd2_g = 2;
-                game_hd2_h = 0;
-                game_hd2_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_hd2_h = 2;
-                set_hd2_g = 1;
-                game_hd2_h = 1;
-                game_hd2_g = 0;
-            } else {
-                set_hd2_h = 1;
-                set_hd2_g = 2;
-                game_hd2_h = 0;
-                game_hd2_g = 1;
-            }
-        }
-
-        int dd_h1 = Integer.parseInt(er_dd_h1);
-        int dd_h2 = Integer.parseInt(er_dd_h2);
-        int dd_h3 = Integer.parseInt(er_dd_h3);
-        int dd_g1 = Integer.parseInt(er_dd_g1);
-        int dd_g2 = Integer.parseInt(er_dd_g2);
-        int dd_g3 = Integer.parseInt(er_dd_g3);
-
-        dd_1 = er_dd_h1 + " - " + er_dd_g1;
-        dd_2 = er_dd_h2 + " - " + er_dd_g2;
-        if (dd_h3 == dd_g3){
-            dd_3 = "-";
-        }else {
-            dd_3 = er_dd_h3 + " - " + er_dd_g3;
-        }
-
-        pkt_dd_h = dd_h1 + dd_h2 + dd_h3;
-        pkt_dd_g = dd_g1 + dd_g2 + dd_g3;
-
-        // true = Heim gewinnt
-        set1 = dd_h1 > dd_g1;
-        set2 = dd_h2 > dd_g2;
-        set3 = dd_h3 > dd_g3;
-        if (dd_h3 == dd_g3) {
-            if (set1) {
-                set_dd_h = 2;
-                set_dd_g = 0;
-                game_dd_h = 1;
-                game_dd_g = 0;
-            } else {
-                set_dd_h = 0;
-                set_dd_g = 2;
-                game_dd_h = 0;
-                game_dd_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_dd_h = 2;
-                set_dd_g = 1;
-                game_dd_h = 1;
-                game_dd_g = 0;
-            } else {
-                set_dd_h = 1;
-                set_dd_g = 2;
-                game_dd_h = 0;
-                game_dd_g = 1;
-            }
-        }
-
-        int he1_h1 = Integer.parseInt(er_he1_h1);
-        int he1_h2 = Integer.parseInt(er_he1_h2);
-        int he1_h3 = Integer.parseInt(er_he1_h3);
-        int he1_g1 = Integer.parseInt(er_he1_g1);
-        int he1_g2 = Integer.parseInt(er_he1_g2);
-        int he1_g3 = Integer.parseInt(er_he1_g3);
-
-        he1_1 = er_he1_h1 + " - " + er_he1_g1;
-        he1_2 = er_he1_h2 + " - " + er_he1_g2;
-        if (he1_h3 == he1_g3){
-            he1_3 = "-";
-        }else {
-            he1_3 = er_he1_h3 + " - " + er_he1_g3;
-        }
-
-        pkt_he1_h = he1_h1 + he1_h2 + he1_h3;
-        pkt_he1_g = he1_g1 + he1_g2 + he1_g3;
-
-        // true = Heim gewinnt
-        set1 = he1_h1 > he1_g1;
-        set2 = he1_h2 > he1_g2;
-        set3 = he1_h3 > he1_g3;
-        if (he1_h3 == he1_g3) {
-            if (set1) {
-                set_he1_h = 2;
-                set_he1_g = 0;
-                game_he1_h = 1;
-                game_he1_g = 0;
-            } else {
-                set_he1_h = 0;
-                set_he1_g = 2;
-                game_he1_h = 0;
-                game_he1_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_he1_h = 2;
-                set_he1_g = 1;
-                game_he1_h = 1;
-                game_he1_g = 0;
-            } else {
-                set_he1_h = 1;
-                set_he1_g = 2;
-                game_he1_h = 0;
-                game_he1_g = 1;
-            }
-        }
-
-        int he2_h1 = Integer.parseInt(er_he2_h1);
-        int he2_h2 = Integer.parseInt(er_he2_h2);
-        int he2_h3 = Integer.parseInt(er_he2_h3);
-        int he2_g1 = Integer.parseInt(er_he2_g1);
-        int he2_g2 = Integer.parseInt(er_he2_g2);
-        int he2_g3 = Integer.parseInt(er_he2_g3);
-
-        he2_1 = er_he2_h1 + " - " + er_he2_g1;
-        he2_2 = er_he2_h2 + " - " + er_he2_g2;
-        if (he2_h3 == he2_g3){
-            he2_3 = "-";
-        }else {
-            he2_3 = er_he2_h3 + " - " + er_he2_g3;
-        }
-
-        pkt_he2_h = he2_h1 + he2_h2 + he2_h3;
-        pkt_he2_g = he2_g1 + he2_g2 + he2_g3;
-
-        // true = Heim gewinnt
-        set1 = he2_h1 > he2_g1;
-        set2 = he2_h2 > he2_g2;
-        set3 = he2_h3 > he2_g3;
-        if (he2_h3 == he2_g3) {
-            if (set1) {
-                set_he2_h = 2;
-                set_he2_g = 0;
-                game_he2_h = 1;
-                game_he2_g = 0;
-            } else {
-                set_he2_h = 0;
-                set_he2_g = 2;
-                game_he2_h = 0;
-                game_he2_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_he2_h = 2;
-                set_he2_g = 1;
-                game_he2_h = 1;
-                game_he2_g = 0;
-            } else {
-                set_he2_h = 1;
-                set_he2_g = 2;
-                game_he2_h = 0;
-                game_he2_g = 1;
-            }
-        }
-
-        int he3_h1 = Integer.parseInt(er_he3_h1);
-        int he3_h2 = Integer.parseInt(er_he3_h2);
-        int he3_h3 = Integer.parseInt(er_he3_h3);
-        int he3_g1 = Integer.parseInt(er_he3_g1);
-        int he3_g2 = Integer.parseInt(er_he3_g2);
-        int he3_g3 = Integer.parseInt(er_he3_g3);
-
-        he3_1 = er_he3_h1 + " - " + er_he3_g1;
-        he3_2 = er_he3_h2 + " - " + er_he3_g2;
-        if (he3_h3 == he3_g3){
-            he3_3 = "-";
-        }else {
-            he3_3 = er_he3_h3 + " - " + er_he3_g3;
-        }
-
-        pkt_he3_h = he3_h1 + he3_h2 + he3_h3;
-        pkt_he3_g = he3_g1 + he3_g2 + he3_g3;
-
-        // true = Heim gewinnt
-        set1 = he3_h1 > he3_g1;
-        set2 = he3_h2 > he3_g2;
-        set3 = he3_h3 > he3_g3;
-        if (he3_h3 == he3_g3) {
-            if (set1) {
-                set_he3_h = 2;
-                set_he3_g = 0;
-                game_he3_h = 1;
-                game_he3_g = 0;
-            } else {
-                set_he3_h = 0;
-                set_he3_g = 2;
-                game_he3_h = 0;
-                game_he3_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_he3_h = 2;
-                set_he3_g = 1;
-                game_he3_h = 1;
-                game_he3_g = 0;
-            } else {
-                set_he3_h = 1;
-                set_he3_g = 2;
-                game_he3_h = 0;
-                game_he3_g = 1;
-            }
-        }
-
-        int de_h1 = Integer.parseInt(er_de_h1);
-        int de_h2 = Integer.parseInt(er_de_h2);
-        int de_h3 = Integer.parseInt(er_de_h3);
-        int de_g1 = Integer.parseInt(er_de_g1);
-        int de_g2 = Integer.parseInt(er_de_g2);
-        int de_g3 = Integer.parseInt(er_de_g3);
-
-        de_1 = er_de_h1 + " - " + er_de_g1;
-        de_2 = er_de_h2 + " - " + er_de_g2;
-        if (de_h3 == de_g3){
-            de_3 = "-";
-        }else {
-            de_3 = er_de_h3 + " - " + er_de_g3;
-        }
-
-        pkt_de_h = de_h1 + de_h2 + de_h3;
-        pkt_de_g = de_g1 + de_g2 + de_g3;
-
-        // true = Heim gewinnt
-        set1 = de_h1 > de_g1;
-        set2 = de_h2 > de_g2;
-        set3 = de_h3 > de_g3;
-        if (de_h3 == de_g3) {
-            if (set1) {
-                set_de_h = 2;
-                set_de_g = 0;
-                game_de_h = 1;
-                game_de_g = 0;
-            } else {
-                set_de_h = 0;
-                set_de_g = 2;
-                game_de_h = 0;
-                game_de_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_de_h = 2;
-                set_de_g = 1;
-                game_de_h = 1;
-                game_de_g = 0;
-            } else {
-                set_de_h = 1;
-                set_de_g = 2;
-                game_de_h = 0;
-                game_de_g = 1;
-            }
-        }
-
-        int mx_h1 = Integer.parseInt(er_mx_h1);
-        int mx_h2 = Integer.parseInt(er_mx_h2);
-        int mx_h3 = Integer.parseInt(er_mx_h3);
-        int mx_g1 = Integer.parseInt(er_mx_g1);
-        int mx_g2 = Integer.parseInt(er_mx_g2);
-        int mx_g3 = Integer.parseInt(er_mx_g3);
-
-        mx_1 = er_mx_h1 + " - " + er_mx_g1;
-        mx_2 = er_mx_h2 + " - " + er_mx_g2;
-        if (mx_h3 == mx_g3){
-            mx_3 = "-";
-        }else {
-            mx_3 = er_mx_h3 + " - " + er_mx_g3;
-        }
-
-        pkt_mx_h = mx_h1 + mx_h2 + mx_h3;
-        pkt_mx_g = mx_g1 + mx_g2 + mx_g3;
-
-        // true = Heim gewinnt
-        set1 = mx_h1 > mx_g1;
-        set2 = mx_h2 > mx_g2;
-        set3 = mx_h3 > mx_g3;
-        if (mx_h3 == mx_g3) {
-            if (set1) {
-                set_mx_h = 2;
-                set_mx_g = 0;
-                game_mx_h = 1;
-                game_mx_g = 0;
-            } else {
-                set_mx_h = 0;
-                set_mx_g = 2;
-                game_mx_h = 0;
-                game_mx_g = 1;
-            }
-        } else {
-            if (set3) {
-                set_mx_h = 2;
-                set_mx_g = 1;
-                game_mx_h = 1;
-                game_mx_g = 0;
-            } else {
-                set_mx_h = 1;
-                set_mx_g = 2;
-                game_mx_h = 0;
-                game_mx_g = 1;
-            }
-        }
-
-        pkt_sum_h = pkt_hd1_h + pkt_hd2_h + pkt_dd_h + pkt_he1_h + pkt_he2_h + pkt_he3_h + pkt_de_h + pkt_mx_h;
-        pkt_sum_g = pkt_hd1_g + pkt_hd2_g + pkt_dd_g + pkt_he1_g + pkt_he2_g + pkt_he3_g + pkt_de_g + pkt_mx_g;
-        
-        set_sum_h = set_hd1_h + set_hd2_h + set_dd_h + set_he1_h + set_he2_h + set_he3_h + set_de_h + set_mx_h;
-        set_sum_g = set_hd1_g + set_hd2_g + set_dd_g + set_he1_g + set_he2_g + set_he3_g + set_de_g + set_mx_g;
-
-        game_sum_h = game_hd1_h + game_hd2_h + game_dd_h + game_he1_h + game_he2_h + game_he3_h + game_de_h + game_mx_h;
-        game_sum_g = game_hd1_g + game_hd2_g + game_dd_g + game_he1_g + game_he2_g + game_he3_g + game_de_g + game_mx_g;
-
-        if (game_sum_h > game_sum_g) {
+        if (sums[4] > sums[5]) {
             winner = heimverein;
         } else {
-            if (game_sum_h < game_sum_g) {
+            if (sums[4] < sums[5]) {
                 winner = gastverein;
             } else{
                 winner = "unentschieden";
             }
         }
     }
+
 }

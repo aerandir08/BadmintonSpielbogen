@@ -46,83 +46,14 @@ public class MainActivity extends AppCompatActivity {
     public static String zeit;
     public static String kommentar;
 
-    // Namen des Heimvereins speichern
-    public static String h_hd11;
-    public static String h_hd12;
-    public static String h_hd21;
-    public static String h_hd22;
-    public static String h_dd1;
-    public static String h_dd2;
-    public static String h_he1;
-    public static String h_he2;
-    public static String h_he3;
-    public static String h_de;
-    public static String h_mx1;
-    public static String h_mx2;
+    // Spielernamen
+    public static String[] heim_team = new String[12];
+    public static String[] gast_team = new String[12];
 
-    // Namen des Gastvereins speichern
-    public static String g_hd11;
-    public static String g_hd12;
-    public static String g_hd21;
-    public static String g_hd22;
-    public static String g_dd1;
-    public static String g_dd2;
-    public static String g_he1;
-    public static String g_he2;
-    public static String g_he3;
-    public static String g_de;
-    public static String g_mx1;
-    public static String g_mx2;
 
-    // Alle Ergebnisse als String
-    public  static String er_hd1_h1;
-    public  static String er_hd1_h2;
-    public  static String er_hd1_h3;
-    public  static String er_hd1_g1;
-    public  static String er_hd1_g2;
-    public  static String er_hd1_g3;
-    public  static String er_hd2_h1;
-    public  static String er_hd2_h2;
-    public  static String er_hd2_h3;
-    public  static String er_hd2_g1;
-    public  static String er_hd2_g2;
-    public  static String er_hd2_g3;
-    public  static String er_dd_h1;
-    public  static String er_dd_h2;
-    public  static String er_dd_h3;
-    public  static String er_dd_g1;
-    public  static String er_dd_g2;
-    public  static String er_dd_g3;
-    public  static String er_he1_h1;
-    public  static String er_he1_h2;
-    public  static String er_he1_h3;
-    public  static String er_he1_g1;
-    public  static String er_he1_g2;
-    public  static String er_he1_g3;
-    public  static String er_he2_h1;
-    public  static String er_he2_h2;
-    public  static String er_he2_h3;
-    public  static String er_he2_g1;
-    public  static String er_he2_g2;
-    public  static String er_he2_g3;
-    public  static String er_he3_h1;
-    public  static String er_he3_h2;
-    public  static String er_he3_h3;
-    public  static String er_he3_g1;
-    public  static String er_he3_g2;
-    public  static String er_he3_g3;
-    public  static String er_de_h1;
-    public  static String er_de_h2;
-    public  static String er_de_h3;
-    public  static String er_de_g1;
-    public  static String er_de_g2;
-    public  static String er_de_g3;
-    public  static String er_mx_h1;
-    public  static String er_mx_h2;
-    public  static String er_mx_h3;
-    public  static String er_mx_g1;
-    public  static String er_mx_g2;
-    public  static String er_mx_g3;
+    // Alle Ergebnisse als Integer
+    public static Integer[][] heim_erg = new Integer[8][3];
+    public static Integer[][] gast_erg = new Integer[8][3];
 
     public static boolean erg_opend = false;
     public static boolean pdf_created = false;
@@ -204,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     public void save_json(){
         onStop();
         Date datum = Calendar.getInstance().getTime();
@@ -219,81 +151,18 @@ public class MainActivity extends AppCompatActivity {
             jsonObj.put("zeit", zeit);
             jsonObj.put("kommentar", kommentar);
 
-            jsonObj.put("h_hd11", h_hd11);
-            jsonObj.put("h_hd12", h_hd12);
-            jsonObj.put("h_hd21", h_hd21);
-            jsonObj.put("h_hd22", h_hd22);
-            jsonObj.put("h_dd1", h_dd1);
-            jsonObj.put("h_dd2", h_dd2);
-            jsonObj.put("h_he1", h_he1);
-            jsonObj.put("h_he2", h_he2);
-            jsonObj.put("h_he3", h_he3);
-            jsonObj.put("h_de", h_de);
-            jsonObj.put("h_mx1", h_mx1);
-            jsonObj.put("h_mx2", h_mx2);
+            for (int ii=0; ii<12; ii++) {
+                jsonObj.put("heim_team_"+Integer.toString(ii), heim_team[ii]);
+                jsonObj.put("gast_team_"+Integer.toString(ii), gast_team[ii]);
 
-            jsonObj.put("g_hd11", g_hd11);
-            jsonObj.put("g_hd12", g_hd12);
-            jsonObj.put("g_hd21", g_hd21);
-            jsonObj.put("g_hd22", g_hd22);
-            jsonObj.put("g_dd1", g_dd1);
-            jsonObj.put("g_dd2", g_dd2);
-            jsonObj.put("g_he1", g_he1);
-            jsonObj.put("g_he2", g_he2);
-            jsonObj.put("g_he3", g_he3);
-            jsonObj.put("g_de", g_de);
-            jsonObj.put("g_mx1", g_mx1);
-            jsonObj.put("g_mx2", g_mx2);
+            }
 
-            jsonObj.put("er_hd1_h1", er_hd1_h1);
-            jsonObj.put("er_hd1_h2", er_hd1_h2);
-            jsonObj.put("er_hd1_h3", er_hd1_h3);
-            jsonObj.put("er_hd2_h1", er_hd2_h1);
-            jsonObj.put("er_hd2_h2", er_hd2_h2);
-            jsonObj.put("er_hd2_h3", er_hd2_h3);
-            jsonObj.put("er_dd_h1", er_dd_h1);
-            jsonObj.put("er_dd_h2", er_dd_h2);
-            jsonObj.put("er_dd_h3", er_dd_h3);
-            jsonObj.put("er_he1_h1", er_he1_h1);
-            jsonObj.put("er_he1_h2", er_he1_h2);
-            jsonObj.put("er_he1_h3", er_he1_h3);
-            jsonObj.put("er_he2_h1", er_he2_h1);
-            jsonObj.put("er_he2_h2", er_he2_h2);
-            jsonObj.put("er_he2_h3", er_he2_h3);
-            jsonObj.put("er_he3_h1", er_he3_h1);
-            jsonObj.put("er_he3_h2", er_he3_h2);
-            jsonObj.put("er_he3_h3", er_he3_h3);
-            jsonObj.put("er_de_h1", er_de_h1);
-            jsonObj.put("er_de_h2", er_de_h2);
-            jsonObj.put("er_de_h3", er_de_h3);
-            jsonObj.put("er_mx_h1", er_mx_h1);
-            jsonObj.put("er_mx_h2", er_mx_h2);
-            jsonObj.put("er_mx_h3", er_mx_h3);
-
-            jsonObj.put("er_hd1_g1", er_hd1_g1);
-            jsonObj.put("er_hd1_g2", er_hd1_g2);
-            jsonObj.put("er_hd1_g3", er_hd1_g3);
-            jsonObj.put("er_hd2_g1", er_hd2_g1);
-            jsonObj.put("er_hd2_g2", er_hd2_g2);
-            jsonObj.put("er_hd2_g3", er_hd2_g3);
-            jsonObj.put("er_dd_g1", er_dd_g1);
-            jsonObj.put("er_dd_g2", er_dd_g2);
-            jsonObj.put("er_dd_g3", er_dd_g3);
-            jsonObj.put("er_he1_g1", er_he1_g1);
-            jsonObj.put("er_he1_g2", er_he1_g2);
-            jsonObj.put("er_he1_g3", er_he1_g3);
-            jsonObj.put("er_he2_g1", er_he2_g1);
-            jsonObj.put("er_he2_g2", er_he2_g2);
-            jsonObj.put("er_he2_g3", er_he2_g3);
-            jsonObj.put("er_he3_g1", er_he3_g1);
-            jsonObj.put("er_he3_g2", er_he3_g2);
-            jsonObj.put("er_he3_g3", er_he3_g3);
-            jsonObj.put("er_de_g1", er_de_g1);
-            jsonObj.put("er_de_g2", er_de_g2);
-            jsonObj.put("er_de_g3", er_de_g3);
-            jsonObj.put("er_mx_g1", er_mx_g1);
-            jsonObj.put("er_mx_g2", er_mx_g2);
-            jsonObj.put("er_mx_g3", er_mx_g3);
+            for (int ii=0; ii<8; ii++) {
+                for (int jj=0; jj<3; jj++){
+                    jsonObj.put("heim_erg_" + Integer.toString(ii) + "_" + Integer.toString(jj), heim_erg[ii][jj]);
+                    jsonObj.put("gast_erg_" + Integer.toString(ii) + "_" + Integer.toString(jj), gast_erg[ii][jj]);
+                }
+            }
 
             try {
                 File file = new File(this.getBaseContext().getExternalFilesDir(null), date + "_" + heimverein + "-" + gastverein + ".json");
@@ -368,81 +237,29 @@ public class MainActivity extends AppCompatActivity {
                 zeit = get_string_from_json(jsonObj,"zeit");
                 kommentar = get_string_from_json(jsonObj, "kommentar");
 
-                h_hd11 = get_string_from_json(jsonObj,"h_hd11");
-                h_hd12 = get_string_from_json(jsonObj,"h_hd12");
-                h_hd21 = get_string_from_json(jsonObj,"h_hd21");
-                h_hd22 = get_string_from_json(jsonObj,"h_hd22");
-                h_dd1 = get_string_from_json(jsonObj,"h_dd1");
-                h_dd2 = get_string_from_json(jsonObj,"h_dd2");
-                h_he1 = get_string_from_json(jsonObj,"h_he1");
-                h_he2 = get_string_from_json(jsonObj,"h_he2");
-                h_he3 = get_string_from_json(jsonObj,"h_he3");
-                h_de = get_string_from_json(jsonObj,"h_de");
-                h_mx1 = get_string_from_json(jsonObj,"h_mx1");
-                h_mx2 = get_string_from_json(jsonObj,"h_mx2");
+                for (int ii=0; ii<12; ii++) {
+                    heim_team[ii] = get_string_from_json(jsonObj, "heim_team_"+Integer.toString(ii));
+                    gast_team[ii] = get_string_from_json(jsonObj, "gast_team_"+Integer.toString(ii));
+                }
 
-                g_hd11 = get_string_from_json(jsonObj,"g_hd11");
-                g_hd12 = get_string_from_json(jsonObj,"g_hd12");
-                g_hd21 = get_string_from_json(jsonObj,"g_hd21");
-                g_hd22 = get_string_from_json(jsonObj,"g_hd22");
-                g_dd1 = get_string_from_json(jsonObj,"g_dd1");
-                g_dd2 = get_string_from_json(jsonObj,"g_dd2");
-                g_he1 = get_string_from_json(jsonObj,"g_he1");
-                g_he2 = get_string_from_json(jsonObj,"g_he2");
-                g_he3 = get_string_from_json(jsonObj,"g_he3");
-                g_de = get_string_from_json(jsonObj,"g_de");
-                g_mx1 = get_string_from_json(jsonObj,"g_mx1");
-                g_mx2 = get_string_from_json(jsonObj,"g_mx2");
 
-                er_hd1_h1 = get_string_from_json(jsonObj,"er_hd1_h1");
-                er_hd1_h2 = get_string_from_json(jsonObj,"er_hd1_h2");
-                er_hd1_h3 = get_string_from_json(jsonObj,"er_hd1_h3");
-                er_hd2_h1 = get_string_from_json(jsonObj,"er_hd2_h1");
-                er_hd2_h2 = get_string_from_json(jsonObj,"er_hd2_h2");
-                er_hd2_h3 = get_string_from_json(jsonObj,"er_hd2_h3");
-                er_dd_h1 = get_string_from_json(jsonObj,"er_dd_h1");
-                er_dd_h2 = get_string_from_json(jsonObj,"er_dd_h2");
-                er_dd_h3 = get_string_from_json(jsonObj,"er_dd_h3");
-                er_he1_h1 = get_string_from_json(jsonObj,"er_he1_h1");
-                er_he1_h2 = get_string_from_json(jsonObj,"er_he1_h2");
-                er_he1_h3 = get_string_from_json(jsonObj,"er_he1_h3");
-                er_he2_h1 = get_string_from_json(jsonObj,"er_he2_h1");
-                er_he2_h2 = get_string_from_json(jsonObj,"er_he2_h2");
-                er_he2_h3 = get_string_from_json(jsonObj,"er_he2_h3");
-                er_he3_h1 = get_string_from_json(jsonObj,"er_he3_h1");
-                er_he3_h2 = get_string_from_json(jsonObj,"er_he3_h2");
-                er_he3_h3 = get_string_from_json(jsonObj,"er_he3_h3");
-                er_de_h1 = get_string_from_json(jsonObj,"er_de_h1");
-                er_de_h2 = get_string_from_json(jsonObj,"er_de_h2");
-                er_de_h3 = get_string_from_json(jsonObj,"er_de_h3");
-                er_mx_h1 = get_string_from_json(jsonObj,"er_mx_h1");
-                er_mx_h2 = get_string_from_json(jsonObj,"er_mx_h2");
-                er_mx_h3 = get_string_from_json(jsonObj,"er_mx_h3");
+                for (int ii=0; ii<8; ii++) {
+                    for (int jj=0; jj<3; jj++){
+                        String value = get_string_from_json(jsonObj, "heim_erg_" + Integer.toString(ii) + "_" + Integer.toString(jj));
+                        if (!value.isEmpty()) {
+                            heim_erg[ii][jj] = Integer.parseInt(value);
+                        }else{
+                            heim_erg[ii][jj] = null;
+                        }
+                        value = get_string_from_json(jsonObj, "gast_erg_" + Integer.toString(ii) + "_" + Integer.toString(jj));
+                        if (!value.isEmpty()) {
+                            gast_erg[ii][jj] = Integer.parseInt(value);
+                        }else{
+                            gast_erg[ii][jj] = null;
+                        }
+                    }
+                }
 
-                er_hd1_g1 = get_string_from_json(jsonObj,"er_hd1_g1");
-                er_hd1_g2 = get_string_from_json(jsonObj,"er_hd1_g2");
-                er_hd1_g3 = get_string_from_json(jsonObj,"er_hd1_g3");
-                er_hd2_g1 = get_string_from_json(jsonObj,"er_hd2_g1");
-                er_hd2_g2 = get_string_from_json(jsonObj,"er_hd2_g2");
-                er_hd2_g3 = get_string_from_json(jsonObj,"er_hd2_g3");
-                er_dd_g1 = get_string_from_json(jsonObj,"er_dd_g1");
-                er_dd_g2 = get_string_from_json(jsonObj,"er_dd_g2");
-                er_dd_g3 = get_string_from_json(jsonObj,"er_dd_g3");
-                er_he1_g1 = get_string_from_json(jsonObj,"er_he1_g1");
-                er_he1_g2 = get_string_from_json(jsonObj,"er_he1_g2");
-                er_he1_g3 = get_string_from_json(jsonObj,"er_he1_g3");
-                er_he2_g1 = get_string_from_json(jsonObj,"er_he2_g1");
-                er_he2_g2 = get_string_from_json(jsonObj,"er_he2_g2");
-                er_he2_g3 = get_string_from_json(jsonObj,"er_he2_g3");
-                er_he3_g1 = get_string_from_json(jsonObj,"er_he3_g1");
-                er_he3_g2 = get_string_from_json(jsonObj,"er_he3_g2");
-                er_he3_g3 = get_string_from_json(jsonObj,"er_he3_g3");
-                er_de_g1 = get_string_from_json(jsonObj,"er_de_g1");
-                er_de_g2 = get_string_from_json(jsonObj,"er_de_g2");
-                er_de_g3 = get_string_from_json(jsonObj,"er_de_g3");
-                er_mx_g1 = get_string_from_json(jsonObj,"er_mx_g1");
-                er_mx_g2 = get_string_from_json(jsonObj,"er_mx_g2");
-                er_mx_g3 = get_string_from_json(jsonObj,"er_mx_g3");
 
                 EditText editText = findViewById(R.id.editText_heimverein);
                 editText.setText(heimverein);
@@ -557,84 +374,21 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText_kommentar);
         editText.setText("");
 
-        h_hd11 = "";
-        h_hd12 = "";
-        h_hd21 = "";
-        h_hd22 = "";
-        h_dd1 = "";
-        h_dd2 = "";
-        h_he1 = "";
-        h_he2 = "";
-        h_he3 = "";
-        h_de = "";
-        h_mx1 = "";
-        h_mx2 = "";
-        
-        g_hd11 = "";
-        g_hd12 = "";
-        g_hd21 = "";
-        g_hd22 = "";
-        g_dd1 = "";
-        g_dd2 = "";
-        g_he1 = "";
-        g_he2 = "";
-        g_he3 = "";
-        g_de = "";
-        g_mx1 = "";
-        g_mx2 = "";
+        for (int ii=0; ii<12; ii++) {
+            heim_team[ii] = "";
+            gast_team[ii] = "";
+        }
 
+        for (int ii=0; ii<8; ii++) {
+            for (int jj=0; jj<3; jj++){
+                heim_erg[ii][jj] = null;
+                gast_erg[ii][jj] = null;
+            }
+        }
         erg_opend = false;
         pdf_created = false;
         
-        er_hd1_h1 = "";
-        er_hd1_h2 = "";
-        er_hd1_h3 = "";
-        er_hd2_h1 = "";
-        er_hd2_h2 = "";
-        er_hd2_h3 = "";
-        er_dd_h1 = "";
-        er_dd_h2 = "";
-        er_dd_h3 = "";
-        er_he1_h1 = "";
-        er_he1_h2 = "";
-        er_he1_h3 = "";
-        er_he2_h1 = "";
-        er_he2_h2 = "";
-        er_he2_h3 = "";
-        er_he3_h1 = "";
-        er_he3_h2 = "";
-        er_he3_h3 = "";
-        er_de_h1 = "";
-        er_de_h2 = "";
-        er_de_h3 = "";
-        er_mx_h1 = "";
-        er_mx_h2 = "";
-        er_mx_h3 = "";
 
-        er_hd1_g1 = "";
-        er_hd1_g2 = "";
-        er_hd1_g3 = "";
-        er_hd2_g1 = "";
-        er_hd2_g2 = "";
-        er_hd2_g3 = "";
-        er_dd_g1 = "";
-        er_dd_g2 = "";
-        er_dd_g3 = "";
-        er_he1_g1 = "";
-        er_he1_g2 = "";
-        er_he1_g3 = "";
-        er_he2_g1 = "";
-        er_he2_g2 = "";
-        er_he2_g3 = "";
-        er_he3_g1 = "";
-        er_he3_g2 = "";
-        er_he3_g3 = "";
-        er_de_g1 = "";
-        er_de_g2 = "";
-        er_de_g3 = "";
-        er_mx_g1 = "";
-        er_mx_g2 = "";
-        er_mx_g3 = "";
 
         File myFile;
         myFile = new File(this.getBaseContext().getExternalFilesDir(null), "/unterschriften/sign_heim.png");
