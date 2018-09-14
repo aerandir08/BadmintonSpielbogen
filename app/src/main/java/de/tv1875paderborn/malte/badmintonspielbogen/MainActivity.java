@@ -3,9 +3,7 @@ package de.tv1875paderborn.malte.badmintonspielbogen;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.Environment;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -31,10 +29,8 @@ import java.io.InputStreamReader;
 import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -295,7 +291,6 @@ public class MainActivity extends AppCompatActivity {
 
         final String[] cs = l_jason.toArray(new String[0]);
         final boolean[] checked = new boolean[l_jason.size()];
-        final List<String> listitem = Arrays.asList(cs);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Wähle ein Spiel");
         if (l_jason.size() == 0) {
@@ -393,11 +388,11 @@ public class MainActivity extends AppCompatActivity {
         File myFile;
         myFile = new File(this.getBaseContext().getExternalFilesDir(null), "/unterschriften/sign_heim.png");
         if (myFile.exists()) {
-            myFile.delete();
+            boolean bla = myFile.delete();
         }
         myFile = new File(this.getBaseContext().getExternalFilesDir(null), "/unterschriften/sign_gast.png");
         if (myFile.exists()) {
-            myFile.delete();
+            boolean bla = myFile.delete();
         }
 
         Button button = findViewById(R.id.button_share_pdf);

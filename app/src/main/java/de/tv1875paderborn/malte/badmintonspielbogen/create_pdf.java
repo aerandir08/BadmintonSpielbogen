@@ -1,9 +1,6 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.ContextWrapper;
-import android.os.Environment;
 import android.widget.Toast;
 
 import com.itextpdf.text.Chunk;
@@ -11,10 +8,8 @@ import com.itextpdf.text.Element;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfPage;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;

@@ -10,8 +10,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
-import android.os.Build;
-import android.os.Environment;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -114,7 +112,7 @@ public class SignatureMainLayout extends LinearLayout implements OnClickListener
         // in our case, we delete the previous file, you can remove this
         File file = new File(myDir, fname);
         if (file.exists()) {
-            file.delete();
+            boolean bla = file.delete();
         }
 
         try {
@@ -168,16 +166,12 @@ public class SignatureMainLayout extends LinearLayout implements OnClickListener
         /**
          * Get signature
          *
-         * @return
          */
         protected Bitmap getSignature() {
 
-            Bitmap signatureBitmap = null;
+            Bitmap signatureBitmap;
 
-            // set the signature bitmap
-            if (signatureBitmap == null) {
-                signatureBitmap = Bitmap.createBitmap(this.getWidth(), this.getHeight(), Bitmap.Config.RGB_565);
-            }
+            signatureBitmap = Bitmap.createBitmap(this.getWidth(), this.getHeight(), Bitmap.Config.RGB_565);
 
             // important for saving signature
             final Canvas canvas = new Canvas(signatureBitmap);
