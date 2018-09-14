@@ -400,6 +400,11 @@ public class MainActivity extends AppCompatActivity {
             myFile.delete();
         }
 
+        Button button = findViewById(R.id.button_share_pdf);
+        button.setEnabled(false);
+        button = findViewById(R.id.button_create_pdf);
+        button.setEnabled(false);
+
         Toast.makeText(this.getBaseContext(), "Alle Eingaben gelöscht", Toast.LENGTH_LONG).show();
     }
 
@@ -431,7 +436,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button_share_pdf(View view){
-        String pdfname = heimverein + "-" + gastverein + ".pdf";
+        Date datum = Calendar.getInstance().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
+        String date = simpleDateFormat.format(datum);
+
+        // the directory where the signature will be saved
+        String pdfname = date + "_" + heimverein + "-" + gastverein + ".pdf";
         String mimeType = "application/pdf";
         File file = new File(getBaseContext().getExternalFilesDir(null), pdfname);
 
