@@ -693,27 +693,40 @@ public class create_pdf {
 
     private static void get_scores() {
 
+        for (int su=0; su<6; su++){
+            sums[su] = 0;
+        }
+
         for (int game=0; game<8; game++){
+            heim_points[game] = 0;
+            heim_sets[game] = 0;
+            heim_games[game] = 0;
+
+            gast_points[game] = 0;
+            gast_sets[game] = 0;
+            gast_games[game] = 0;
+
             for (int set=0; set<3; set++) {
                 // Darstellung Satzergebnis
-                if (heim_erg[game][set].equals(gast_erg[game][set])){
+                if (heim_erg[game][set] == null || gast_erg[game][set] == null){
                     sets[game][set] = "-";
                 }else {
                     sets[game][set] = heim_erg[game][set] + "-" + gast_erg[game][set];
+
+                    // Berechnung Punkte
+                    if (heim_erg[game][set] > gast_erg[game][set]){
+                        heim_sets[game] += 1;
+                    }else {
+                        gast_sets[game] += 1;
+                    }
+                    heim_points[game] += heim_erg[game][set];
+                    gast_points[game] += gast_erg[game][set];
                 }
-                // Berechnung Punkte
-                if (heim_erg[game][set] > gast_erg[game][set]){
-                    heim_sets[game] += 1;
-                }else {
-                    gast_sets[game] += 1;
-                }
-                heim_points[game] += heim_erg[game][set];
-                gast_points[game] += gast_erg[game][set];
             }
             // Berechnung Sätze und Spiele
             if (heim_sets[game] > gast_sets[game]){
                 heim_games[game] += 1;
-            }else{
+            }else if (heim_sets[game] < gast_sets[game]){
                 gast_games[game] += 1;
             }
 
