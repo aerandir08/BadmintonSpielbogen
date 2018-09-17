@@ -47,7 +47,7 @@ public class ergebnis extends AppCompatActivity {
         TextView textView;
 
         //Spielernamen
-        for (int ii=0; ii<8; ii++){
+        for (int ii=0; ii<16; ii++){
             name = "erg_name_"+Integer.toString(ii);
             resID = getResources().getIdentifier(name, "id", getPackageName());
             textView = findViewById(resID);
