@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import static de.tv1875paderborn.malte.badmintonspielbogen.ergebnis.sign;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.sign_h;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.sign_g;
 
 public class SignatureMainLayout extends LinearLayout implements OnClickListener {
 
@@ -122,6 +124,11 @@ public class SignatureMainLayout extends LinearLayout implements OnClickListener
             out.flush();
             out.close();
 
+            if(sign) {
+                sign_h = true;
+            }else{
+                sign_g = true;
+            }
             Toast.makeText(this.getContext(), "Unterschrift gespeichert", Toast.LENGTH_LONG).show();
 
         } catch (Exception e) {

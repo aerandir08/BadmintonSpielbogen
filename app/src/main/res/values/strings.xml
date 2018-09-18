@@ -28,11 +28,11 @@
     <string name="sign">Unterschrift</string>
     <string name="delete">Löschen</string>
     <string name="aufstellungen">Mannschaftsaufstellungen</string>
-    <string name="pdf">pdf erstellen</string>
+    <string name="pdf">PDF Vorschau</string>
     <string name="end_spieltag">Spieltag abschließen</string>
     <string name="sign_heim">Unterschrift Heim</string>
     <string name="sign_gast">Unterschrift Gast</string>
-    <string name="share">pdf verschicken</string>
+    <string name="share">PDF verschicken</string>
     <string name="reset">Reset</string>
     <string name="load">Laden</string>
     <string name="kommentar">Kommentar</string>

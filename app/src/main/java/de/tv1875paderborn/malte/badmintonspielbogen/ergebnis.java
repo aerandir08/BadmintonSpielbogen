@@ -124,13 +124,4 @@ public class ergebnis extends AppCompatActivity {
         }
     }
 
-    public void button_sign_heim(View view) {
-        Intent intent = new Intent(this, sign_heim.class);
-        startActivity(intent);
-    }
-
-    public void button_sign_gast(View view) {
-        Intent intent = new Intent(this, sign_gast.class);
-        startActivity(intent);
-    }
 }

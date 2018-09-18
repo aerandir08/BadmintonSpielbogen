@@ -54,7 +54,7 @@ public class create_pdf {
 
     private static String winner;
 
-    public static void main(Context context) {
+    public static void main(Context context, boolean vorschau) {
         get_scores();
 
         Date datum = Calendar.getInstance().getTime();
@@ -643,39 +643,39 @@ public class create_pdf {
             }
 
             try {
-                String root = context.getExternalFilesDir(null).toString();
-                Image sign_heim = Image.getInstance(root + "/unterschriften/sign_heim.png");
-                Image sign_gast = Image.getInstance(root + "/unterschriften/sign_gast.png");
+                if (!vorschau) {
+                    String root = context.getExternalFilesDir(null).toString();
+                    Image sign_heim = Image.getInstance(root + "/unterschriften/sign_heim.png");
+                    Image sign_gast = Image.getInstance(root + "/unterschriften/sign_gast.png");
 
-                sign_heim.scaleToFit(180f, 360f);
-                sign_gast.scaleToFit(180f, 360f);
+                    sign_heim.scaleToFit(180f, 360f);
+                    sign_gast.scaleToFit(180f, 360f);
 
-                table = new PdfPTable(2);
-                cell1 = new PdfPCell(new Paragraph("Mannschaftsführer Heimverein:"));
-                cell1.setBorderWidth(0);
-                cell2 = new PdfPCell(new Paragraph("Mannschaftsführer Gastverein:"));
-                cell2.setBorderWidth(0);
+                    table = new PdfPTable(2);
+                    cell1 = new PdfPCell(new Paragraph("Mannschaftsführer Heimverein:"));
+                    cell1.setBorderWidth(0);
+                    cell2 = new PdfPCell(new Paragraph("Mannschaftsführer Gastverein:"));
+                    cell2.setBorderWidth(0);
 
-                table.addCell(cell1);
-                table.addCell(cell2);
+                    table.addCell(cell1);
+                    table.addCell(cell2);
 
-                cell1 = new PdfPCell(sign_heim, false);
-                cell1.setBorderWidth(0);
-                cell2 = new PdfPCell(sign_gast, false);
-                cell2.setBorderWidth(0);
+                    cell1 = new PdfPCell(sign_heim, false);
+                    cell1.setBorderWidth(0);
+                    cell2 = new PdfPCell(sign_gast, false);
+                    cell2.setBorderWidth(0);
 
-                table.addCell(cell1);
-                table.addCell(cell2);
+                    table.addCell(cell1);
+                    table.addCell(cell2);
 
-                document.add(table);
-
+                    document.add(table);
+                }
                 document.close(); // no need to close PDFwriter?
 
                 pdf_created = true;
             }catch (MalformedURLException e){
                 e.printStackTrace();
             }catch (IOException e){
-                Toast.makeText(context, "Unterschriften fehlen", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         } catch (DocumentException e) {

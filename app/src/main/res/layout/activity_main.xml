@@ -219,29 +219,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_kommentar" />
 
-        <Button
-            android:id="@+id/button_create_pdf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:onClick="button_pdf"
-            android:text="@string/pdf"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_pdf" />
-
-        <Button
-            android:id="@+id/button_share_pdf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:onClick="button_share_pdf"
-            android:text="@string/share"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button_create_pdf"
-            app:layout_constraintStart_toEndOf="@+id/button_create_pdf" />
-
         <TextView
             android:id="@+id/textView_add_kommentar"
             android:layout_width="wrap_content"
@@ -265,5 +242,54 @@
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_add_kommentar" />
+
+        <Button
+            android:id="@+id/button_pdf_vorschau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="button_pdf"
+            android:text="@string/pdf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_pdf" />
+
+        <Button
+            android:id="@+id/button_sign_heim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="button_sign_heim"
+            android:text="@string/sign_heim"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_pdf_vorschau" />
+
+        <Button
+            android:id="@+id/button_sign_gast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:onClick="button_sign_gast"
+            android:text="@string/sign_gast"
+            app:layout_constraintStart_toEndOf="@+id/button_sign_heim"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_sign_heim"/>
+
+        <Button
+            android:id="@+id/button_share_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="button_share_pdf"
+            android:text="@string/share"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_sign_gast" />
+
+
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

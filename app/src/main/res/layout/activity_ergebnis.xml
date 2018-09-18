@@ -1061,29 +1061,5 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/erg_name_15"
             tools:layout_editor_absoluteY="631dp" />
 
-        <Button
-            android:id="@+id/button_sign_heim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:onClick="button_sign_heim"
-            android:text="@string/sign_heim"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/erg_name_7" />
-
-        <Button
-            android:id="@+id/button_sign_gast"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:onClick="button_sign_gast"
-            android:text="@string/sign_gast"
-            app:layout_constraintStart_toEndOf="@+id/button_sign_heim"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button_sign_heim"/>
-
-
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

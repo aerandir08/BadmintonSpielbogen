@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static boolean erg_opend = false;
     public static boolean pdf_created = false;
+    public static boolean sign_h = false;
+    public static boolean sign_g = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,16 +74,28 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText_kommentar);
         editText.setText(kommentar);
 
-        Button button = findViewById(R.id.button_create_pdf);
-        if (erg_opend){
+        Button button;
+        if (erg_opend) {
+            button = findViewById(R.id.button_pdf_vorschau);
             button.setEnabled(true);
         }else{
+            button = findViewById(R.id.button_pdf_vorschau);
             button.setEnabled(false);
         }
-        button = findViewById(R.id.button_share_pdf);
+
         if (pdf_created) {
+            button = findViewById(R.id.button_share_pdf);
+            button.setEnabled(true);
+            button = findViewById(R.id.button_sign_heim);
+            button.setEnabled(true);
+            button = findViewById(R.id.button_sign_gast);
             button.setEnabled(true);
         }else{
+            button = findViewById(R.id.button_share_pdf);
+            button.setEnabled(false);
+            button = findViewById(R.id.button_sign_heim);
+            button.setEnabled(false);
+            button = findViewById(R.id.button_sign_gast);
             button.setEnabled(false);
         }
     }
@@ -382,6 +396,8 @@ public class MainActivity extends AppCompatActivity {
         }
         erg_opend = false;
         pdf_created = false;
+        sign_h = false;
+        sign_g = false;
         
 
 
@@ -397,7 +413,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = findViewById(R.id.button_share_pdf);
         button.setEnabled(false);
-        button = findViewById(R.id.button_create_pdf);
+        button = findViewById(R.id.button_pdf_vorschau);
+        button.setEnabled(false);
+        button = findViewById(R.id.button_sign_heim);
+        button.setEnabled(false);
+        button = findViewById(R.id.button_sign_gast);
         button.setEnabled(false);
 
         Toast.makeText(this.getBaseContext(), "Alle Eingaben gelöscht", Toast.LENGTH_LONG).show();
@@ -419,18 +439,53 @@ public class MainActivity extends AppCompatActivity {
         erg_opend = true;
     }
 
+    public void button_sign_heim(View view) {
+        Intent intent = new Intent(this, sign_heim.class);
+        startActivity(intent);
+    }
+
+    public void button_sign_gast(View view) {
+        Intent intent = new Intent(this, sign_gast.class);
+        startActivity(intent);
+    }
+
     public void button_pdf(View view){
         Context context = getBaseContext();
-        create_pdf.main(context);
-        Button button = findViewById(R.id.button_share_pdf);
+        save_json();
+        create_pdf.main(context, true);
+        Button button;
         if (pdf_created) {
+            button = findViewById(R.id.button_share_pdf);
+            button.setEnabled(true);
+            button = findViewById(R.id.button_sign_heim);
+            button.setEnabled(true);
+            button = findViewById(R.id.button_sign_gast);
             button.setEnabled(true);
         }else{
+            button = findViewById(R.id.button_share_pdf);
+            button.setEnabled(false);
+            button = findViewById(R.id.button_sign_heim);
+            button.setEnabled(false);
+            button = findViewById(R.id.button_sign_gast);
             button.setEnabled(false);
         }
+
+        Date datum = Calendar.getInstance().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
+        String date = simpleDateFormat.format(datum);
+
+        File file = new File(context.getExternalFilesDir(null), date + "_" + heimverein + "-" + gastverein + ".pdf");
+        Uri path = Uri.fromFile(file);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(path, "application/pdf");
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     public void button_share_pdf(View view){
+        Context context = getBaseContext();
+        create_pdf.main(context, false);
+
         Date datum = Calendar.getInstance().getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
         String date = simpleDateFormat.format(datum);
