@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gast_team;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heimverein;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heim_team;
 
@@ -19,59 +20,39 @@ public class menu_2 extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView);
         textView.setText(heimverein);
 
-        EditText editText = findViewById(R.id.edit_hd11);
-        editText.setText(heim_team[0]);
-        editText = findViewById(R.id.edit_hd12);
-        editText.setText(heim_team[1]);
-        editText = findViewById(R.id.edit_hd21);
-        editText.setText(heim_team[2]);
-        editText = findViewById(R.id.edit_hd22);
-        editText.setText(heim_team[3]);
-        editText = findViewById(R.id.edit_dd1);
-        editText.setText(heim_team[4]);
-        editText = findViewById(R.id.edit_dd2);
-        editText.setText(heim_team[5]);
-        editText = findViewById(R.id.edit_he1);
-        editText.setText(heim_team[6]);
-        editText = findViewById(R.id.edit_he2);
-        editText.setText(heim_team[7]);
-        editText = findViewById(R.id.edit_he3);
-        editText.setText(heim_team[8]);
-        editText = findViewById(R.id.edit_de);
-        editText.setText(heim_team[9]);
-        editText = findViewById(R.id.edit_mx1);
-        editText.setText(heim_team[10]);
-        editText = findViewById(R.id.edit_mx2);
-        editText.setText(heim_team[11]);
+        int resID;
+        String name;
+        EditText editText;
+
+        //Spielernamen
+        for (int ii=0; ii<12; ii++){
+            name = "text_" + Integer.toString(ii);
+            resID = getResources().getIdentifier(name, "id", getPackageName());
+            textView = findViewById(resID);
+            textView.setText(gast_team[ii]);
+
+            name = "edit_" + Integer.toString(ii);
+            resID = getResources().getIdentifier(name, "id", getPackageName());
+            editText = findViewById(resID);
+            editText.setText(heim_team[ii]);
+        }
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
 
-        EditText editText = findViewById(R.id.edit_hd11);
-        heim_team[0] = editText.getText().toString();
-        editText = findViewById(R.id.edit_hd12);
-        heim_team[1] = editText.getText().toString();
-        editText = findViewById(R.id.edit_hd21);
-        heim_team[2] = editText.getText().toString();
-        editText = findViewById(R.id.edit_hd22);
-        heim_team[3] = editText.getText().toString();
-        editText = findViewById(R.id.edit_dd1);
-        heim_team[4] = editText.getText().toString();
-        editText = findViewById(R.id.edit_dd2);
-        heim_team[5] = editText.getText().toString();
-        editText = findViewById(R.id.edit_he1);
-        heim_team[6] = editText.getText().toString();
-        editText = findViewById(R.id.edit_he2);
-        heim_team[7] = editText.getText().toString();
-        editText = findViewById(R.id.edit_he3);
-        heim_team[8] = editText.getText().toString();
-        editText = findViewById(R.id.edit_de);
-        heim_team[9] = editText.getText().toString();
-        editText = findViewById(R.id.edit_mx1);
-        heim_team[10] = editText.getText().toString();
-        editText = findViewById(R.id.edit_mx2);
-        heim_team[11] = editText.getText().toString();
+        int resID;
+        String name;
+        EditText editText;
+
+        //Spielernamen
+        for (int ii=0; ii<12; ii++){
+            name = "edit_" + Integer.toString(ii);
+            resID = getResources().getIdentifier(name, "id", getPackageName());
+            editText = findViewById(resID);
+            heim_team[ii] = editText.getText().toString();
+        }
     }
 }

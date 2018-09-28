@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".menu_3">
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true" >
+        android:focusableInTouchMode="true">
 
         <TextView
             android:id="@+id/textView"
@@ -36,7 +37,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/edit_hd11"
+            android:id="@+id/edit_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -45,12 +46,12 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_hd1"
-            android:nextFocusForward="@+id/edit_hd12"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_hd1" />
 
         <EditText
-            android:id="@+id/edit_hd12"
+            android:id="@+id/edit_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -59,9 +60,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_hd11"
-            android:nextFocusForward="@+id/edit_hd21"/>
+            app:layout_constraintTop_toBottomOf="@+id/edit_0" />
 
         <TextView
             android:id="@+id/text_hd2"
@@ -72,10 +73,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/hd2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_hd12" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_1" />
 
         <EditText
-            android:id="@+id/edit_hd21"
+            android:id="@+id/edit_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -84,12 +85,12 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_hd2"
-            android:nextFocusForward="@+id/edit_hd22"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_hd2" />
 
         <EditText
-            android:id="@+id/edit_hd22"
+            android:id="@+id/edit_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -98,9 +99,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_hd21"
-            android:nextFocusForward="@+id/edit_dd1"/>
+            app:layout_constraintTop_toBottomOf="@+id/edit_2" />
 
         <TextView
             android:id="@+id/text_dd"
@@ -111,10 +112,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/dd"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_hd22" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_3" />
 
         <EditText
-            android:id="@+id/edit_dd1"
+            android:id="@+id/edit_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -123,12 +124,12 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_dd"
-            android:nextFocusForward="@+id/edit_dd2"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_dd" />
 
         <EditText
-            android:id="@+id/edit_dd2"
+            android:id="@+id/edit_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -137,9 +138,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_dd1"
-            android:nextFocusForward="@+id/edit_he1"/>
+            app:layout_constraintTop_toBottomOf="@+id/edit_4" />
 
         <TextView
             android:id="@+id/text_he1"
@@ -150,10 +151,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/he1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_dd2" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_5" />
 
         <EditText
-            android:id="@+id/edit_he1"
+            android:id="@+id/edit_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -162,9 +163,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_7"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_he1"
-            android:nextFocusForward="@+id/edit_he2"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_he1" />
 
         <TextView
             android:id="@+id/text_he2"
@@ -175,10 +176,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/he2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_he1" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_6" />
 
         <EditText
-            android:id="@+id/edit_he2"
+            android:id="@+id/edit_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -187,9 +188,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_he2"
-            android:nextFocusForward="@+id/edit_he3"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_he2" />
 
         <TextView
             android:id="@+id/text_he3"
@@ -200,10 +201,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/he3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_he2" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_7" />
 
         <EditText
-            android:id="@+id/edit_he3"
+            android:id="@+id/edit_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -212,9 +213,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_he3"
-            android:nextFocusForward="@+id/edit_de"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_he3" />
 
         <TextView
             android:id="@+id/text_de"
@@ -225,10 +226,10 @@
             android:layout_marginTop="32dp"
             android:text="@string/de"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_he3" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_8" />
 
         <EditText
-            android:id="@+id/edit_de"
+            android:id="@+id/edit_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -237,9 +238,9 @@
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_10"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_de"
-            android:nextFocusForward="@+id/edit_mx1"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_de" />
 
         <TextView
             android:id="@+id/text_mx"
@@ -250,10 +251,24 @@
             android:layout_marginTop="32dp"
             android:text="@string/mx"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_de" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_9" />
 
         <EditText
-            android:id="@+id/edit_mx1"
+            android:id="@+id/edit_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:nextFocusForward="@+id/edit_11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_mx" />
+
+        <EditText
+            android:id="@+id/edit_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -263,21 +278,127 @@
             android:hint="@string/name"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_mx"
-            android:nextFocusForward="@+id/edit_mx2"/>
+            app:layout_constraintTop_toBottomOf="@+id/edit_10" />
 
-        <EditText
-            android:id="@+id/edit_mx2"
+        <TextView
+            android:id="@+id/text_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="@string/name"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_mx1" />
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_0"
+            app:layout_constraintStart_toEndOf="@+id/edit_0" />
+
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_1"
+            app:layout_constraintStart_toEndOf="@+id/edit_1" />
+
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_2"
+            app:layout_constraintStart_toEndOf="@+id/edit_2" />
+
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_3"
+            app:layout_constraintStart_toEndOf="@+id/edit_3" />
+
+        <TextView
+            android:id="@+id/text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_4"
+            app:layout_constraintStart_toEndOf="@+id/edit_4" />
+
+        <TextView
+            android:id="@+id/text_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_5"
+            app:layout_constraintStart_toEndOf="@+id/edit_5" />
+
+        <TextView
+            android:id="@+id/text_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_6"
+            app:layout_constraintStart_toEndOf="@+id/edit_6" />
+
+        <TextView
+            android:id="@+id/text_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_7"
+            app:layout_constraintStart_toEndOf="@+id/edit_7" />
+
+        <TextView
+            android:id="@+id/text_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_8"
+            app:layout_constraintStart_toEndOf="@+id/edit_8" />
+
+        <TextView
+            android:id="@+id/text_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_9"
+            app:layout_constraintStart_toEndOf="@+id/edit_9" />
+
+        <TextView
+            android:id="@+id/text_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_10"
+            app:layout_constraintStart_toEndOf="@+id/edit_10" />
+
+        <TextView
+            android:id="@+id/text_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_11"
+            app:layout_constraintStart_toEndOf="@+id/edit_11" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
