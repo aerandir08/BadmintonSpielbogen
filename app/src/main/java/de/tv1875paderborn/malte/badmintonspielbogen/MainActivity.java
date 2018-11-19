@@ -400,6 +400,9 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText_kommentar);
         editText.setText("");
 
+        mail_heim = "";
+        mail_gast = "";
+
         for (int ii=0; ii<12; ii++) {
             heim_team[ii] = "";
             gast_team[ii] = "";
