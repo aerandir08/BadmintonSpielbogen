@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     public static Integer[][] gast_erg = new Integer[8][3];
 
     public static boolean erg_opend = false;
-    public static boolean pdf_created = false;
     public static boolean sign_h = false;
     public static boolean sign_g = false;
 
@@ -60,6 +59,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button;
+        button = findViewById(R.id.button_pdf_vorschau);
+        button.setEnabled(false);
+        button = findViewById(R.id.button_sign_heim);
+        button.setEnabled(false);
+        button = findViewById(R.id.button_sign_gast);
+        button.setEnabled(false);
+        button = findViewById(R.id.button_share_pdf);
+        button.setEnabled(false);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        EditText editText = findViewById(R.id.editText_heimverein);
+        heimverein = editText.getText().toString();
+        editText = findViewById(R.id.editText_gastverein);
+        gastverein = editText.getText().toString();
+        editText = findViewById(R.id.editText_staffel);
+        staffel = editText.getText().toString();
+        editText = findViewById(R.id.editText_ort);
+        ort = editText.getText().toString();
+        editText = findViewById(R.id.editText_zeit);
+        zeit = editText.getText().toString();
+        editText = findViewById(R.id.editText_kommentar);
+        kommentar = editText.getText().toString();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         EditText editText = findViewById(R.id.editText_heimverein);
         editText.setText(heimverein);
@@ -78,43 +110,22 @@ public class MainActivity extends AppCompatActivity {
         if (erg_opend) {
             button = findViewById(R.id.button_pdf_vorschau);
             button.setEnabled(true);
-        }else{
-            button = findViewById(R.id.button_pdf_vorschau);
-            button.setEnabled(false);
+            button = findViewById(R.id.button_sign_heim);
+            button.setEnabled(true);
+            button = findViewById(R.id.button_sign_gast);
+            button.setEnabled(true);
         }
 
-        if (pdf_created) {
+        if (sign_h && sign_g) {
             button = findViewById(R.id.button_share_pdf);
             button.setEnabled(true);
-            button = findViewById(R.id.button_sign_heim);
-            button.setEnabled(true);
-            button = findViewById(R.id.button_sign_gast);
-            button.setEnabled(true);
-        }else{
-            button = findViewById(R.id.button_share_pdf);
-            button.setEnabled(false);
-            button = findViewById(R.id.button_sign_heim);
-            button.setEnabled(false);
-            button = findViewById(R.id.button_sign_gast);
-            button.setEnabled(false);
         }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        EditText editText = findViewById(R.id.editText_heimverein);
-        heimverein = editText.getText().toString();
-        editText = findViewById(R.id.editText_gastverein);
-        gastverein = editText.getText().toString();
-        editText = findViewById(R.id.editText_staffel);
-        staffel = editText.getText().toString();
-        editText = findViewById(R.id.editText_ort);
-        ort = editText.getText().toString();
-        editText = findViewById(R.id.editText_zeit);
-        zeit = editText.getText().toString();
-        editText = findViewById(R.id.editText_kommentar);
-        kommentar = editText.getText().toString();
+
     }
 
     @Override
@@ -395,7 +406,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         erg_opend = false;
-        pdf_created = false;
         sign_h = false;
         sign_g = false;
         
@@ -453,22 +463,6 @@ public class MainActivity extends AppCompatActivity {
         Context context = getBaseContext();
         save_json();
         create_pdf.main(context, true);
-        Button button;
-        if (pdf_created) {
-            button = findViewById(R.id.button_share_pdf);
-            button.setEnabled(true);
-            button = findViewById(R.id.button_sign_heim);
-            button.setEnabled(true);
-            button = findViewById(R.id.button_sign_gast);
-            button.setEnabled(true);
-        }else{
-            button = findViewById(R.id.button_share_pdf);
-            button.setEnabled(false);
-            button = findViewById(R.id.button_sign_heim);
-            button.setEnabled(false);
-            button = findViewById(R.id.button_sign_gast);
-            button.setEnabled(false);
-        }
 
         Date datum = Calendar.getInstance().getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);

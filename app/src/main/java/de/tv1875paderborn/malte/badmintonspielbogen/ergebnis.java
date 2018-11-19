@@ -44,7 +44,6 @@ public class ergebnis extends AppCompatActivity {
 
         String name;
         int resID;
-        EditText editText;
         TextView textView;
 
         //Spielernamen
@@ -54,41 +53,11 @@ public class ergebnis extends AppCompatActivity {
             textView = findViewById(resID);
             textView.setText(erg_namen[ii]);
         }
-
-        // Ergebnisse Heim Team
-        for (int game=0; game<8; game++){
-            for (int set=0; set<3; set++){
-                name = "heim_"+Integer.toString(game)+"_"+Integer.toString(set);
-                resID = getResources().getIdentifier(name, "id", getPackageName());
-                editText = findViewById(resID);
-                if (heim_erg[game][set] != null) {
-                    editText.setText(String.valueOf(heim_erg[game][set]));
-                }else{
-                    editText.setText("");
-                }
-            }
-        }
-
-        // Ergebnisse Gast Team
-        for (int game=0; game<8; game++){
-            for (int set=0; set<3; set++){
-                name = "gast_"+Integer.toString(game)+"_"+Integer.toString(set);
-                resID = getResources().getIdentifier(name, "id", getPackageName());
-                editText = findViewById(resID);
-                if (gast_erg[game][set] != null) {
-                    editText.setText(String.valueOf(gast_erg[game][set]));
-                }else{
-                    editText.setText("");
-                }
-            }
-        }
     }
 
-
     @Override
-    protected void onStop() {
-        super.onStop();
-
+    protected void onPause() {
+        super.onPause();
         String name;
         int resID;
         EditText editText;
@@ -123,6 +92,48 @@ public class ergebnis extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        String name;
+        int resID;
+        EditText editText;
+
+        // Ergebnisse Heim Team
+        for (int game=0; game<8; game++){
+            for (int set=0; set<3; set++){
+                name = "heim_"+Integer.toString(game)+"_"+Integer.toString(set);
+                resID = getResources().getIdentifier(name, "id", getPackageName());
+                editText = findViewById(resID);
+                if (heim_erg[game][set] != null) {
+                    editText.setText(String.valueOf(heim_erg[game][set]));
+                }else{
+                    editText.setText("");
+                }
+            }
+        }
+
+        // Ergebnisse Gast Team
+        for (int game=0; game<8; game++){
+            for (int set=0; set<3; set++){
+                name = "gast_"+Integer.toString(game)+"_"+Integer.toString(set);
+                resID = getResources().getIdentifier(name, "id", getPackageName());
+                editText = findViewById(resID);
+                if (gast_erg[game][set] != null) {
+                    editText.setText(String.valueOf(gast_erg[game][set]));
+                }else{
+                    editText.setText("");
+                }
+            }
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
 }

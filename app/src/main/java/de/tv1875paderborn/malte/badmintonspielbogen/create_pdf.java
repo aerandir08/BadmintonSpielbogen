@@ -27,7 +27,6 @@ import java.util.Locale;
 // Alle Variablen importieren
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heimverein;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gastverein;
-import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.pdf_created;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.staffel;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.ort;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.zeit;
@@ -672,7 +671,6 @@ public class create_pdf {
                 }
                 document.close(); // no need to close PDFwriter?
 
-                pdf_created = true;
             }catch (MalformedURLException e){
                 e.printStackTrace();
             }catch (IOException e){

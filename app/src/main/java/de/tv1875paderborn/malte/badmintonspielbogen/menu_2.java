@@ -16,16 +16,35 @@ public class menu_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_2);
         setTitle(heimverein);
+    }
 
-        // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.textView);
-        textView.setText(heimverein);
+    @Override
+    protected void onPause() {
+        super.onPause();
 
         int resID;
         String name;
         EditText editText;
 
-        //Spielernamen
+        // Spielernamen
+        for (int ii=0; ii<12; ii++){
+            name = "edit_" + Integer.toString(ii);
+            resID = getResources().getIdentifier(name, "id", getPackageName());
+            editText = findViewById(resID);
+            heim_team[ii] = editText.getText().toString();
+        }
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        int resID;
+        String name;
+        EditText editText;
+        TextView textView;
+
+        // Spielernamen
         for (int ii=0; ii<12; ii++){
             name = "text_" + Integer.toString(ii);
             resID = getResources().getIdentifier(name, "id", getPackageName());
@@ -37,23 +56,11 @@ public class menu_2 extends AppCompatActivity {
             editText = findViewById(resID);
             editText.setText(heim_team[ii]);
         }
-
     }
 
     @Override
     protected void onStop() {
         super.onStop();
 
-        int resID;
-        String name;
-        EditText editText;
-
-        //Spielernamen
-        for (int ii=0; ii<12; ii++){
-            name = "edit_" + Integer.toString(ii);
-            resID = getResources().getIdentifier(name, "id", getPackageName());
-            editText = findViewById(resID);
-            heim_team[ii] = editText.getText().toString();
-        }
     }
 }
