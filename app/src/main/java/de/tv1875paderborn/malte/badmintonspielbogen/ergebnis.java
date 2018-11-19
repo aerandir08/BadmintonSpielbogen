@@ -20,6 +20,7 @@ public class ergebnis extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ergebnis);
+        setTitle("Ergebnisse eintragen");
 
         // Strings zur Darstellung
         String erg_namen[] = new String[16];

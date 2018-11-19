@@ -15,6 +15,7 @@ public class menu_3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_3);
+        setTitle(gastverein);
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView);
