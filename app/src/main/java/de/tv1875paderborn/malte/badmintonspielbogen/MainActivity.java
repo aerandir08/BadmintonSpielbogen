@@ -495,10 +495,18 @@ public class MainActivity extends AppCompatActivity {
         String mimeType = "application/pdf";
         File file = new File(getBaseContext().getExternalFilesDir(null), pdfname);
 
-        Uri uri = FileProvider.getUriForFile(this, "de.tv1875paderborn.malte.badmintonspielbogen.fileprovider", file);
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType(mimeType);
-        intent.putExtra(Intent.EXTRA_STREAM, uri);
-        startActivity(Intent.createChooser(intent, "PDF senden..."));
+        Uri path = Uri.fromFile(file);
+
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{mail_heim, mail_gast});
+        i.putExtra(Intent.EXTRA_SUBJECT, "Spielberichtsbogen" + heimverein + " - " + gastverein);
+        i.putExtra(Intent.EXTRA_TEXT   , "Hallo,\nhier ist der Spielberichtsbogen vom heutigen Ligaspiel.\n\nSportliche Grüße\n");
+        i.putExtra(Intent.EXTRA_STREAM, path);
+        try {
+            startActivity(Intent.createChooser(i, "Sende Mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this, "Es sind keine Mail-Clients installiert, weshalb die Mail nicht versendet werden kann.", Toast.LENGTH_LONG).show();
+        }
     }
 }
