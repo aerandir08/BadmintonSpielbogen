@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     public static String ort;
     public static String zeit;
     public static String kommentar;
+    public static String mail_heim;
+    public static String mail_gast;
 
     // Spielernamen
     public static String[] heim_team = new String[12];
@@ -171,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
             jsonObj.put("ort", ort);
             jsonObj.put("zeit", zeit);
             jsonObj.put("kommentar", kommentar);
+            jsonObj.put("mail_heim", mail_heim);
+            jsonObj.put("mail_gast", mail_gast);
 
             for (int ii=0; ii<12; ii++) {
                 jsonObj.put("heim_team_"+Integer.toString(ii), heim_team[ii]);
@@ -257,6 +261,8 @@ public class MainActivity extends AppCompatActivity {
                 ort = get_string_from_json(jsonObj,"ort");
                 zeit = get_string_from_json(jsonObj,"zeit");
                 kommentar = get_string_from_json(jsonObj, "kommentar");
+                mail_heim = get_string_from_json(jsonObj, "mail_heim");
+                mail_gast = get_string_from_json(jsonObj, "mail_gast");
 
                 for (int ii=0; ii<12; ii++) {
                     heim_team[ii] = get_string_from_json(jsonObj, "heim_team_"+Integer.toString(ii));

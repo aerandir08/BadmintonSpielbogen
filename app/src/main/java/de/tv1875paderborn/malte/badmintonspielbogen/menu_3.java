@@ -8,6 +8,7 @@ import android.widget.TextView;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gast_team;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.gastverein;
 import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.heim_team;
+import static de.tv1875paderborn.malte.badmintonspielbogen.MainActivity.mail_gast;
 
 public class menu_3 extends AppCompatActivity {
 
@@ -26,6 +27,9 @@ public class menu_3 extends AppCompatActivity {
         String name;
         EditText editText;
 
+        editText = findViewById(R.id.edit_mail);
+        mail_gast = editText.getText().toString();
+
         // Spielernamen
         for (int ii=0; ii<12; ii++){
             name = "edit_" + Integer.toString(ii);
@@ -42,6 +46,9 @@ public class menu_3 extends AppCompatActivity {
         String name;
         EditText editText;
         TextView textView;
+
+        editText = findViewById(R.id.edit_mail);
+        editText.setText(mail_gast);
 
         // Spielernamen
         for (int ii=0; ii<12; ii++){
