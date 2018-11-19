@@ -1,7 +1,6 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Element;
