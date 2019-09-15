@@ -1,5 +1,6 @@
 package de.tv1875paderborn.malte.badmintonspielbogen;
 
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -57,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
     public static boolean sign_h = false;
     public static boolean sign_g = false;
 
+    // timePicker
+    EditText chooseTime;
+    TimePickerDialog timerPickerDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +77,25 @@ public class MainActivity extends AppCompatActivity {
         button.setEnabled(false);
         button = findViewById(R.id.button_share_pdf);
         button.setEnabled(false);
+
+        // timePicker
+        chooseTime = findViewById(R.id.editText_zeit);
+        chooseTime.setOnFocusChangeListener(new View.OnFocusChangeListener()
+        {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus)
+            {
+                if (hasFocus) {
+                    timerPickerDialog = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker timePicker, int hours, int minutes) {
+                            chooseTime.setText(String.format("%02d:%02d", hours, minutes));
+                        }
+                    }, 18, 0, true);
+                    timerPickerDialog.show();
+                }
+            }
+        });
     }
 
     @Override
