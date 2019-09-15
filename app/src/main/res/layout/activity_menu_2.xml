@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".menu_2">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
@@ -409,6 +409,6 @@
             app:layout_constraintBaseline_toBaselineOf="@+id/textView"
             app:layout_constraintStart_toEndOf="@+id/textView" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 

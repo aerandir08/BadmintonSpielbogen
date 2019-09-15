@@ -41,7 +41,7 @@
             android:screenOrientation="landscape" />
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="de.tv1875paderborn.malte.badmintonspielbogen.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
